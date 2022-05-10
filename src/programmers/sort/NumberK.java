@@ -1,6 +1,8 @@
 package programmers.sort;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * 문제 설명
  * 배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
@@ -24,21 +26,20 @@ public class NumberK {
     int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
 
-    private ArrayList<int[]> array = new ArrayList<int[]>();
-    private ArrayList commands = new ArrayList<int[][]>();
-    private ArrayList returns = new ArrayList<int[]>();
+    ArrayList<int[]> arrayC = new ArrayList<int[]>();
+
 
     public void test() {
-        array.add(arrayCase);
-        commands.add(commandsCase);
-        returns.add(returnsCase);
+        arrayC.add(arrayCase);
+        System.out.println("arrayC.size() = " + arrayC.size());
+        System.out.println("arrayC.get(0) = " + arrayC.get(0));
+        System.out.println("arrayCase = " + arrayCase.length);
+        System.out.println("arrayCase = " + arrayCase[2]);
+        System.out.println("commandsCase = " + commandsCase.toString());
 
         //i부터 j까지 추출하고, 정렬한 뒤, k번째 수 출력
-        for (int i = 0; i < commands.size(); i++) {
-            System.out.println("i = " + i);
-            System.out.println("commands.size() = " + commands.size());
-            System.out.println("commands = " + commands.get(i).toString());
-        }
+//        for (int i = 0; i < commands.size(); i++) {
+//        }
 
     }
 
