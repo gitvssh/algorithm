@@ -22,6 +22,7 @@ import java.util.Arrays;
  * commands의 각 원소는 길이가 3입니다.
  */
 public class NumberK {
+
     int[] arrayCase = {1, 5, 2, 6, 3, 7, 4};
     int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
@@ -31,16 +32,14 @@ public class NumberK {
 
     public void test() {
         arrayC.add(arrayCase);
-        System.out.println("arrayC.size() = " + arrayC.size());
-        System.out.println("arrayC.get(0) = " + arrayC.get(0));
-        System.out.println("arrayCase = " + arrayCase.length);
-        System.out.println("arrayCase = " + arrayCase[2]);
-        System.out.println("commandsCase = " + commandsCase.toString());
+        System.out.println("commandsCase = " + commandsCase[0].length);
 
         //i부터 j까지 추출하고, 정렬한 뒤, k번째 수 출력
 //        for (int i = 0; i < commands.size(); i++) {
 //        }
-
+        for (int[] cases : commandsCase) {
+            Arrays.stream(arrayCase).toArray();
+        }
     }
 
     public static void main(String[] args) {
