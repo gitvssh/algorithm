@@ -24,7 +24,7 @@ import java.util.Arrays;
 public class NumberK {
 
     int[] arrayCase = {1, 5, 2, 6, 3, 7, 4};
-    int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
+    int[][] commandsCase = {{2, 5, 3} };//, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
 
     ArrayList<int[]> arrayC = new ArrayList<int[]>();
@@ -34,9 +34,6 @@ public class NumberK {
         arrayC.add(arrayCase);
         System.out.println("commandsCase = " + commandsCase[0].length);
 
-        //i부터 j까지 추출하고, 정렬한 뒤, k번째 수 출력
-//        for (int i = 0; i < commands.size(); i++) {
-//        }
         for (int[] cases : commandsCase) {
             Arrays.stream(arrayCase).toArray();
         }
