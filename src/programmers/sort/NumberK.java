@@ -2,6 +2,7 @@ package programmers.sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * 문제 설명
@@ -24,7 +25,7 @@ import java.util.Arrays;
 public class NumberK {
 
     int[] arrayCase = {1, 5, 2, 6, 3, 7, 4};
-    int[][] commandsCase = {{2, 5, 3} };//, {4, 4, 1}, {1, 7, 3}};
+    int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
 
     ArrayList<int[]> arrayC = new ArrayList<int[]>();
@@ -32,9 +33,22 @@ public class NumberK {
 
     public void test() {
         arrayC.add(arrayCase);
-        System.out.println("commandsCase = " + commandsCase[0].length);
+//        System.out.println("commandsCase = " + commandsCase[0].length);
 
         for (int[] cases : commandsCase) {
+//            System.out.println("called cases" + cases.length);
+//            System.out.println("cases[0] = " + cases[0]);
+//            System.out.println("cases[0] = " + cases[1]);
+            int[] ints = IntStream.range(cases[0], cases[1])
+                    .toArray();
+            for (int anInt : ints) {
+                System.out.println("ints = " + ints);
+                System.out.println("anInt = " + anInt);
+            }
+//                    .mapToObj(i -> arr[i])
+//                    .toArray(String[]::new);
+//            전체 배열, 단위 배열
+
             Arrays.stream(arrayCase).toArray();
         }
     }
