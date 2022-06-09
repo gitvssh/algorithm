@@ -24,7 +24,7 @@ import java.util.stream.IntStream;
  */
 public class NumberK {
 
-    int[] arrayCase = {1, 5, 2, 6, 3, 7, 4};
+    int[] testCase = {1, 5, 2, 6, 3, 7, 4};
     int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
 
@@ -32,15 +32,24 @@ public class NumberK {
 
 
     public void test() {
-        arrayC.add(arrayCase);
+        arrayC.add(testCase);
 //        System.out.println("commandsCase = " + commandsCase[0].length);
-
-        for (int[] cases : commandsCase) {
+        
+        //테스트케이스 조건별 로직
+        for (int[] unitcases : commandsCase) {
 //            System.out.println("called cases" + cases.length);
 //            System.out.println("cases[0] = " + cases[0]);
 //            System.out.println("cases[0] = " + cases[1]);
-            int[] ints = IntStream.range(cases[0], cases[1])
+
+            //1. 배열 추출
+            int[] ints = IntStream.range(unitcases[0], unitcases[1])
                     .toArray();
+
+            //2. 배열 정렬
+
+            //3. 목표값 적재
+
+            //4. 결과값 반환
             for (int anInt : ints) {
                 System.out.println("ints = " + ints);
                 System.out.println("anInt = " + anInt);
@@ -49,7 +58,7 @@ public class NumberK {
 //                    .toArray(String[]::new);
 //            전체 배열, 단위 배열
 
-            Arrays.stream(arrayCase).toArray();
+            Arrays.stream(testCase).toArray();
         }
     }
 
