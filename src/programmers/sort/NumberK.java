@@ -1,5 +1,8 @@
 package programmers.sort;
 
+import programmers.recursive.LeetCode329;
+import programmers.recursive.LeetCode329M;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.IntStream;
@@ -63,8 +66,17 @@ public class NumberK {
     }
 
     public static void main(String[] args) {
-        NumberK numberK = new NumberK();
-        numberK.test();
+//        NumberK numberK = new NumberK();
+//        numberK.test();
+        LeetCode329 leetCode329 = new LeetCode329();
+        LeetCode329M leetCode322 = new LeetCode329M();
+        int[][] testcase = {{7,7,5},{2,4,6},{8,2,0}};
+//        int[][] testcase = {{1,2}};
+
+//        int result = leetCode322.longestIncreasingPath(testcase);
+        int result = leetCode329.longestIncreasingPath(testcase);
+        System.out.println("result = " + result);
+
     }
 
     public int[] solution(int[] array, int[][] commands) {
