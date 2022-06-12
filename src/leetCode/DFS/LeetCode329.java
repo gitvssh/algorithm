@@ -1,11 +1,9 @@
-package programmers.recursive;
+package leetCode.DFS;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class LeetCode329 {
-
-
     int length = 0;
 
     int heightPos = 0;
@@ -35,16 +33,11 @@ public class LeetCode329 {
     }
 
     private int checkPath(int[][] matrix, int value, int length, int tempHeight, int tempWidth) {
-        if (height == heightPos && width == widthPos) {//마지막 탈출
-            return length;
-        }
         if (value < matrix[tempHeight][tempWidth]) { //값 비교, 재귀 호출 여부 판단
-
             testArray.add(length);
             if ((tempHeight - 1) > -1) {
                 if (checkPath(matrix, matrix[tempHeight][tempWidth], length + 1, tempHeight - 1, tempWidth) > length) {
                     testArray.add(length + 1);
-
                 }
             }
             if ((tempHeight + 1) < height) {

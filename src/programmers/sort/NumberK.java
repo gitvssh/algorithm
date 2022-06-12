@@ -1,7 +1,6 @@
 package programmers.sort;
 
-import programmers.recursive.LeetCode329;
-import programmers.recursive.LeetCode329M;
+import leetCode.DFS.LeetCode209;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,13 +35,8 @@ public class NumberK {
 
     public void test() {
         arrayC.add(testCase);
-//        System.out.println("commandsCase = " + commandsCase[0].length);
-        
         //테스트케이스 조건별 로직
         for (int[] unitcases : commandsCase) {
-//            System.out.println("called cases" + cases.length);
-//            System.out.println("cases[0] = " + cases[0]);
-//            System.out.println("cases[0] = " + cases[1]);
 
             //1. 배열 추출
             int[] ints = IntStream.range(unitcases[0], unitcases[1])
@@ -57,8 +51,6 @@ public class NumberK {
                 System.out.println("ints = " + ints);
                 System.out.println("anInt = " + anInt);
             }
-//                    .mapToObj(i -> arr[i])
-//                    .toArray(String[]::new);
 //            전체 배열, 단위 배열
 
             Arrays.stream(testCase).toArray();
@@ -66,17 +58,10 @@ public class NumberK {
     }
 
     public static void main(String[] args) {
-//        NumberK numberK = new NumberK();
-//        numberK.test();
-        LeetCode329 leetCode329 = new LeetCode329();
-        LeetCode329M leetCode322 = new LeetCode329M();
-        int[][] testcase = {{7,7,5},{2,4,6},{8,2,0}};
-//        int[][] testcase = {{1,2}};
-
-//        int result = leetCode322.longestIncreasingPath(testcase);
-        int result = leetCode329.longestIncreasingPath(testcase);
+        LeetCode209 leetCode209 = new LeetCode209();
+        int[][] testcase = {{0,1}};
+        boolean result = leetCode209.canFinish(2,testcase);
         System.out.println("result = " + result);
-
     }
 
     public int[] solution(int[] array, int[][] commands) {
