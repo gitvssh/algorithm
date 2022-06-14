@@ -30,38 +30,35 @@ public class NumberK {
     int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
     int[] returnsCase = {5, 6, 3};
 
-    ArrayList<int[]> arrayC = new ArrayList<int[]>();
+    ArrayList<Integer> arrayC = new ArrayList<>();
 
 
     public void test() {
-        arrayC.add(testCase);
         //테스트케이스 조건별 로직
         for (int[] unitcases : commandsCase) {
 
             //1. 배열 추출
-            int[] ints = IntStream.range(unitcases[0], unitcases[1])
-                    .toArray();
+            int[] slicedArray = Arrays.copyOfRange(testCase, unitcases[0]-1, unitcases[1]);
 
             //2. 배열 정렬
-
             //3. 목표값 적재
-
-            //4. 결과값 반환
+            int[] ints = Arrays.stream(slicedArray).sorted().toArray();
+            int result2 = ints[unitcases[2]-1];
+            System.out.println("unitcases = " + unitcases[2]);
+            System.out.println("result2 = " + result2);
             for (int anInt : ints) {
-                System.out.println("ints = " + ints);
                 System.out.println("anInt = " + anInt);
             }
-//            전체 배열, 단위 배열
-
-            Arrays.stream(testCase).toArray();
+//            arrayC.add(result);
         }
+        System.out.println("testCase = " + arrayC);
+            //4. 결과값 반환
     }
 
     public static void main(String[] args) {
-        LeetCode209 leetCode209 = new LeetCode209();
-        int[][] testcase = {{0,1}};
-        boolean result = leetCode209.canFinish(2,testcase);
-        System.out.println("result = " + result);
+        NumberK numberK = new NumberK();
+        numberK.test();
+
     }
 
     public int[] solution(int[] array, int[][] commands) {
