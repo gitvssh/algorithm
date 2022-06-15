@@ -33,7 +33,6 @@ public class NumberK {
     public void test() {
         //테스트케이스 조건별 로직
         for (int[] unitcases : commandsCase) {
-
             int from = unitcases[0] - 1;
             int to = unitcases[1];
             int targetNum = unitcases[2] - 1;
@@ -43,17 +42,17 @@ public class NumberK {
 
             //2. 배열 정렬
             //3. 목표값 적재
-            int[] sortedArray = Arrays.stream(slicedArray).sorted().toArray();
+//            int[] sortedArray = Arrays.stream(slicedArray).sorted().toArray();
+            //스트림 쓸 필요 없고, 신규 생성하지 않고 정렬함수 쓰면 바로 정렬이 됨
+            Arrays.sort(slicedArray);
 
-            int target = sortedArray[targetNum];
+//            int target = sortedArray[targetNum];
+            int target = slicedArray[targetNum];
             arrayC.add(target);
         }
-        int[] ints = arrayC.stream().mapToInt(y -> y).toArray();
-        System.out.println("ints = " + ints);
-        for (int anInt : ints) {
-            System.out.println("anInt = " + anInt);
-        }
+        //어레이리스트 스트림으로 바꾸고, 다시 배열로 바꾸는 것 불필요함, 결과값에 바로 저장하면 됨
         //4. 결과값 반환
+        int[] ints = arrayC.stream().mapToInt(y -> y).toArray();
     }
 
     public static void main(String[] args) {
