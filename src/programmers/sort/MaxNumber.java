@@ -22,8 +22,6 @@ numbers의 원소는 0 이상 1,000 이하입니다.
     9 + 91 + 902 + 6 + 62 +322 +1 + 0
 
 해시테이블 사용?
-
-
 */
 public class MaxNumber {
     public String solution(int[] numbers) {
