@@ -57,13 +57,6 @@ public class NumberK {
         }
     }
 
-    public static void main(String[] args) {
-        LeetCode209 leetCode209 = new LeetCode209();
-        int[][] testcase = {{0,1}};
-        boolean result = leetCode209.canFinish(2,testcase);
-        System.out.println("result = " + result);
-    }
-
     public int[] solution(int[] array, int[][] commands) {
         int[] answer = {};
         return answer;
