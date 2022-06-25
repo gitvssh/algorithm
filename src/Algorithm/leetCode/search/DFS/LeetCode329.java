@@ -1,4 +1,4 @@
-package leetCode.DFS;
+package Algorithm.leetCode.search.DFS;
 
 import java.util.ArrayList;
 import java.util.Collections;

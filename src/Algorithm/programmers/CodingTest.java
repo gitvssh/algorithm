@@ -1,4 +1,4 @@
-package programmers;
+package Algorithm.programmers;
 
 public class CodingTest {
     final int[][] dir = {{-1,0},{0,-1},{1,0},{0,1}};

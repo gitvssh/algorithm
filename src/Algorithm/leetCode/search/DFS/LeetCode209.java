@@ -1,6 +1,4 @@
-package leetCode.DFS;
-
-import java.util.Arrays;
+package Algorithm.leetCode.search.DFS;
 
 /*
 There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1.

@@ -1,4 +1,4 @@
-package leetCode.BFS;
+package Algorithm.leetCode.search.BFS;
 
 import java.util.HashSet;
 import java.util.Set;

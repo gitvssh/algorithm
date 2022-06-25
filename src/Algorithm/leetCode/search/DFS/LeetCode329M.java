@@ -1,7 +1,4 @@
-package leetCode.DFS;
-
-import java.util.ArrayList;
-import java.util.Collections;
+package Algorithm.leetCode.search.DFS;
 
 public class LeetCode329M {
 

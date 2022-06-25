@@ -1,6 +1,4 @@
-package programmers.array;
-
-import java.util.Arrays;
+package Algorithm.programmers.array;
 
 public class Array01 {
     public int[] solution(int[] arr) {

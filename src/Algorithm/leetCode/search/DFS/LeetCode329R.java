@@ -1,4 +1,4 @@
-package leetCode.DFS;
+package Algorithm.leetCode.search.DFS;
 
 public class LeetCode329R {
 
