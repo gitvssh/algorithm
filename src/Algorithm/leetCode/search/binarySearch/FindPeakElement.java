@@ -36,7 +36,7 @@ public class FindPeakElement implements TestCase {
         } else {
             //log(n) 다음 기준점
             int m = (start + end) / 2;
-            // 탈출 조건
+            // 탈출 조건(최고점)
             if (num[m - 1] < num[m]  && num[m] > num[m + 1]) {
                 return m;
                 //왼쪽 탐색

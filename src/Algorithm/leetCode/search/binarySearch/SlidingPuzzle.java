@@ -20,12 +20,20 @@ public class SlidingPuzzle implements TestCase {
     public int slidingPuzzle(int[][] board) {
         //1. 초기값 세팅
         String target = "123450";
-        String start = "";
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
-                start += board[i][j];
-            }
+
+//        String start = "";
+//        for (int i = 0; i < board.length; i++) {
+//            for (int j = 0; j < board[0].length; j++) {
+//                start += board[i][j];
+//            }
+//        }
+        StringBuilder start_= new StringBuilder();
+
+        for(int i= 0; i< 2; i++){
+            for(int j= 0; j< 3; j++)
+                start_.append(board[i][j]);
         }
+        String start= start_.toString();
 
         HashSet<String> visited = new HashSet<>();
         int[][] dirs = new int[][]{{1, 3}, {0, 2, 4}, {1, 5}, {0, 4}, {1, 3, 5}, {2, 4}};
