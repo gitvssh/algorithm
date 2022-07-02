@@ -1,11 +1,10 @@
 import Algorithm.TestCase;
-import Algorithm.leetCode.search.binarySearch.FindPeakElement;
-import Algorithm.programmers.level1.PushKeypad;
+import Algorithm.programmers.search.bruteforce.MockExam;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new PushKeypad();
+        TestCase testCase = new MockExam();
         testCase.test();
     }
 }
