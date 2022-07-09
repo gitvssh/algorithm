@@ -1,5 +1,5 @@
 import Algorithm.TestCase;
-import Algorithm.programmers.level1.GymSuit;
+import Algorithm.programmers.greedy.GymSuit;
 
 
 public class Algorithm {
