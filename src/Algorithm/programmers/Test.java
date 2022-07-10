@@ -2,12 +2,12 @@ package Algorithm.programmers;
 
 import Algorithm.TestCase;
 
+import java.util.stream.IntStream;
+
 public class Test implements TestCase {
     @Override
     public void test() {
-        long n = 1;
-        boolean b = (Math.sqrt(n) - (int) Math.sqrt(n)) == 0 ? true : false;
-
-        System.out.println("b = " + b);
+        int[] a = {1, 2, 3, 4};
+        int[] b = {-3, -1, 0, 2};
     }
 }
