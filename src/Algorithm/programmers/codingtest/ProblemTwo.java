@@ -3,7 +3,7 @@ package Algorithm.programmers.codingtest;
 import Algorithm.TestCase;
 
 /*
-복잡하게 안하고 수학적으로 계산해서 구현해도 될 것 같음
+복잡하게 안하고 수식으로 계산해서 구현해도 될 것 같음
 시간절약 가능
 
 n*n 정사각형임

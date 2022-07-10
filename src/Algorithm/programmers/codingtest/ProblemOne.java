@@ -17,14 +17,14 @@ public class ProblemOne implements TestCase {
         boolean change = false;
         for (int i = grade.length - 2; i >= 0; i--) {
             int diff = checkDiff(grade[i + 1] - grade[i]);
-            System.out.println("diff = " + diff);
-            System.out.println("grade[i] = " + grade[i]);
+//            System.out.println("diff = " + diff);
+//            System.out.println("grade[i] = " + grade[i]);
             if (diff < 0) {
                 grade[i] =grade[i]+diff;
                 answer -= diff;
             }
-            System.out.println("grade[i] = " + grade[i]);
-            System.out.println("answer = " + answer);
+//            System.out.println("grade[i] = " + grade[i]);
+//            System.out.println("answer = " + answer);
         }
         return answer;
     }
