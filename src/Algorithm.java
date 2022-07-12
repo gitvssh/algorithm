@@ -1,10 +1,10 @@
 import Algorithm.TestCase;
-import Algorithm.programmers.Test;
+import Algorithm.programmers.level1.SecretMap;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new Test();
+        TestCase testCase = new SecretMap();
         testCase.test();
     }
 }
