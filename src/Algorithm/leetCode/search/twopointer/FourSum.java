@@ -1,4 +1,4 @@
-package algorithm.leetcode.search.array;
+package algorithm.leetcode.search.twopointer;
 
 import algorithm.TestCase;
 

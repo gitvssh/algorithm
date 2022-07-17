@@ -3,7 +3,7 @@ package algorithm.programmers.level1;
 import algorithm.TestCase;
 
 public class AddMatrix implements TestCase {
-    public int[][] solution(int[][] arr1, int[][] arr2) {1
+    public int[][] solution(int[][] arr1, int[][] arr2) {
         int[][] answer = new int[arr1.length][arr1[0].length];
         for (int i = 0; i < arr1.length; i++) {
             for (int j = 0; j < arr1[0].length; j++) {

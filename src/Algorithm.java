@@ -1,5 +1,5 @@
 import algorithm.TestCase;
-import algorithm.leetcode.search.bfs.SurroundedRegions;
+import algorithm.leetcode.search.dfs.SurroundedRegions;
 
 
 public class Algorithm {
