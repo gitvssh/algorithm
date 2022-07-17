@@ -1,10 +1,10 @@
 import algorithm.TestCase;
-import algorithm.leetcode.search.dfs.SurroundedRegions;
+import algorithm.programmers.level1.Dart;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new SurroundedRegions();
+        TestCase testCase = new Dart();
         testCase.test();
     }
 }
