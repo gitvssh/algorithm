@@ -10,44 +10,47 @@ public class Dart implements TestCase {
         String[] split = dartResult.split("");
         int n = 0;
         for (int i = 0; i < split.length; i++) {
-            if(split[i].matches("[\\d]")){
-                if(Integer.parseInt(split[i]) == 0){
-                    score[n-1] = 10;
+            //숫자면
+            if (split[i].matches("[\\d]")) {
+                if (Integer.parseInt(split[i]) == 0 && i != 0 && split[i - 1].matches("[\\d]")) {
+                    score[n - 1] = 10;
                     continue;
                 }
                 score[n] = Integer.parseInt(split[i]);
                 n++;
-                continue;
-            }else if(split[i].matches("[A-Z]")){
-                switch(split[i]){
-                    case "S":
-                        break;
+                //문자면
+            } else if (split[i].matches("[A-Z]")) {
+                switch (split[i]) {
                     case "D":
-                        score[n-1] = (int)Math.pow(score[n-1],2);
+                        score[n - 1] = (int) Math.pow(score[n - 1], 2);
                         break;
                     case "T":
-                        score[n-1] = (int)Math.pow(score[n-1],3);
+                        score[n - 1] = (int) Math.pow(score[n - 1], 3);
                         break;
+                    case "S":
                     default:
                         break;
                 }
-            }else {
-                if(split[i].equals("*")){
-                    for (int j = (n != 0 ? n-2 : 0); j < (n != 0 ? n : 1); j++) {
-                        score[j+n-2] = score[j+n-2] * 2;
+                //보너스면
+            } else {
+                if (split[i].equals("*")) {
+                    if(n==1) {
+                        score[0] *= 2;
+                        continue;
                     }
-                }else{
-                    score[n-1] = score[n-1] * -1;
+                    score[n-1] = score[n-1] * 2;
+                    score[n-2] = score[n-2] * 2;
+                } else {
+                    score[n - 1] = score[n - 1] * -1;
                 }
             }
 
         }
-        int answer = Arrays.stream(score).sum();
-        return answer;
+        return Arrays.stream(score).sum();
     }
+
     @Override
     public void test() {
-        int solution = solution("1S2D*3T");
-        System.out.println("solution = " + solution);
+        // remove print
     }
 }
