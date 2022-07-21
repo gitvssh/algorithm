@@ -31,19 +31,32 @@ public class FailRate implements TestCase {
         ConcurrentHashMap<Integer, Double> map = new ConcurrentHashMap<>();
         //1 정렬
         Arrays.sort(stages);
+        int stage = 0;
+        int cnt = 0;
         for (int i = 0; i < stages.length; i++) {
-            int cnt = 0;
-            if(i!=0) cnt = (stages[i]==stages[i-1])?cnt++:0;
-            map.put(i,(double)cnt);
+//            System.out.println(stages[i] + ", " +stages[(i-1)>0?i-1:0]);
+                if(cnt==1) stage++;
+            if(i!=0) {
+                cnt = (stages[i]!=stages[i-1])?1:++cnt;
+            }
+            map.put(stage,(double)cnt);
+//            if(i!=0) System.out.println(stages[i]!=stages[i-1]);
+//            System.out.println("cnt = " + cnt);
+//            System.out.println("cnt = " + (double)cnt);
         }
+        for (Integer integer : map.keySet()) {
+            System.out.println();
+            System.out.println("integer = " + integer + " map.get(integer) = " + map.get(integer));
+        }
+        int a = 0;
         return answer;
     }
     @Override
     public void test() {
         int[] solution = solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
-        for (int s : solution) {
-            System.out.println("s = " + s);
-        }
-        System.out.println(1/8d);
+//        for (int s : solution) {
+//            System.out.println("s = " + s);
+//        }
+//        System.out.println(1/8d);
     }
 }
