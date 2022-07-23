@@ -38,6 +38,8 @@ public class FailRate implements TestCase {
         for (int i = 0; i < stages.length; i++) {
             answer[stages[i]-1]++;
         }
+        
+        //소스트리 깃 커밋 테스트
         double total = answer[N];
         for (int i = N; i > 0; i--) {
             total += answer[i];
