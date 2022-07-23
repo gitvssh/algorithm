@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.concurrent.ConcurrentHashMap;
 
 /*
-* 실패율 계산(소수점)
-* 실패율 정렬
-* */
+ * 실패율 계산(소수점)
+ * 실패율 정렬
+ * */
 public class FailRate implements TestCase {
     public int[] solution(int N, int[] stages) {
         /*
@@ -20,37 +20,37 @@ public class FailRate implements TestCase {
         도달수 = 스테이지번호 이상인 수
         실패율 = 도달수 - 이전스테이지 클리어 수
 
-        1. 정렬
+        -- 1. 정렬
         2. 전체순회 하면서 해당 스테이지별 카운트 세기
         3. 공식에 따라 실패율 구하기
         4. 실패율 정렬 반환
         * */
         //실패율을 기준으로 정렬된 스테이지 번호 반환 배열
-        int[] answer = new int[stages.length];
+        int[] answer = new int[N+1];
+        double[] failRate = new double[N];
         //스테이지 번호와 실패율 저장
         ConcurrentHashMap<Integer, Double> map = new ConcurrentHashMap<>();
         //1 정렬
         Arrays.sort(stages);
+
         int stage = 0;
         int cnt = 0;
         for (int i = 0; i < stages.length; i++) {
-//            System.out.println(stages[i] + ", " +stages[(i-1)>0?i-1:0]);
-                if(cnt==1) stage++;
-            if(i!=0) {
-                cnt = (stages[i]!=stages[i-1])?1:++cnt;
-            }
-            map.put(stage,(double)cnt);
-//            if(i!=0) System.out.println(stages[i]!=stages[i-1]);
-//            System.out.println("cnt = " + cnt);
-//            System.out.println("cnt = " + (double)cnt);
+            answer[stages[i]-1]++;
+        }
+        double total = answer[N];
+        for (int i = N; i > 0; i--) {
+            total += answer[i];
+            map.put(answer[i],total);
         }
         for (Integer integer : map.keySet()) {
-            System.out.println();
-            System.out.println("integer = " + integer + " map.get(integer) = " + map.get(integer));
+
         }
+
         int a = 0;
         return answer;
     }
+
     @Override
     public void test() {
         int[] solution = solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
