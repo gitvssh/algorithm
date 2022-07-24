@@ -12,13 +12,13 @@ public class NumberXtoN implements TestCase {
             start += x;
             temp.add(start);
         }
-        return temp.stream().mapToLong(s->s).toArray();
+        return temp.stream().mapToLong(s -> s).toArray();
     }
 
     @Override
     public void test() {
-        int x = 2, n = 5;
-        long[] solution = solution(x, n);
-        System.out.println("solution = " + solution.toString());
+        int x = 2;
+        int n = 5;
+        solution(x, n);
     }
 }

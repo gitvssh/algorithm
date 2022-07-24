@@ -25,7 +25,6 @@ public class NumberK {
 
     int[] testCase = {1, 5, 2, 6, 3, 7, 4};
     int[][] commandsCase = {{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
-    int[] returnsCase = {5, 6, 3};
 
     ArrayList<Integer> arrayC = new ArrayList<>();
 
@@ -42,28 +41,13 @@ public class NumberK {
 
             //2. 배열 정렬
             //3. 목표값 적재
-//            int[] sortedArray = Arrays.stream(slicedArray).sorted().toArray();
             //스트림 쓸 필요 없고, 신규 생성하지 않고 정렬함수 쓰면 바로 정렬이 됨
             Arrays.sort(slicedArray);
-
-//            int target = sortedArray[targetNum];
             int target = slicedArray[targetNum];
             arrayC.add(target);
         }
         //어레이리스트 스트림으로 바꾸고, 다시 배열로 바꾸는 것 불필요함, 결과값에 바로 저장하면 됨
         //4. 결과값 반환
-        int[] ints = arrayC.stream().mapToInt(y -> y).toArray();
-    }
-
-    public static void main(String[] args) {
-        NumberK numberK = new NumberK();
-        numberK.test();
-
-    }
-
-    public int[] solution(int[] array, int[][] commands) {
-        int[] answer = {};
-        return answer;
     }
 
 }

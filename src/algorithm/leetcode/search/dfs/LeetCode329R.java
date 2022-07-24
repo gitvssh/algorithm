@@ -26,7 +26,8 @@ public class LeetCode329R {
         if (cache[i][j] != 0) return cache[i][j];
         int max = 1;
         for (int[] dir : dirs) {
-            int x = i + dir[0], y = j + dir[1];
+            int x = i + dir[0];
+            int y = j + dir[1];
             if (x < 0 || x >= height || y < 0 || y >= width || matrix[x][y] <= matrix[i][j]) continue;
             int len = checkPath(matrix, x, y, cache);
             max = Math.max(max, len);

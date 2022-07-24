@@ -1,7 +1,7 @@
 package algorithm.programmers;
 
 public class CodingTest {
-    final int[][] dir = {{-1,0},{0,-1},{1,0},{0,1}};
+    final int[][] dir = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
     public int solution(int[][] office, int r, int c, String[] move) {
         /*
@@ -23,10 +23,10 @@ public class CodingTest {
         무언가 흐름이 꼬임, 최초 초기화시키고 로봇 안움직임
         좌표 출력 디버깅?
         */
-        Robot myRobot = new Robot(office,r,c);
+        Robot myRobot = new Robot(office, r, c);
 
-        for(int i=0;i<move.length;i++){
-            if(!myRobot.canMove(office, move[i])) continue;//방향전환 다음 명령어
+        for (int i = 0; i < move.length; i++) {
+            if (!myRobot.canMove(office, move[i])) continue;//방향전환 다음 명령어
             myRobot.move();
             myRobot.clean(office);
         }
@@ -36,32 +36,33 @@ public class CodingTest {
         return answer;
     }
 
-    private class Robot{
-        private int x = 0, y = 0;
+    private class Robot {
+        private int x = 0;
+        private int y = 0;
         private int direction = 0; //0:동, 1:서, 2:남, 3:북 //
         private int totalDust = 0;
 
-        public Robot(){
+        public Robot() {
 
         }
 
-        public int getTotalDust(){
+        public int getTotalDust() {
             return this.totalDust;
         }
 
-        public Robot(int[][] office, int r,int c){
+        public Robot(int[][] office, int r, int c) {
             y = r;
             x = c;
             this.clean(office);
         }
 
-        private void move(){
+        private void move() {
             x += dir[direction][1];//다음 x좌표
             y += dir[direction][0];//다음 y좌표
         }
 
-        private boolean canMove(int[][] office, String move){
-            if(move != "go"){
+        private boolean canMove(int[][] office, String move) {
+            if (move.equals("go")) {
                 this.changeDir(move);
                 return false;//? 방향만 바꾸고 다음명령어, 이동 안함
             }
@@ -71,24 +72,20 @@ public class CodingTest {
 
             int i = x + dir[direction][1];//다음 x좌표
             int j = y + dir[direction][0];//다음 y좌표
-            if(i<0 || i>office.length || j<0 || j>office.length || office[j][i]==-1){
-                return false;
-            }else{
-                return true;
-            }
+            return i >= 0 && i <= office.length && j >= 0 && j <= office.length && office[j][i] != -1;
         }
 
-        private void changeDir(String move){
-            if(move=="left"){//반시계 ++
-                if(direction==3) direction=0;
+        private void changeDir(String move) {
+            if (move.equals("left")) {//반시계 ++
+                if (direction == 3) direction = 0;
                 direction++;
-            }else{//"right" 시계 --
-                if(direction==0) direction=3;
+            } else {//"right" 시계 --
+                if (direction == 0) direction = 3;
                 direction--;
             }
         }
 
-        private void clean(int[][] office){
+        private void clean(int[][] office) {
             totalDust += office[this.y][this.x];
             office[this.y][this.x] = 0;
         }

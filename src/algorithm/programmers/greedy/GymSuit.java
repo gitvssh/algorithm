@@ -26,7 +26,6 @@ public class GymSuit implements TestCase {
         for (int i : lost) {
             losts.add(i);
         }
-        System.out.println(reserves.size());
         do {
             boolean flag = false;
             int num = 0;
@@ -45,30 +44,26 @@ public class GymSuit implements TestCase {
                     target = reserves.get(i);
                 }
                 switch (num) {
-                    case 2:
-                        break;
                     case 1:
                         losts.remove(reserves.get(i));
                     case 0:
                         flag = true;
                         reserves.remove(reserves.get(i));
                         break;
+                    case 2:
+                    default:
+                        break;
                 }
             }
-            System.out.println("num = " + num);
-            System.out.println("flag = " + flag);
-            if (num != 0 ||flag == true) hasOne = false;
-            System.out.println("hasOne = " + hasOne);
+            if (num != 0 || flag) hasOne = false;
         } while (hasOne);
 
-//        System.out.println(reserves.size());
-        for (int i = 0; i < reserves.size(); i++) {
-            if (losts.contains(reserves.get(i) + 1)) {
-                System.out.println("reserves.get(i) + 1 = " + (reserves.get(i) + 1));
-                losts.remove(new Integer(reserves.get(i) + 1));
+        for (Integer integer : reserves) {
+            if (losts.contains(integer + 1)) {
+                losts.remove(new Integer(integer + 1));
             }
-            if (losts.contains(reserves.get(i) - 1)) {
-                losts.remove(new Integer(reserves.get(i) - 1));
+            if (losts.contains(integer - 1)) {
+                losts.remove(new Integer(integer - 1));
             }
         }
         return n - losts.size();
@@ -76,7 +71,6 @@ public class GymSuit implements TestCase {
 
     @Override
     public void test() {
-        int solution = solution(5, new int[]{2, 4}, new int[]{3});
-        System.out.println("solution = " + solution);
+        solution(5, new int[]{2, 4}, new int[]{3});
     }
 }

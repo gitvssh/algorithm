@@ -15,11 +15,6 @@ public class AddMatrix implements TestCase {
 
     @Override
     public void test() {
-        int[][] solution = solution(new int[][]{{1, 2}, {2, 3}}, new int[][]{{3, 4}, {5, 6}});
-        for (int[] ints : solution) {
-            for (int anInt : ints) {
-                System.out.println("anInt = " + anInt);
-            }
-        }
+        solution(new int[][]{{1, 2}, {2, 3}}, new int[][]{{3, 4}, {5, 6}});
     }
 }

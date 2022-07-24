@@ -37,7 +37,7 @@ public class FindPeakElement implements TestCase {
             //log(n) 다음 기준점
             int m = (start + end) / 2;
             // 탈출 조건(최고점)
-            if (num[m - 1] < num[m]  && num[m] > num[m + 1]) {
+            if (num[m - 1] < num[m] && num[m] > num[m + 1]) {
                 return m;
                 //왼쪽 탐색
             } else if (num[m - 1] > num[m] && num[m] > num[m + 1]) {
@@ -52,8 +52,6 @@ public class FindPeakElement implements TestCase {
     @Override
     public void test() {
         int[] num = {1, 2, 3, 2};
-        int peakElement = findPeakElement(num);
-        System.out.println("인덱스 = " + peakElement);
-        System.out.println("해당 인덱스 값 = " + num[peakElement]);
+        findPeakElement(num);
     }
 }

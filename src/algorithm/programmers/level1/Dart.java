@@ -9,11 +9,13 @@ public class Dart implements TestCase {
         int[] score = new int[3];
         String[] split = dartResult.split("");
         int n = 0;
-        for (int i = 0; i < split.length; i++) {
+        int i = 0;
+        while (i < split.length) {
             //숫자면
             if (split[i].matches("[\\d]")) {
                 if (Integer.parseInt(split[i]) == 0 && i != 0 && split[i - 1].matches("[\\d]")) {
                     score[n - 1] = 10;
+                    i++;
                     continue;
                 }
                 score[n] = Integer.parseInt(split[i]);
@@ -34,17 +36,19 @@ public class Dart implements TestCase {
                 //보너스면
             } else {
                 if (split[i].equals("*")) {
-                    if(n==1) {
+                    if (n == 1) {
                         score[0] *= 2;
+                        i++;
                         continue;
                     }
-                    score[n-1] = score[n-1] * 2;
-                    score[n-2] = score[n-2] * 2;
+                    score[n - 1] = score[n - 1] * 2;
+                    score[n - 2] = score[n - 2] * 2;
                 } else {
                     score[n - 1] = score[n - 1] * -1;
                 }
             }
 
+            i++;
         }
         return Arrays.stream(score).sum();
     }

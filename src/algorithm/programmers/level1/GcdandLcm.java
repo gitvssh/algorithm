@@ -11,7 +11,7 @@ public class GcdandLcm implements TestCase {
     }
 
     private int gcd(int p, int q) {
-        if(q == 0 ) return p;
+        if (q == 0) return p;
         return gcd(q, p % q);
     }
 
@@ -21,9 +21,6 @@ public class GcdandLcm implements TestCase {
 
     @Override
     public void test() {
-        int[] solution = solution(3, 12);
-        for (int i : solution) {
-            System.out.println("i = " + i);
-        }
+        solution(3, 12);
     }
 }

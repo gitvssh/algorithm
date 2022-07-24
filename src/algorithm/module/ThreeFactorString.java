@@ -1,30 +1,38 @@
 package algorithm.module;
 
-public class ThreeFactorString {
+import algorithm.TestCase;
+
+public class ThreeFactorString implements TestCase {
     private String getString(int i, int j, int k) {
-        int a = 0, b = 0, c = 0;
+        int a = 0;
+        int b = 0;
+        int c = 0;
         if (i > j) {//i>j
             if (i > k) {//i>j?k
                 a = i;
-                b = (j > k) ? j : k;
-                c = (j > k) ? k : j;
+                b = Math.max(j, k);
+                c = Math.min(j, k);
             } else {//i?k>j
-                a = (i > k) ? i : k;
-                b = (i > k) ? k : i;
+                a = Math.max(i, k);
+                b = Math.min(i, k);
                 c = j;
             }
         } else {//j>i
             if (i > k) {
                 a = j;
-                b = (i > k) ? i : k;
-                c = (i > k) ? k : i;
+                b = Math.max(i, k);
+                c = Math.min(i, k);
             }
         }
         StringBuilder sb = new StringBuilder();
         sb.append(a);
         sb.append(b);
         sb.append(c);
-        String s = sb.toString();
-        return s;
+        return sb.toString();
+    }
+
+    @Override
+    public void test() {
+        getString(1, 2, 3);
     }
 }

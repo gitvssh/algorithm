@@ -13,7 +13,6 @@ public class Average implements TestCase {
 
     @Override
     public void test() {
-        double solution = solution(new int[]{1, 2, 3, 4});
-        System.out.println("solution = " + solution);
+        solution(new int[]{1, 2, 3, 4});
     }
 }

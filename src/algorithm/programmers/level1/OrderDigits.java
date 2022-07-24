@@ -17,7 +17,6 @@ public class OrderDigits implements TestCase {
 
     @Override
     public void test() {
-        long solution = solution(118372);
-        System.out.println("solution = " + solution);
+        solution(118372);
     }
 }

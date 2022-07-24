@@ -31,7 +31,7 @@ public class SecretMap implements TestCase {
             }
             sb2.append(bin2);
             for (int j = 0; j < n; j++) {
-                if ((sb.substring(j, j + 1).equals("0")) && ((sb2.substring(j, j + 1).equals("0")))) {
+                if ((sb.substring(j, j + 1).equals("0")) && sb2.substring(j, j + 1).equals("0")) {
                     resSb.append(" ");
                 } else {
                     resSb.append("#");
@@ -48,6 +48,6 @@ public class SecretMap implements TestCase {
 
     @Override
     public void test() {
-        String[] solution = solution(5, new int[]{9, 20, 28, 18, 11}, new int[]{30, 1, 21, 17, 28});
+        solution(5, new int[]{9, 20, 28, 18, 11}, new int[]{30, 1, 21, 17, 28});
     }
 }

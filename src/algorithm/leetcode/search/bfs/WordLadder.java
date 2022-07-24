@@ -16,49 +16,39 @@ import java.util.Set;
  * 전체에서 가장 짧은 길이를 찾아야 함
  *
  * */
-public class WordLadder{
+public class WordLadder {
 
-    private String beginWord, endWord;
-    private Set<String> wordList = new HashSet();
+    private String beginWord;
+    private String endWord;
+    private Set<String> wordList = new HashSet<>();
 
-    private void init() {
-        beginWord = "hit";
-        endWord = "cog";
-        wordList.add("hot");
-        wordList.add("dot");
-        wordList.add("lot");
-        wordList.add("log");
-        wordList.add("cog");
-    }
-
-    public WordLadder() {
-        init();
+    public WordLadder(String beginWord, String endWord) {
+        this.beginWord = beginWord;
+        this.endWord = endWord;
     }
 
     public void test() {
-        int result = ladderLength(beginWord,endWord,wordList);
-        System.out.println("result = " + result);
+        ladderLength(beginWord, endWord, wordList);
     }
 
-    public int ladderLength(String beginWord, String endWord, Set<String> wordList) {
+    public void ladderLength(String beginWord, String endWord, Set<String> wordList) {
         //컬렉션 공통함수
-        Set<String> beginSet = new HashSet<String>(), endSet = new HashSet<String>();
+        Set<String> beginSet = new HashSet<>();
+        Set<String> endSet = new HashSet<>();
 
-        int len = 1;
-        int strLen = beginWord.length();
         //방문노드 체크
-        HashSet<String> visited = new HashSet<String>();
+        HashSet<String> visited = new HashSet<>();
 
         beginSet.add(beginWord);
         endSet.add(endWord);
-        while (!beginSet.isEmpty() && !endSet.isEmpty()) {
+        while (!beginSet.isEmpty()) {
             if (beginSet.size() > endSet.size()) {
                 Set<String> set = beginSet;
                 beginSet = endSet;
                 endSet = set;
             }
 
-            Set<String> temp = new HashSet<String>();
+            Set<String> temp = new HashSet<>();
             //뎁스별 전체검사
             for (String word : beginSet) {
                 //파싱
@@ -71,7 +61,7 @@ public class WordLadder{
                         String target = String.valueOf(chs);
 
                         if (endSet.contains(target)) {
-                            return len + 1;
+                            return;
                         }
 
                         //최초방문 && 단어리스트 포함
@@ -83,11 +73,7 @@ public class WordLadder{
                     }
                 }
             }
-
             beginSet = temp;
-            len++;
         }
-
-        return 0;
     }
 }

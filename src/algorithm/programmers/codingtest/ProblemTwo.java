@@ -33,57 +33,44 @@ for i
  * */
 public class ProblemTwo implements TestCase {
 
-    public int[][] solution(int n, boolean horizontal) {
+    public int[][] solution(int n) {
         int[][] answer = new int[n][n];
         answer[0][0] = 1;
         for (int i = 1; i < n; i++) {
-            System.out.println("i = " + i);
-            if(i%2==0){
-                solve(answer,i,horizontal);
-            }else{
-                solve2(answer,i,horizontal);
+            if (i % 2 == 0) {
+                solve(answer, i);
+            } else {
+                solve2(answer, i);
             }
         }
         return answer;
     }
 
     //시계방향
-    private void solve(int[][] answer, int i, boolean horizontal) {
-        int n = i;//바운더리
-        int start = (n*n);
-        for (int j = 0; j < n; j++) {
-            answer[n][j] = ++start;
-            System.out.println("증가 answer[n][j] = " + answer[n][j]);
+    private void solve(int[][] answer, int i) {
+        int start = (i * i);
+        for (int j = 0; j < i; j++) {
+            answer[i][j] = ++start;
         }
-        for (int j = n; j >= 0; j--) {
-            answer[j][n] = ++start;
-            System.out.println("감소 answer[j][n] = " + answer[j][n]);
+        for (int j = i; j >= 0; j--) {
+            answer[j][i] = ++start;
         }
     }
 
     //반시계방향
-    private void solve2(int[][] answer, int i, boolean horizontal) {
-        int n = i;//바운더리
-        int start = (n*n);
-        for (int j = 0; j < n; j++) {
-            answer[j][n] = ++start;
-            System.out.println("감소 answer[j][n] = " + answer[j][n]);
+    private void solve2(int[][] answer, int i) {
+        int start = (i * i);
+        for (int j = 0; j < i; j++) {
+            answer[j][i] = ++start;
         }
-        for (int j = n; j >= 0; j--) {
-            answer[n][j] = ++start;
-            System.out.println("증가 answer[n][j] = " + answer[n][j]);
+        for (int j = i; j >= 0; j--) {
+            answer[i][j] = ++start;
         }
     }
 
     @Override
     public void test() {
         int n = 4;
-        boolean horizontal = true;
-        int[][] solution = solution(n, horizontal);
-        for (int i = 0; i < solution.length; i++) {
-            for (int j = 0; j < solution[0].length; j++) {
-                System.out.println("[x , y] = [" + solution[i][j] + " , " + solution[i][j] + " ]");
-            }
-        }
+        solution(n);
     }
 }

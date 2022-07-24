@@ -10,7 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 실패율 정렬
  * */
 public class FailRate implements TestCase {
-    public int[] solution(int N, int[] stages) {
+    public int[] solution(int n, int[] stages) {
         /*
         실패율 계산
         현재 멈춰있는 스테이지 번호가 담긴 배열
@@ -26,8 +26,8 @@ public class FailRate implements TestCase {
         4. 실패율 정렬 반환
         * */
         //실패율을 기준으로 정렬된 스테이지 번호 반환 배열
-        int[] answer = new int[N+1];
-        double[] failRate = new double[N];
+        int[] answer = new int[n + 1];
+        double[] failRate = new double[n];
         //스테이지 번호와 실패율 저장
         ConcurrentHashMap<Integer, Double> map = new ConcurrentHashMap<>();
         //1 정렬
@@ -36,14 +36,14 @@ public class FailRate implements TestCase {
         int stage = 0;
         int cnt = 0;
         for (int i = 0; i < stages.length; i++) {
-            answer[stages[i]-1]++;
+            answer[stages[i] - 1]++;
         }
-        
+
         //소스트리 깃 커밋 테스트
-        double total = answer[N];
-        for (int i = N; i > 0; i--) {
+        double total = answer[n];
+        for (int i = n; i > 0; i--) {
             total += answer[i];
-            map.put(answer[i],total);
+            map.put(answer[i], total);
         }
         for (Integer integer : map.keySet()) {
 
@@ -55,10 +55,6 @@ public class FailRate implements TestCase {
 
     @Override
     public void test() {
-        int[] solution = solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
-//        for (int s : solution) {
-//            System.out.println("s = " + s);
-//        }
-//        System.out.println(1/8d);
+        solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
     }
 }

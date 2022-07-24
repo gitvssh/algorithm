@@ -15,22 +15,21 @@ public class CaesarCipher implements TestCase {
         char[] chars = s.toCharArray();
         StringBuilder sb = new StringBuilder();
         for (char aChar : chars) {
-            if(aChar==' ') {
+            if (aChar == ' ') {
                 sb.append(' ');
                 continue;
             }
             if (Character.isUpperCase(aChar)) {
-                sb.append((char)(65 + ((aChar-65+n)%26)));
-//                sb.append(aChar=='Z'?'A':(char)(aChar+n));
+                sb.append((char) (65 + ((aChar - 65 + n) % 26)));
             } else {
-                sb.append((char)(97 + ((aChar-97+n)%26)));
+                sb.append((char) (97 + ((aChar - 97 + n) % 26)));
             }
         }
         return sb.toString();
     }
+
     @Override
     public void test() {
-        String ab = solution("a B z", 4);
-        System.out.println("ab = " + ab);
+        solution("a B z", 4);
     }
 }
