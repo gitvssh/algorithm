@@ -2,7 +2,7 @@ package algorithm.programmers.level1;
 
 import algorithm.TestCase;
 
-import java.util.Arrays;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /*
@@ -26,35 +26,59 @@ public class FailRate implements TestCase {
         4. 실패율 정렬 반환
         * */
         //실패율을 기준으로 정렬된 스테이지 번호 반환 배열
-        int[] answer = new int[n + 1];
-        double[] failRate = new double[n];
+        int[] stageClearCount = new int[n + 1];
+        int[] finalResult = new int[n];
         //스테이지 번호와 실패율 저장
         ConcurrentHashMap<Integer, Double> map = new ConcurrentHashMap<>();
         //1 정렬
         Arrays.sort(stages);
-
-        int stage = 0;
-        int cnt = 0;
-        for (int i = 0; i < stages.length; i++) {
-            answer[stages[i] - 1]++;
+        //2. 전체순회 하면서 해당 스테이지별 카운트 세기
+        for (int stage : stages) {
+            int stageNum = stage - 1;
+            stageClearCount[stageNum]++;
         }
 
-        //소스트리 깃 커밋 테스트
-        double total = answer[n];
+        double total = stageClearCount[n];
+        //3. 공식에 따라 실패율 구하기
         for (int i = n; i > 0; i--) {
-            total += answer[i];
-            map.put(answer[i], total);
+            total += stageClearCount[i - 1];
+            map.put(i - 1, 1 - (total - stageClearCount[i - 1]) / total);
         }
         for (Integer integer : map.keySet()) {
-
+            System.out.println("integer = " + integer + ", " + map.get(integer));
         }
+        //4. 실패율 정렬 반환
+        Map<Integer, Double> result = sortMapByValue(map);
 
-        int a = 0;
-        return answer;
+//        Set<Integer> integers = result.keySet();
+//        for (Integer integer : integers) {
+//            System.out.println("integer = " + integer);
+//        }
+        int count = 4;
+        for (Integer integer : result.keySet()) {
+            finalResult[count] = integer + 1;
+            count--;
+        }
+        return finalResult;
+    }
+
+    public static LinkedHashMap<Integer, Double> sortMapByValue(Map<Integer, Double> map) {
+        List<Map.Entry<Integer, Double>> entries = new LinkedList<>(map.entrySet());
+//        entries.sort(Comparator.naturalOrder(),(o1, o2) -> o1.getValue().compareTo(o2.getValue()));
+        Collections.sort(entries, Map.Entry.comparingByValue());
+
+        LinkedHashMap<Integer, Double> result = new LinkedHashMap<>();
+        for (Map.Entry<Integer, Double> entry : entries) {
+            result.put(entry.getKey(), entry.getValue());
+        }
+        return result;
     }
 
     @Override
     public void test() {
-        solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
+        int[] solution = solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
+        for (int i : solution) {
+            System.out.println("i = " + i);
+        }
     }
 }
