@@ -44,28 +44,20 @@ public class FailRate implements TestCase {
             total += stageClearCount[i - 1];
             map.put(i - 1, 1 - (total - stageClearCount[i - 1]) / total);
         }
-        for (Integer integer : map.keySet()) {
-            System.out.println("integer = " + integer + ", " + map.get(integer));
-        }
         //4. 실패율 정렬 반환
         Map<Integer, Double> result = sortMapByValue(map);
 
-//        Set<Integer> integers = result.keySet();
-//        for (Integer integer : integers) {
-//            System.out.println("integer = " + integer);
-//        }
-        int count = 4;
+        int count = n-1;
         for (Integer integer : result.keySet()) {
-            finalResult[count] = integer + 1;
+            finalResult[n-1-count] = integer + 1;
             count--;
         }
         return finalResult;
     }
 
-    public static LinkedHashMap<Integer, Double> sortMapByValue(Map<Integer, Double> map) {
+    public static Map<Integer, Double> sortMapByValue(Map<Integer, Double> map) {
         List<Map.Entry<Integer, Double>> entries = new LinkedList<>(map.entrySet());
-//        entries.sort(Comparator.naturalOrder(),(o1, o2) -> o1.getValue().compareTo(o2.getValue()));
-        Collections.sort(entries, Map.Entry.comparingByValue());
+        entries.sort(((o1, o2) -> Double.compare(o2.getValue(), o1.getValue())));
 
         LinkedHashMap<Integer, Double> result = new LinkedHashMap<>();
         for (Map.Entry<Integer, Double> entry : entries) {
@@ -76,9 +68,6 @@ public class FailRate implements TestCase {
 
     @Override
     public void test() {
-        int[] solution = solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
-        for (int i : solution) {
-            System.out.println("i = " + i);
-        }
+        solution(5, new int[]{2, 1, 2, 6, 2, 4, 3, 3});
     }
 }

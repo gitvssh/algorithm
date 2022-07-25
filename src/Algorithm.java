@@ -1,10 +1,10 @@
 import algorithm.TestCase;
-import algorithm.programmers.level1.FailRate;
+import algorithm.programmers.greedy.GymSuit;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new FailRate();
+        TestCase testCase = new GymSuit();
         testCase.test();
     }
 }

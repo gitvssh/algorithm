@@ -2,7 +2,7 @@ package algorithm.programmers.greedy;
 
 import algorithm.TestCase;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GymSuit implements TestCase {
     public int solution(int n, int[] lost, int[] reserve) {
@@ -17,60 +17,55 @@ public class GymSuit implements TestCase {
         체육복을 넘겨주거나 못주면 reserve에서 빼고, 넘겨받으면 lost에서 뺌
         최종적으로 n - lost.length로 리턴하면 됨됨
        */
-        ArrayList<Integer> reserves = new ArrayList<>();
-        ArrayList<Integer> losts = new ArrayList<>();
-        boolean hasOne = true;
-        for (int i : reserve) {
-            reserves.add(i);
+        Arrays.sort(lost);
+        Arrays.sort(reserve);
+        // 기본 0
+        int[] students = new int[n];
+        // 잃어버리면 -1
+        for (int lostStudent : lost) {
+            students[lostStudent - 1]--;
         }
-        for (int i : lost) {
-            losts.add(i);
+        // 여유분 +1
+        for (int reserveStudent : reserve) {
+            students[reserveStudent - 1]++;
         }
-        do {
-            boolean flag = false;
-            int num = 0;
-            for (int i = 0; i < reserves.size(); i++) {
-                int target = 0;
-                if (losts.contains(reserves.get(i))) {
-                    losts.remove(reserves.get(i));
-                    reserves.remove(reserves.get(i));
-                }
-                if (losts.contains(reserves.get(i) + 1)) {
-                    num++;
-                    target = reserves.get(i);
-                }
-                if (losts.contains(reserves.get(i) - 1)) {
-                    num++;
-                    target = reserves.get(i);
-                }
-                switch (num) {
-                    case 1:
-                        losts.remove(reserves.get(i));
-                    case 0:
-                        flag = true;
-                        reserves.remove(reserves.get(i));
-                        break;
-                    case 2:
-                    default:
-                        break;
-                }
-            }
-            if (num != 0 || flag) hasOne = false;
-        } while (hasOne);
 
-        for (Integer integer : reserves) {
-            if (losts.contains(integer + 1)) {
-                losts.remove(new Integer(integer + 1));
-            }
-            if (losts.contains(integer - 1)) {
-                losts.remove(new Integer(integer - 1));
+        // +1이상이 -1로 주는 작업
+        if (students[0] >= 1 && students[1] == -1) {
+            students[0] = 0;
+            students[1] = 0;
+        }
+        if (students[n-1] >= 1 && students[n-2] == -1) {
+            students[n-1] = 0;
+            students[n-2] = 0;
+        }
+        for (int j = 0; j < 2; j++) {
+            for (int i = 1; i < n; i++) {
+                if (students[i] < 1) continue;
+                if (i + 1 < n && students[i - 1] == -1 && students[i + 1] != -1) {
+                    students[i - 1] = 0;
+                    students[i] = 0;
+                } else if (i + 1 < n && students[i + 1] == -1 && students[i - 1] != -1) {
+                    students[i + 1] = 0;
+                    students[i] = 0;
+                }
             }
         }
-        return n - losts.size();
+        for (int i = 1; i < n; i++) {
+            if (students[i] < 1) continue;
+            if (i + 1 < n && students[i - 1] == -1) {
+                students[i - 1] = 0;
+                students[i] = 0;
+            } else if (i + 1 < n && students[i + 1] == -1) {
+                students[i + 1] = 0;
+                students[i] = 0;
+            }
+        }
+        return n - (int)Arrays.stream(students).filter(a -> a<0).count();
     }
 
     @Override
     public void test() {
-        solution(5, new int[]{2, 4}, new int[]{3});
+        solution(5, new int[]{2, 4}, new int[]{1, 3, 5});
     }
 }
