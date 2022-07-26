@@ -29,6 +29,7 @@ public class GymSuit implements TestCase {
         for (int reserveStudent : reserve) {
             students[reserveStudent - 1]++;
         }
+        Arrays.stream(students).filter(a -> a ==0).count();
 
         // +1이상이 -1로 주는 작업
         if (students[0] >= 1 && students[1] == -1) {

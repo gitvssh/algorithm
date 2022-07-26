@@ -31,7 +31,6 @@ public class MinimalRectangle implements TestCase {
                 .mapToInt(x -> x[1])
                 .max()
                 .orElse(0);
-
         return i + j;
     }
 
