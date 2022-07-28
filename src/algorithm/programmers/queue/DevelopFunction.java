@@ -25,7 +25,6 @@ public class DevelopFunction implements TestCase {
             // 개발 성공
             index++;
 
-
             cnt++;
             cnt += isMoreDeveloped(progresses, index);
             answerList.add(cnt);
