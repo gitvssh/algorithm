@@ -14,6 +14,7 @@ public class DevelopFunction implements TestCase {
         //전체순회
         for (int j = 0; j < 100; j++) {
             if (index >= progresses.length) break;
+
             // 1번에 개발완료된 수
             cnt = 0;
             // 1회 개발 진행, 진척도 상승
