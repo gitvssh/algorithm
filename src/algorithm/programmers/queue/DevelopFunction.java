@@ -18,7 +18,6 @@ public class DevelopFunction implements TestCase {
             // 1번에 개발완료된 수
             cnt = 0;
 
-
             // 1회 개발 진행, 진척도 상승
             for (int i = 0; i < progresses.length; i++) {
                 progresses[i] += speeds[i];
