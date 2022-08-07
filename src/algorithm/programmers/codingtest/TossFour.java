@@ -6,6 +6,7 @@ public class TossFour implements TestCase {
     // db에서 읽어온 값으로 초대점수 가장 높은 3명 순서대로 구하기
     // 초대 점수 공식 있음
     // 점수가 같으면 마지막 초대가 높은 순위
+
     public long[] solution(long[][] invitationPairs) {
         long[] answer = {};
         return answer;
