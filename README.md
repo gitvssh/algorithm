@@ -1,6 +1,3 @@
 # algorithm
 study algorithm
 
-
-
-
