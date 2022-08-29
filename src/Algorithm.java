@@ -1,10 +1,10 @@
 import algorithm.TestCase;
-import algorithm.programmers.hash.PhoneNumberList;
+import algorithm.leetcode.mlp.LeetTwoSum;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new PhoneNumberList();
+        TestCase testCase = new LeetTwoSum();
         testCase.test();
     }
 }
