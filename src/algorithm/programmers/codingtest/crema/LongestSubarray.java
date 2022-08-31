@@ -2,28 +2,34 @@ package algorithm.programmers.codingtest.crema;
 
 import algorithm.TestCase;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
 public class LongestSubarray implements TestCase {
     public static int maxLength(List<Integer> a, int k) {
-        // Write your code here
-//        int[] ints = new int[a.get(0)];
-//        int constrain = a.get(a.get(0)+1);
-//        System.out.println("constrain = " + constrain);
-//        for (int i = 0; i < a.get(0); i++) {
-//            ints[i] = a.get(i + 1);
-//            System.out.println("i = " + ints[i]);
-//        }
-        a.sort(Comparator.naturalOrder());
+        int sum = a.stream().mapToInt(b->b).sum();
+        int length = a.size();
         int result = 0;
-        for (int i=0; i<a.size(); i++) {
-            k -= a.get(i);
-            if(k<=0) return result;
-            result++;
+
+        for (int i=0; i<length; i++) {
+
+            int cnt = length-i;
+            int localSum = sum;
+
+            for (int j = length-1; j > i; j--) {
+                if(k>=localSum){
+                    result = Math.max(result, cnt);
+                    System.out.println(result);
+                }
+                cnt--;
+                localSum -= a.get(j);
+            }
+            sum-=a.get(i);
         }
-        return 0;
+        return result;
     }
+
     @Override
     public void test() {
     }
