@@ -1,4 +1,4 @@
-package algorithm.programmers.codingtest;
+package algorithm.programmers.codingtest.toss;
 
 import algorithm.TestCase;
 
