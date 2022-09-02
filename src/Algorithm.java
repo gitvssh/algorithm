@@ -1,10 +1,10 @@
 import algorithm.TestCase;
-import algorithm.programmers.codingtest.crema.StringChains;
+import algorithm.leetcode.mlp.LongestSubstring;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new StringChains();
+        TestCase testCase = new LongestSubstring();
         testCase.test();
     }
 }
