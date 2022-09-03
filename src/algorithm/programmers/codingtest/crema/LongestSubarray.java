@@ -12,6 +12,7 @@ public class LongestSubarray implements TestCase {
         int length = a.size();
         int result = 0;
 
+
         for (int i=0; i<length; i++) {
 
             int cnt = length-i;
