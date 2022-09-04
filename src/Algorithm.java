@@ -1,10 +1,10 @@
 import algorithm.TestCase;
-import algorithm.leetcode.mlp.LongestSubstring;
+import algorithm.programmers.codingtest.wefun.Truck;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new LongestSubstring();
+        TestCase testCase = new Truck();
         testCase.test();
     }
 }
