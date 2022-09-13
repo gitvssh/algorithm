@@ -12,6 +12,7 @@ public class LeetCode209 {
         if(prerequisites.length==0) return false;
         boolean result = false;
 
+
         int m = prerequisites.length; //n = 2
         int[] cache = new int[m];
 
