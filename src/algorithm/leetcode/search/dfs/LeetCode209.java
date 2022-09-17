@@ -1,5 +1,7 @@
 package algorithm.leetcode.search.dfs;
 
+import java.util.Scanner;
+
 /*
 There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1.
 You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
@@ -14,8 +16,9 @@ public class LeetCode209 {
 
         int m = prerequisites.length; //n = 2
         int[] cache = new int[m];
-
+        String a = "a";
 //        Arrays.stream(prerequisites).filter(y -> )
+
 
         for (int i = 0; i < numCourses; i++) {
             if (!checkPrq(prerequisites, i, m, cache)) {
