@@ -8,7 +8,6 @@ Return true if you can finish all courses. Otherwise, return false.
 */
 public class LeetCode209 {
 
-
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         if(prerequisites.length==1) return true;
         if(prerequisites.length==0) return false;
