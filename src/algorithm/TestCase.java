@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.text.ParseException;
+
 public interface TestCase {
-    void test();
+    void test() throws ParseException;
 }
