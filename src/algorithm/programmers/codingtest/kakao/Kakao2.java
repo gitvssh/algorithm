@@ -5,7 +5,6 @@ import algorithm.TestCase;
 import java.text.ParseException;
 
 public class Kakao2 implements TestCase {
-
     public long solution(int cap, int n, int[] deliveries, int[] pickups) {
         long answer = 0;
         Service del = new Service(deliveries);
