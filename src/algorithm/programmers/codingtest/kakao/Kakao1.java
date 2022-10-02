@@ -10,6 +10,7 @@ import java.util.HashMap;
 
 public class Kakao1 implements TestCase {
     public int[] solution(String today, String[] terms, String[] privacies) {
+
         ArrayList<Integer> tmp = new ArrayList<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
         Date todayDate = null;
