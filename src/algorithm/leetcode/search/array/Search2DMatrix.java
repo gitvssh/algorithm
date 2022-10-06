@@ -6,6 +6,9 @@ import java.util.Arrays;
 
 public class Search2DMatrix implements TestCase {
     public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return false;
+        }
         int[] ints = Arrays.stream(matrix).mapToInt(a -> a[0]).toArray();
         int start = 0;
         int end = ints.length - 1;
