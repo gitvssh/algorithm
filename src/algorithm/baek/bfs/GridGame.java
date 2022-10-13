@@ -7,7 +7,6 @@ import java.text.ParseException;
 public class GridGame implements TestCase {
 
     static final int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-
     int height, width;
 
     //n(row) m(column)

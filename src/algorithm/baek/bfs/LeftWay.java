@@ -25,50 +25,6 @@ public class LeftWay implements TestCase {
     public void test() throws ParseException {
 
     }
-    public void goRight(int[][] grid, int n, int m) {
-
-        Set<String> beginSet = new HashSet<>();
-        Set<String> endSet = new HashSet<>();
-
-        //방문노드 체크
-        int[][] visited = new int[n][m];
-
-        endSet.add(endWord);
-        while (!beginSet.isEmpty()) {
-            if (beginSet.size() > endSet.size()) {
-                Set<String> set = beginSet;
-                beginSet = endSet;
-                endSet = set;
-            }
-
-            Set<String> temp = new HashSet<>();
-            //뎁스별 전체검사
-            for (String word : beginSet) {
-                //파싱
-                char[] chs = word.toCharArray();
-                //문자별 검사
-                for (int i = 0; i < chs.length; i++) {
-                    for (char c = 'a'; c <= 'z'; c++) {
-                        char old = chs[i];
-                        chs[i] = c;
-                        String target = String.valueOf(chs);
-
-                        if (endSet.contains(target)) {
-                            return;
-                        }
-
-                        //최초방문 && 단어리스트 포함
-                        if (!visited.contains(target) && wordList.contains(target)) {
-                            temp.add(target);
-                            visited.add(target);
-                        }
-                        chs[i] = old;
-                    }
-                }
-            }
-            beginSet = temp;
-        }
-    }
 
     private static final int DEFAULT_BUFFER_SIZE = 1 << 16;
     private static DataInputStream inputStream;
