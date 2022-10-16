@@ -1,4 +1,2 @@
 # algorithm
 study algorithm
-
-
