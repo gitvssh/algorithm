@@ -1,38 +1,39 @@
 package algorithm.baek.datastructure;
 
 import algorithm.TestCase;
+import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 
 
+@Slf4j
 public class Compression implements TestCase {
-    public String compress(String str) {
-        if (str == null || str.length() == 0) return str;
-        StringBuilder sb = new StringBuilder();
-        char[] chars = str.toCharArray();
-        int count = 1;
-        char prev = chars[0];
-        for (int i = 1; i < chars.length; i++) {
-            if (prev == chars[i]) {
-                count++;
+    public int compress(String str) {
+        int len = str.length();
+        int[] dp = new int[len];
+        dp[0] = 1;
+        for (int i = 1; i < len; i++) {
+            if (str.charAt(i) == str.charAt(i - 1)) {
+                dp[i] = dp[i - 1] + 1;
             } else {
-                sb.append(prev);
-                if (count > 1) {
-                    sb.append(count);
-                }
-                count = 1;
-                prev = chars[i];
+                dp[i] = 1;
             }
         }
-        sb.append(prev);
-        if (count > 1) {
-            sb.append(count);
+        int res = 0;
+        for (int i = 0; i < len; i++) {
+            if (dp[i] == 1) {
+                res++;
+            } else {
+                res += 1 + String.valueOf(dp[i]).length();
+            }
         }
-        return sb.toString();
+        return res;
     }
 
     @Override
     public void test() throws ParseException {
-        String compress = compress("33(562(71(9)))");
+        int compress = compress("33(562(71(9)))");
+        log.info("is start");
+        log.info("compress = {}", compress);
     }
 }

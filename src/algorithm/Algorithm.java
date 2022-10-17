@@ -1,12 +1,13 @@
-import algorithm.TestCase;
-import algorithm.programmers.codingtest.kakao.Kakao2;
+package algorithm;
+
+import algorithm.baek.datastructure.Compression;
 
 import java.text.ParseException;
 
 
 public class Algorithm {
     public static void main(String[] args) {
-        TestCase testCase = new Kakao2();
+        TestCase testCase = new Compression();
         try {
             testCase.test();
         } catch (ParseException e) {
