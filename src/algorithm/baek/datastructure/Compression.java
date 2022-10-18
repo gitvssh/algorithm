@@ -4,28 +4,41 @@ import algorithm.TestCase;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
+import java.util.Iterator;
+import java.util.Stack;
 
 
 @Slf4j
 public class Compression implements TestCase {
     public int compress(String str) {
         int len = str.length();
-        int[] dp = new int[len];
-        dp[0] = 1;
-        for (int i = 1; i < len; i++) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
-                dp[i] = dp[i - 1] + 1;
-            } else {
-                dp[i] = 1;
-            }
-        }
+        char[] chars = str.toCharArray();
         int res = 0;
-        for (int i = 0; i < len; i++) {
-            if (dp[i] == 1) {
-                res++;
+        int curIdx = 0;
+        Stack<Character> st = new Stack<>();
+
+        while (curIdx < len) {
+            char curChar = chars[curIdx];
+            if (curChar == '(') {
+                int count = 0;
+                while (chars[curIdx] != ')') {
+                    count++;
+                    curIdx++;
+                }
+                log.info("{}",count);
+                res += (count * (st.pop() - '0'));
             } else {
-                res += 1 + String.valueOf(dp[i]).length();
+                st.add(curChar);
+                curIdx++;
             }
+            log.info("curIdx: {} / {} : {}", curIdx, len, res);
+        }
+
+        Iterator<Character> it = st.iterator();
+
+        while (it.hasNext()) {
+            log.info("{}",st.pop());
+            res++;
         }
         return res;
     }
