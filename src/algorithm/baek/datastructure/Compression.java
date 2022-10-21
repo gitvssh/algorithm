@@ -10,6 +10,7 @@ import java.util.Stack;
 @Slf4j
 public class Compression implements TestCase {
     public int compress(String str) {
+
         int len = str.length();
         char[] chars = str.toCharArray();
         int res = 0;
