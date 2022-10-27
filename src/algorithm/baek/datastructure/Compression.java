@@ -11,6 +11,7 @@ import java.util.Stack;
 public class Compression implements TestCase {
     public int compress(String str) {
 
+
         int len = str.length();
         char[] chars = str.toCharArray();
         int res = 0;
