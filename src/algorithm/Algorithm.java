@@ -17,6 +17,7 @@ public class Algorithm {
     public static void main(String[] args) throws IOException {
         int keyboard =0;
         keyboard |= 1<<3;
+
         String ret = ((keyboard & (1 << 2)) == 0 ? "텐키리스" : "풀배열");
         log.info("{}", keyboard);
         log.info("{}", ret);
