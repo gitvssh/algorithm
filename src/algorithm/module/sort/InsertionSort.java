@@ -1,5 +1,9 @@
 package algorithm.module.sort;
 
+
+import lombok.extern.slf4j.Slf4j;
+
+//@Slf4j
 public class InsertionSort {
     public static void insertionSort(int[] a) {
         insertionSort(a, a.length);
@@ -15,8 +19,8 @@ public class InsertionSort {
             }
             a[j + 1] = target;
         }
-        while(n > 0) {
-            System.out.println(a[n - 1]);
+        while (n > 0) {
+            //log.info("a = {}", a[--n]);
             n--;
         }
     }

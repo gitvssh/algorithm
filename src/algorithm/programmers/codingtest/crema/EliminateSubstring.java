@@ -3,7 +3,7 @@ package algorithm.programmers.codingtest.crema;
 import algorithm.TestCase;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+//@Slf4j
 public class EliminateSubstring implements TestCase {
     public static String getFinalString(String s) {
         StringBuffer sf = new StringBuffer(s);
@@ -22,6 +22,6 @@ public class EliminateSubstring implements TestCase {
     @Override
     public void test() {
         String awawssg = getFinalString("AWAWSSG");
-        log.info(awawssg);
+        //log.info(awawssg);
     }
 }

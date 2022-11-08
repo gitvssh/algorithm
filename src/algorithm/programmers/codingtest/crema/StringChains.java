@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.*;
 import java.util.stream.Collectors;
 
-@Slf4j
+//@Slf4j
 public class StringChains implements TestCase {
     public static int longestChain(List<String> words) {
         // Write your code here
@@ -24,14 +24,14 @@ public class StringChains implements TestCase {
             System.out.println("s = " + s);
         }
         for (String word : words) {
-            log.info("word :{}", word);
+            //log.info("word :{}", word);
             int length = 1;
             for (int i = 0; i < word.length(); i++) {
                 StringBuilder sb = new StringBuilder(word);
                 String testWord = sb.deleteCharAt(i).toString();
-                log.info("testWord :{}", testWord);
+                //log.info("testWord :{}", testWord);
                 if (map.containsKey(testWord)) {
-//                    log.info("containKey :{}",length + map.get(testWord));
+//                    //log.info("containKey :{}",length + map.get(testWord));
                     length = 1 + map.get(testWord);
                     map.put(word, length);
                     max = length > max ? length : max;
@@ -47,6 +47,6 @@ public class StringChains implements TestCase {
     @Override
     public void test() {
         int i = longestChain(Arrays.asList(new String[]{"aaaa", "aa", "aaaaaaaa", "bca", "bda", "bdca"}));
-        log.info("max :{}", i);
+        //log.info("max :{}", i);
     }
 }

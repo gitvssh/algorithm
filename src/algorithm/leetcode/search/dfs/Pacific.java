@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-@Slf4j
+//@Slf4j
 public class Pacific implements TestCase {
     int[][] dir = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
@@ -73,7 +73,7 @@ public class Pacific implements TestCase {
 
         for (List<Integer> list : lists) {
             for (Integer integer : list) {
-                log.info("abc = {}", integer);
+                //log.info("abc = {}", integer);
             }
         }
     }

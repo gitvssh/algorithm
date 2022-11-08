@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
     매달 k일 관리비, k일이 주말이면 가장 가까운 평일에 냄
     1월 1일 요일과, 관리비 내야 한는 날짜 k 매개변수 -> 1~12일까지 평일 or 주말
 * */
-@Slf4j
+//@Slf4j
 public class ManagementFee implements TestCase {
     final static int MONTH_LENGTH = 12;
     int[] monthLength = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
@@ -28,8 +28,8 @@ public class ManagementFee implements TestCase {
         for (int i = 0; i <MONTH_LENGTH; i++) {
             int localDay = (sumMonthDays + k) % 7;
             answer[i]=localDay<5?0:1; //5 미만 평일,5 이상 주말
-//            log.info("local day : {} 월 {}일",i+1,localDay);
-//            log.info("판정 결과 : {}",localDay<5?0:1);
+//            //log.info("local day : {} 월 {}일",i+1,localDay);
+//            //log.info("판정 결과 : {}",localDay<5?0:1);
             sumMonthDays += monthLength[i];
         }
         return answer;
@@ -39,7 +39,7 @@ public class ManagementFee implements TestCase {
     public void test() {
         int[] solution = solution(6, 25);
         for (int i : solution) {
-            log.info("평일 or 휴일 :{}", i);
+            //log.info("평일 or 휴일 :{}", i);
         }
     }
 }

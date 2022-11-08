@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 
-@Slf4j
+//@Slf4j
 public class RunningSum implements TestCase {
     public int[] runningSum(int[] nums) {
         int[] res = new int[nums.length];
@@ -20,7 +20,7 @@ public class RunningSum implements TestCase {
     public void test() throws ParseException {
         int[] ints = runningSum(new int[]{1, 2, 3, 4});
         for (int anInt : ints) {
-            log.info("anInt = {}", anInt);
+            //log.info("anInt = {}", anInt);
         }
     }
 }

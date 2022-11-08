@@ -5,7 +5,7 @@ import algorithm.TestCase;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-//@Slf4j
+////@Slf4j
 public class LeetTwoSum implements TestCase {
     //    public int[] twoSum(int[] nums, int target) {
 //        int length = nums.length;
@@ -38,7 +38,7 @@ public class LeetTwoSum implements TestCase {
         System.out.println("ints = " + ints.toString());
         for (int anInt : ints) {
             System.out.println("anInt = " + anInt);
-//            log.info();
+//            //log.info();
         }
     }
 }

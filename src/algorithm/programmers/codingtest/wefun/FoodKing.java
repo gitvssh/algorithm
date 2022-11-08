@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * 음식을 여러개 주문 가능, 같은 음식 여러번도 가능
  * 가장 많은 종류 음식 유저 아이디 배열, 같으면 오름차순 정렬
  * */
-@Slf4j
+//@Slf4j
 public class FoodKing implements TestCase {
     public String[] solution(String[] orders) {
         String[] answer = {};
@@ -31,17 +31,17 @@ public class FoodKing implements TestCase {
             } else {
                 user = users.get(item[0]);
             }
-//            log.info("username : {}", item[0]);
-//            log.info("item length:{}", item.length);
+//            //log.info("username : {}", item[0]);
+//            //log.info("item length:{}", item.length);
 
             for (int j = 1; j < item.length; j++) {
                 user.addOrder(item[j]);
-//                log.info("oder :{}", item[j]);
+//                //log.info("oder :{}", item[j]);
             }
             foodVariety.put(user.getUsername(), user.orderNum);
         }
 //        for (Integer value : foodVariety.values()) {
-//            log.info("food :{}", value);
+//            //log.info("food :{}", value);
 //        }
 
         Integer max = foodVariety.entrySet()

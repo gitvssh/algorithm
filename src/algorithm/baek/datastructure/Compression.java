@@ -7,7 +7,7 @@ import java.text.ParseException;
 import java.util.Stack;
 
 
-@Slf4j
+//@Slf4j
 public class Compression implements TestCase {
     public int compress(String str) {
 
@@ -43,13 +43,13 @@ public class Compression implements TestCase {
         }
         st.pop();
         int multiple = st.isEmpty() ? 0 : st.pop() - '0';
-        log.info("cnt: {}, multiple: {}", cnt, multiple);
+        //log.info("cnt: {}, multiple: {}", cnt, multiple);
         return cnt * multiple;
     }
 
     @Override
     public void test() throws ParseException {
         int compress = compress("1()66(5)");
-        log.info("compress = {}", compress);
+        //log.info("compress = {}", compress);
     }
 }

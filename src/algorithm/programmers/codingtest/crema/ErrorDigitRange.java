@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-@Slf4j
+//@Slf4j
 public class ErrorDigitRange implements TestCase {
     public static long findRange(int num) {
         // Write your code here
@@ -25,6 +25,6 @@ public class ErrorDigitRange implements TestCase {
     @Override
     public void test() {
         long range = findRange(123512);
-        log.info("range :{}", range);
+        //log.info("range :{}", range);
     }
 }
