@@ -41,12 +41,13 @@ public class Statistics implements TestCase {
                 modeMax = count;
                 mode = arr[i];
                 flag = true;
-            } else if (count == modeMax && flag == true) {
+            } else if (count == modeMax && flag) {
                 mode = arr[i];
                 flag = false;
             }
             i += jump;
         }
+
 
         mean = (int) Math.round((double) sum / tc);
         median = arr[tc / 2];
