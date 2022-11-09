@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.recursive.Factorial;
 import algorithm.baek.sort.Statistics;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
 
     public static void main(String[] args) throws IOException {
-        Statistics statistics = new Statistics();
+        Factorial statistics = new Factorial();
         doTest(statistics);
     }
 
