@@ -23,6 +23,7 @@ public class Statistics implements TestCase {
         }
         Arrays.sort(arr);
 
+
         boolean flag = false;
         int modeMax = 0;
         int mode = 10000;
