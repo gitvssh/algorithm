@@ -21,6 +21,7 @@ public class Statistics implements TestCase {
             arr[i] = n;
             sum += n;
         }
+
         Arrays.sort(arr);
 
 
