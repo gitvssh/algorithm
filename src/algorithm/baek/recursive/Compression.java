@@ -5,7 +5,7 @@ import algorithm.TestCase;
 import java.io.IOException;
 import java.text.ParseException;
 
-public class Fibonacci implements TestCase {
+public class Compression implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
         int fib = fibonacci(2);
