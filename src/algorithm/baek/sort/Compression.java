@@ -15,6 +15,7 @@ public class Compression implements TestCase {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
 
+
         int tc = Integer.parseInt("6");
         int[] arr = new int[tc];
         int[] arr2 = new int[tc];
