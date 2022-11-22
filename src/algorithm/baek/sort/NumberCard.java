@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-public class Compression implements TestCase {
+public class NumberCard implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
