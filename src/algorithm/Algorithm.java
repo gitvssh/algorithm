@@ -1,7 +1,7 @@
 package algorithm;
 
 
-import algorithm.baek.set.NumberCard;
+import algorithm.baek.set.SubSetString;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,11 +10,7 @@ import java.util.ArrayList;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NumberCard testCase = new NumberCard();
-        ArrayList<String> list = new ArrayList<>();
-        list.add("gef");
-        list.add("dbf");
-        list.stream().sorted().forEach((i) -> list.get(0));
+        SubSetString testCase = new SubSetString();
         doTest(testCase);
     }
 
