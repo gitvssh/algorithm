@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.codingtest.devmatch2022winter.Marathoner;
+import algorithm.baek.brute.DoomMovies;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Marathoner testCase = new Marathoner();
+        DoomMovies testCase = new DoomMovies();
         doTest(testCase);
     }
 
