@@ -12,7 +12,6 @@ public class ValidParentheses implements TestCase {
     public void test() throws ParseException, IOException {
         String s = "]";
         System.out.println(isValid(s));
-
     }
 
     public boolean isValid(String s) {
