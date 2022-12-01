@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.leetcode.daily.ValidParentheses;
-import algorithm.leetcode.numbertheory.MultipleFactors;
+import algorithm.baek.numbertheory.Lcm;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MultipleFactors testCase = new MultipleFactors();
+        Lcm testCase = new Lcm();
         doTest(testCase);
     }
 
