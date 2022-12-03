@@ -14,6 +14,7 @@ public class Ring implements TestCase {
         int n = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
         int numerator = Integer.parseInt(st.nextToken());
+
         for (int i = 0; i < n-1; i++) {
             int denominator = Integer.parseInt(st.nextToken());
             int gcd = gcd(numerator, denominator);
