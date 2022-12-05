@@ -12,6 +12,7 @@ public class Lcm implements TestCase {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int tc = Integer.parseInt(br.readLine());
+
         for (int i = 0; i < tc; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int n = Integer.parseInt(st.nextToken());
