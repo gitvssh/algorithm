@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.Ring;
+import algorithm.baek.datastructure.Hashing;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Ring testCase = new Ring();
+        Hashing testCase = new Hashing();
         doTest(testCase);
     }
 
