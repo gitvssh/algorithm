@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.Hashing;
+import algorithm.baek.cumulativesum.Sequence;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Hashing testCase = new Hashing();
+        Sequence testCase = new Sequence();
         doTest(testCase);
     }
 
