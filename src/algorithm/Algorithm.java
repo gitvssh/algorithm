@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Sequence;
+import algorithm.baek.cumulativesum.HumanComputer;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Sequence testCase = new Sequence();
+        HumanComputer testCase = new HumanComputer();
         doTest(testCase);
     }
 
@@ -16,7 +16,7 @@ public class Algorithm {
         try {
             testCase.test();
         } catch (ParseException | IOException e) {
-            throw new RuntimeException(e);
+            throw new ShCodingTestException(e);
         }
     }
 }
