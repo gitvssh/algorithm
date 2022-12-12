@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.level1.SequenceNumberSum;
+import algorithm.programmers.level1.StringInString;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        SequenceNumberSum testCase = new SequenceNumberSum();
+        StringInString testCase = new StringInString();
         doTest(testCase);
     }
 
