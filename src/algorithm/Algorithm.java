@@ -9,6 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
         StringInString testCase = new StringInString();
+
         doTest(testCase);
     }
 
