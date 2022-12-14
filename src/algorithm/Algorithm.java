@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.level1.StringInString;
+import algorithm.baek.datastructure.Card2;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        StringInString testCase = new StringInString();
+        Card2 testCase = new Card2();
 
         doTest(testCase);
     }
