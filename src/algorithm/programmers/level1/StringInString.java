@@ -11,6 +11,7 @@ public class StringInString implements TestCase {
         String s = "abcde";
         String t = "cd";
         System.out.println(solution(s, t));
+
     }
     public int solution(String s, String t) {
         return s.contains(t) ? 1 : 2;
