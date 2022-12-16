@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.level1.StringInString;
+import algorithm.programmers.level1.StringSort;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        StringInString testCase = new StringInString();
+        StringSort testCase = new StringSort();
 
         doTest(testCase);
     }
