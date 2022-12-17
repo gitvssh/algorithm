@@ -13,7 +13,6 @@ public class StringSort implements TestCase {
         System.out.println("answer = " + zbcdefg);
     }
 
-
     public String solution(String my_string) {
         int len = my_string.length();
         char[] arr = new char[len];
