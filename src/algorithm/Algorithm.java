@@ -1,6 +1,7 @@
 package algorithm;
 
-import algorithm.programmers.level1.StringSort;
+import algorithm.module.BigInt;
+import algorithm.programmers.level1.NearestString;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        StringSort testCase = new StringSort();
+        NearestString testCase = new NearestString();
 
         doTest(testCase);
     }
