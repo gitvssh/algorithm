@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.module.BigInt;
-import algorithm.programmers.level1.NearestString;
+import algorithm.baek.cumulativesum.MatrixSum;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NearestString testCase = new NearestString();
+        MatrixSum testCase = new MatrixSum();
 
         doTest(testCase);
     }
