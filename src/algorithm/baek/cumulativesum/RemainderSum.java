@@ -15,21 +15,22 @@ public class RemainderSum implements TestCase {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         st = new StringTokenizer(br.readLine());
-        int[] arr = new int[n];
-        int[] arrSum = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(st.nextToken());
-            arrSum[i] = (i == 0 ? arr[0] : arrSum[i - 1]) + arr[i];
+
+        long result = 0;
+        long[] s = new long[n + 1];
+        long[] cnt = new long[m];
+
+        for (int i = 1; i <= n; i++) {
+            s[i] = (s[i - 1] + Integer.parseInt(st.nextToken())) % m;
+            if (s[i] == 0) result++;
+            cnt[(int) s[i]]++;
         }
-        int res = 0;
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                if ((arr[i] - arr[j]) % m == 0) {
-                    res++;
-                }
+        for (int i = 0; i < m; i++) {
+            if (cnt[i] > 1) {
+                result += (cnt[i] * (cnt[i] - 1) / 2);
             }
         }
-        bw.write(res + "\n");
+        bw.write(result + "\n");
         bw.close();
     }
 }

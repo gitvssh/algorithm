@@ -20,7 +20,7 @@ public class MatrixSum implements TestCase {
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < n; j++) {
-                matrix[i + 1][j + 1] = matrix[i + 1][j]+Integer.parseInt(st.nextToken());
+                matrix[i + 1][j + 1] = matrix[i + 1][j] + Integer.parseInt(st.nextToken());
             }
         }
         for (int i = 0; i < m; i++) {
