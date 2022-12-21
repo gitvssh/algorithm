@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.RemainderSum;
+import algorithm.baek.numbertheory.CheckPoint;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        RemainderSum testCase = new RemainderSum();
+        CheckPoint testCase = new CheckPoint();
 
         doTest(testCase);
     }
