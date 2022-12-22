@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.CheckPoint;
+import algorithm.baek.recursive.PrintStart;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        CheckPoint testCase = new CheckPoint();
+        PrintStart testCase = new PrintStart();
 
         doTest(testCase);
     }
