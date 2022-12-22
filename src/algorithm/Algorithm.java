@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.recursive.Hanoi;
 import algorithm.baek.recursive.PrintStart;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        PrintStart testCase = new PrintStart();
+        Hanoi testCase = new Hanoi();
 
         doTest(testCase);
     }
