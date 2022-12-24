@@ -32,20 +32,20 @@ public class Marathoner implements TestCase {
             courses[i + 1].setRank();
             int n = 0;
             for (int j = 0; j < marathonRecords.length; j++) {
-                if (marathoners[j].records[i] >0) {
+                if (marathoners[j].records[i] > 0) {
                     courses[i + 1].recordList[n] = marathoners[j].records[i];
                     n++;
                 }
             }
         }
         for (int i = 0; i < 5; i++) {
-            courses[i+1].sortRecord();
+            courses[i + 1].sortRecord();
         }
         // 3. 각 선수의 메달 수 기록
         for (int i = 0; i < marathonRecords.length; i++) {
             for (int j = 0; j < 5; j++) {
                 int courseRecord = marathoners[i].records[j];
-                if(courses[j + 1].recordMap.get(courseRecord)!=null){
+                if (courses[j + 1].recordMap.get(courseRecord) != null) {
                     if (courses[j + 1].recordMap.get(courseRecord) <= courses[j + 1].getGold()) {
                         marathoners[i].setGold(marathoners[i].getGold() + 1);
                     } else if (courses[j + 1].recordMap.get(courseRecord) <= courses[j + 1].getSilver()) {
@@ -60,9 +60,9 @@ public class Marathoner implements TestCase {
         Arrays.sort(marathoners, (o1, o2) -> {
             if (o1.getFinish() != o2.getFinish()) {  //조건 1
                 return Integer.compare(o2.getFinish(), o1.getFinish()); //조건 1
-            }else if (o1.getMostDiff() != o2.getMostDiff()) { //조건 2
+            } else if (o1.getMostDiff() != o2.getMostDiff()) { //조건 2
                 return Integer.compare(o2.getMostDiff(), o1.getMostDiff()); //조건2
-            }else if (o1.getGold() == o2.getGold()) { //조건 3
+            } else if (o1.getGold() == o2.getGold()) { //조건 3
                 if (o1.getSilver() == o2.getSilver()) { //조건 3
                     if (o1.getBronze() == o2.getBronze()) { //조건 3
                         if (o1.getTotalFinish() == o2.getTotalFinish()) { //조건 4
@@ -189,7 +189,7 @@ public class Marathoner implements TestCase {
         int finishCnt;
 
         int[] recordList;
-        HashMap<Integer,Integer> recordMap;
+        HashMap<Integer, Integer> recordMap;
 
         int goldLine;
         int silverLine;
@@ -221,9 +221,9 @@ public class Marathoner implements TestCase {
         }
 
         public void setRank() {
-            this.goldLine = (int) Math.ceil(finishCnt / (double)12);
-            this.silverLine = (int) Math.ceil(finishCnt / (double)4);
-            this.bronzeLine = (int) Math.ceil(finishCnt / (double)2);
+            this.goldLine = (int) Math.ceil(finishCnt / (double) 12);
+            this.silverLine = (int) Math.ceil(finishCnt / (double) 4);
+            this.bronzeLine = (int) Math.ceil(finishCnt / (double) 2);
             makeRecordList(finishCnt);
         }
 
@@ -234,7 +234,7 @@ public class Marathoner implements TestCase {
         public void sortRecord() {
             Arrays.sort(recordList);
             for (int i = 0; i < recordList.length; i++) {
-                this.recordMap.put(recordList[i],i+1);
+                this.recordMap.put(recordList[i], i + 1);
             }
         }
     }
