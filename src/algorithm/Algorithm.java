@@ -1,9 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.MyQueue;
-import algorithm.baek.etc.PhoneBill;
-import algorithm.baek.recursive.Hanoi;
-import algorithm.baek.recursive.PrintStart;
+import algorithm.baek.datastructure.Zero;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        PhoneBill testCase = new PhoneBill();
+        Zero testCase = new Zero();
 
         doTest(testCase);
     }
