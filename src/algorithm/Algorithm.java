@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.datastructure.MyDeck;
 import algorithm.baek.datastructure.Zero;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Zero testCase = new Zero();
+        MyDeck testCase = new MyDeck();
 
         doTest(testCase);
     }

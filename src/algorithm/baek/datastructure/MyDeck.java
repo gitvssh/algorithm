@@ -1,0 +1,56 @@
+package algorithm.baek.datastructure;
+
+import algorithm.TestCase;
+
+import java.io.*;
+import java.text.ParseException;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.StringTokenizer;
+
+public class MyDeck implements TestCase {
+    @Override
+    public void test() throws ParseException, IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        Deque<Integer> deque = new ArrayDeque<>();
+        int n = Integer.parseInt(br.readLine());
+        for (int i = 0; i < n; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String cmd = st.nextToken();
+            switch (cmd) {
+                case "push_front":
+                    deque.addFirst(Integer.parseInt(st.nextToken()));
+                    break;
+                case "push_back":
+                    deque.addLast(Integer.parseInt(st.nextToken()));
+                    break;
+                case "pop_front":
+                    bw.write(deque.isEmpty() ? "-1" : deque.pollFirst() + "");
+                    bw.newLine();
+                    break;
+                case "pop_back":
+                    bw.write(deque.isEmpty() ? "-1" : deque.pollLast() + "");
+                    bw.newLine();
+                    break;
+                case "size":
+                    bw.write(deque.size() + "");
+                    bw.newLine();
+                    break;
+                case "empty":
+                    bw.write(deque.isEmpty() ? "1" : "0");
+                    bw.newLine();
+                    break;
+                case "front":
+                    bw.write(deque.isEmpty() ? "-1" : deque.peekFirst() + "");
+                    bw.newLine();
+                    break;
+                case "back":
+                    bw.write(deque.isEmpty() ? "-1" : deque.peekLast() + "");
+                    bw.newLine();
+                    break;
+            }
+        }
+        bw.close();
+    }
+}
