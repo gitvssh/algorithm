@@ -1,9 +1,7 @@
 package algorithm;
 
-import algorithm.baek.datastructure.Bracket;
-import algorithm.baek.datastructure.MyDeck;
-import algorithm.baek.datastructure.Yosepus;
-import algorithm.baek.datastructure.Zero;
+import algorithm.baek.brute.MineCraft;
+import algorithm.baek.etc.MyQueue;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Yosepus testCase = new Yosepus();
+        MyQueue testCase = new MyQueue();
 
         doTest(testCase);
     }
