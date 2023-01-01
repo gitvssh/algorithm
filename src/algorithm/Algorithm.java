@@ -2,6 +2,8 @@ package algorithm;
 
 import algorithm.baek.brute.MineCraft;
 import algorithm.baek.etc.MyQueue;
+import algorithm.baek.numbertheory.BinomialCoefficient;
+import algorithm.baek.numbertheory.BridgeMaker;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +11,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MyQueue testCase = new MyQueue();
+        BridgeMaker testCase = new BridgeMaker();
 
         doTest(testCase);
     }
