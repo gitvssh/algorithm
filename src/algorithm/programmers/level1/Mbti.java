@@ -1,7 +1,7 @@
 package algorithm.programmers.level1;
 
 import algorithm.TestCase;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 //@Slf4j
 public class Mbti implements TestCase {

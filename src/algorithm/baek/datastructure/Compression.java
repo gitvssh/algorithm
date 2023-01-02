@@ -1,7 +1,7 @@
 package algorithm.baek.datastructure;
 
 import algorithm.TestCase;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 import java.util.Stack;

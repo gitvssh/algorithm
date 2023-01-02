@@ -1,7 +1,7 @@
 package algorithm.programmers.codingtest.crema;
 
 import algorithm.TestCase;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Comparator;

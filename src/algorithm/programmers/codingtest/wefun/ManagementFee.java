@@ -1,7 +1,7 @@
 package algorithm.programmers.codingtest.wefun;
 
 import algorithm.TestCase;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 /*
     매달 k일 관리비, k일이 주말이면 가장 가까운 평일에 냄

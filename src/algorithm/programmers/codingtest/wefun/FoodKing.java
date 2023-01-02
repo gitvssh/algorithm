@@ -1,7 +1,7 @@
 package algorithm.programmers.codingtest.wefun;
 
 import algorithm.TestCase;
-import lombok.extern.slf4j.Slf4j;
+//import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.List;
