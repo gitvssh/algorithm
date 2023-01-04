@@ -4,10 +4,7 @@ import algorithm.baek.brute.MineCraft;
 import algorithm.baek.etc.Digit;
 import algorithm.baek.etc.MakeOne;
 import algorithm.baek.etc.MyQueue;
-import algorithm.baek.numbertheory.BinomialCoefficient;
-import algorithm.baek.numbertheory.BridgeMaker;
-import algorithm.baek.numbertheory.FactorialCount;
-import algorithm.baek.numbertheory.FashionKing;
+import algorithm.baek.numbertheory.*;
 import algorithm.programmers.level1.ArrayCopy;
 
 import java.io.IOException;
@@ -16,7 +13,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Digit testCase = new Digit();
+        KaingCalendar testCase = new KaingCalendar();
 
         doTest(testCase);
     }
