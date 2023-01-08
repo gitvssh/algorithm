@@ -1,10 +1,7 @@
 package algorithm;
 
 import algorithm.baek.brute.MineCraft;
-import algorithm.baek.etc.Digit;
-import algorithm.baek.etc.FindEven;
-import algorithm.baek.etc.MakeOne;
-import algorithm.baek.etc.MyQueue;
+import algorithm.baek.etc.*;
 import algorithm.baek.numbertheory.*;
 import algorithm.programmers.level1.ArrayCopy;
 
@@ -14,7 +11,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        FindEven testCase = new FindEven();
+        TaxiGeometry testCase = new TaxiGeometry();
 
         doTest(testCase);
     }
