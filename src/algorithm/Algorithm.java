@@ -1,9 +1,6 @@
 package algorithm;
 
-import algorithm.baek.brute.MineCraft;
-import algorithm.baek.etc.*;
-import algorithm.baek.numbertheory.*;
-import algorithm.programmers.level1.ArrayCopy;
+import algorithm.baek.etc.Turret;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        TaxiGeometry testCase = new TaxiGeometry();
+        Turret testCase = new Turret();
 
         doTest(testCase);
     }
