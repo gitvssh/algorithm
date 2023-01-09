@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.Turret;
+import algorithm.baek.etc.LittlePrince;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Turret testCase = new Turret();
+        LittlePrince testCase = new LittlePrince();
 
         doTest(testCase);
     }
