@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.backtracking.NM1;
 import algorithm.baek.etc.LittlePrince;
 import algorithm.baek.numbertheory.BinomailCount;
 
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        BinomailCount testCase = new BinomailCount();
+        NM1 testCase = new NM1();
 
         doTest(testCase);
     }
