@@ -2,19 +2,21 @@ package algorithm.baek.backtracking;
 
 import algorithm.TestCase;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
 public class NM2 implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
-    int n;
-    int m;
-    int[] arr;
-    boolean[] visited;
+        int n;
+        int m;
+        int[] arr;
+        boolean[] visited;
 
-    StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         n = Integer.parseInt(st.nextToken());

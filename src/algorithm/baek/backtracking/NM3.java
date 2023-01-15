@@ -17,15 +17,14 @@ public class NM3 implements TestCase {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         int[] arr = new int[m];
-        dfs(n, m, 1, arr, sb);
+        dfs(n, m, 0, arr, sb);
         System.out.println(sb);
     }
 
     private void dfs(int n, int m, int depth, int[] arr, StringBuilder sb) {
         if (m == depth) {
-            for (int j = 0; j < n; j++) {
+            for (int j = 0; j < m; j++) {
                 sb.append(arr[j]).append(" ");
-//            sb.delete(sb.length()-2, sb.length());
             }
             sb.append("\n");
             return;
