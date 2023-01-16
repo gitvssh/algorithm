@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.backtracking.NM3;
+import algorithm.baek.backtracking.NM4;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NM3 testCase = new NM3();
+        NM4 testCase = new NM4();
 
         doTest(testCase);
     }
