@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.backtracking.NM4;
 import algorithm.baek.backtracking.NQueen;
+import algorithm.baek.dynamicprograming.fibonacciNumber;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NQueen testCase = new NQueen();
+        fibonacciNumber testCase = new fibonacciNumber();
 
         doTest(testCase);
     }
