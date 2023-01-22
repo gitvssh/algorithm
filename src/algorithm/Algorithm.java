@@ -4,6 +4,7 @@ import algorithm.baek.backtracking.ExecuteFunction;
 import algorithm.baek.backtracking.NM4;
 import algorithm.baek.backtracking.NQueen;
 import algorithm.baek.dynamicprograming.Padoban;
+import algorithm.baek.dynamicprograming.SerialSum;
 import algorithm.baek.dynamicprograming.Tiles;
 import algorithm.baek.dynamicprograming.fibonacciNumber;
 
@@ -13,7 +14,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Padoban testCase = new Padoban();
+        SerialSum testCase = new SerialSum();
 
         doTest(testCase);
     }
