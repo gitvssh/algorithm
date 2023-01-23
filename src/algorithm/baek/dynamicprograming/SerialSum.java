@@ -19,6 +19,7 @@ public class SerialSum implements TestCase {
         arr = new int[N];
         dp = new Integer[N];
 
+
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         for(int i = 0; i < N; i++) {
