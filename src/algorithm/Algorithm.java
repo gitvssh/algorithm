@@ -7,6 +7,7 @@ import algorithm.baek.dynamicprograming.Padoban;
 import algorithm.baek.dynamicprograming.SerialSum;
 import algorithm.baek.dynamicprograming.Tiles;
 import algorithm.baek.dynamicprograming.fibonacciNumber;
+import algorithm.baek.etc.DiceGame;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -14,7 +15,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        SerialSum testCase = new SerialSum();
+        DiceGame testCase = new DiceGame();
 
         doTest(testCase);
     }
