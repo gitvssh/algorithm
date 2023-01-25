@@ -7,9 +7,10 @@ import java.text.ParseException;
 import java.util.StringTokenizer;
 
 public class SerialSum implements TestCase {
-    static int[] arr;		// 배열
-    static Integer[] dp;	// 메모이제이션 할 dp
-    static int max;			// 최댓값 변수
+    static int[] arr;        // 배열
+    static Integer[] dp;    // 메모이제이션 할 dp
+    static int max;            // 최댓값 변수
+
     @Override
     public void test() throws ParseException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,7 +23,7 @@ public class SerialSum implements TestCase {
 
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-        for(int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
@@ -35,8 +36,7 @@ public class SerialSum implements TestCase {
     }
 
     static int recur(int N) {
-
-        if(dp[N] == null) {
+        if (dp[N] == null) {
             dp[N] = Math.max(recur(N - 1) + arr[N], arr[N]);
 
             max = Math.max(dp[N], max);
