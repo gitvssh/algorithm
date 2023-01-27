@@ -10,6 +10,7 @@ import algorithm.baek.dynamicprograming.fibonacciNumber;
 import algorithm.baek.etc.BasketBall;
 import algorithm.baek.etc.DiceGame;
 import algorithm.baek.etc.Start4;
+import algorithm.baek.etc.Stick;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -17,7 +18,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Start4 testCase = new Start4();
+        Stick testCase = new Stick();
 
         doTest(testCase);
     }
