@@ -7,10 +7,7 @@ import algorithm.baek.dynamicprograming.Padoban;
 import algorithm.baek.dynamicprograming.SerialSum;
 import algorithm.baek.dynamicprograming.Tiles;
 import algorithm.baek.dynamicprograming.fibonacciNumber;
-import algorithm.baek.etc.BasketBall;
-import algorithm.baek.etc.DiceGame;
-import algorithm.baek.etc.Start4;
-import algorithm.baek.etc.Stick;
+import algorithm.baek.etc.*;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -18,7 +15,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Stick testCase = new Stick();
+        RoomNumber testCase = new RoomNumber();
 
         doTest(testCase);
     }
