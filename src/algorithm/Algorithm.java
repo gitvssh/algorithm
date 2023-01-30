@@ -11,6 +11,7 @@ import algorithm.baek.etc.BasketBall;
 import algorithm.baek.etc.DiceGame;
 import algorithm.baek.etc.MostLetters;
 import algorithm.baek.etc.Start4;
+import algorithm.baek.recursive.FibonacciCount;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -18,7 +19,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MostLetters testCase = new MostLetters();
+        FibonacciCount testCase = new FibonacciCount();
 
         doTest(testCase);
     }
