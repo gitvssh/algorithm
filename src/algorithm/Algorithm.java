@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.dynamicprograming.RGBDistance;
 import algorithm.baek.etc.ThreeNumber;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        ThreeNumber testCase = new ThreeNumber();
+        RGBDistance testCase = new RGBDistance();
 
         doTest(testCase);
     }
