@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.dynamicprograming.OneTwoThree;
 import algorithm.baek.dynamicprograming.RGBDistance;
 import algorithm.baek.etc.ThreeNumber;
 import algorithm.baek.set.FindPassword;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        FindPassword testCase = new FindPassword();
+        OneTwoThree testCase = new OneTwoThree();
 
         doTest(testCase);
     }
