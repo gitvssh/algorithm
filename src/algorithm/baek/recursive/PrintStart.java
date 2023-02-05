@@ -5,6 +5,10 @@ import algorithm.TestCase;
 import java.io.*;
 import java.text.ParseException;
 
+/**
+ * https://www.acmicpc.net/problem/2447
+ * 재귀 / 별찍기
+ */
 public class PrintStart implements TestCase {
     static char[][] arr;
 
