@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.datastructure.Card1;
 import algorithm.baek.dynamicprograming.OneTwoThree;
 import algorithm.baek.dynamicprograming.RGBDistance;
 import algorithm.baek.etc.ThreeNumber;
@@ -12,7 +13,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NumberOfPaper testCase = new NumberOfPaper();
+        Card1 testCase = new Card1();
 
         doTest(testCase);
     }
