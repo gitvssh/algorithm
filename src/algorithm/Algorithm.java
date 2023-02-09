@@ -6,6 +6,7 @@ import algorithm.baek.dfs.Tetromino;
 import algorithm.baek.dynamicprograming.OneTwoThree;
 import algorithm.baek.dynamicprograming.RGBDistance;
 import algorithm.baek.dynamicprograming.TwoNTiling;
+import algorithm.baek.etc.AC;
 import algorithm.baek.etc.ThreeNumber;
 import algorithm.baek.recursive.NumberOfPaper;
 import algorithm.baek.set.FindPassword;
@@ -16,7 +17,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Tetromino testCase = new Tetromino();
+        AC testCase = new AC();
 
         doTest(testCase);
     }
