@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.cumulativesum.Atm;
 import algorithm.baek.datastructure.Card1;
+import algorithm.baek.dfs.RedGreenColorWeakness;
 import algorithm.baek.dfs.Tetromino;
 import algorithm.baek.dynamicprograming.OneTwoThree;
 import algorithm.baek.dynamicprograming.RGBDistance;
@@ -17,7 +18,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        AC testCase = new AC();
+        RedGreenColorWeakness testCase = new RedGreenColorWeakness();
 
         doTest(testCase);
     }

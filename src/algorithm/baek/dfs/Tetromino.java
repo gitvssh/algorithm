@@ -8,6 +8,10 @@ import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
+/**
+ * https://www.acmicpc.net/problem/14500
+ * 테트로미노
+ */
 public class Tetromino implements TestCase {
     int[][] ways = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     int[][][] specialCase = {{{-1, 0}, {1, 0}, {0, 1}}, {{0, -1}, {0, 1}, {1, 0}}, {{0, -1}, {-1, 0}, {1, 0}}, {{0, -1}, {-1, 0}, {0, 1}}};
