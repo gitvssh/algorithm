@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.bfs.Dslr;
 import algorithm.baek.cumulativesum.Atm;
 import algorithm.baek.datastructure.Card1;
 import algorithm.baek.dfs.RedGreenColorWeakness;
@@ -18,7 +19,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        RedGreenColorWeakness testCase = new RedGreenColorWeakness();
+        Dslr testCase = new Dslr();
 
         doTest(testCase);
     }
