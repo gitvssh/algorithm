@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.datastructure.CyclingQueue;
 import algorithm.baek.dynamicprograming.IntegerTriangle;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        IntegerTriangle testCase = new IntegerTriangle();
+        CyclingQueue testCase = new CyclingQueue();
 
         doTest(testCase);
     }
