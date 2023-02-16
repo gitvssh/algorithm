@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.datastructure.CyclingQueue;
 import algorithm.baek.dynamicprograming.IntegerTriangle;
+import algorithm.baek.dynamicprograming.UpStair;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        CyclingQueue testCase = new CyclingQueue();
+        UpStair testCase = new UpStair();
 
         doTest(testCase);
     }
