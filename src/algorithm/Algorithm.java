@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.datastructure.CyclingQueue;
+import algorithm.baek.datastructure.MinHeap;
 import algorithm.baek.dynamicprograming.IntegerTriangle;
 import algorithm.baek.dynamicprograming.UpStair;
 
@@ -10,7 +11,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        UpStair testCase = new UpStair();
+        MinHeap testCase = new MinHeap();
 
         doTest(testCase);
     }
