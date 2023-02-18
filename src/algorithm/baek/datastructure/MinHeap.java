@@ -6,6 +6,10 @@ import java.io.*;
 import java.text.ParseException;
 import java.util.PriorityQueue;
 
+/**
+ * https://www.acmicpc.net/problem/1927
+ * 최소 힙
+ */
 public class MinHeap implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
