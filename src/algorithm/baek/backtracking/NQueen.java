@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.ParseException;
 
+/**
+ * https://www.acmicpc.net/problem/9663
+ * N-Queen
+ */
 public class NQueen implements TestCase {
     @Override
     public void test() throws ParseException, IOException {

@@ -1,5 +1,7 @@
 package algorithm;
 
+import algorithm.baek.backtracking.NQueen;
+import algorithm.baek.backtracking.Sudoku;
 import algorithm.baek.datastructure.CyclingQueue;
 import algorithm.baek.datastructure.MinHeap;
 import algorithm.baek.dfs.Virus;
@@ -12,7 +14,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Virus testCase = new Virus();
+        Sudoku testCase = new Sudoku();
 
         doTest(testCase);
     }
