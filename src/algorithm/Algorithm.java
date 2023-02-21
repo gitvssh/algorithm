@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.bitmask.BitSet;
+import algorithm.baek.etc.VerticalRead;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        BitSet testCase = new BitSet();
+        VerticalRead testCase = new VerticalRead();
 
         doTest(testCase);
     }
