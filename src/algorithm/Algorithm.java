@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bitmask.BitSet;
-import algorithm.baek.etc.VerticalRead;
+import algorithm.baek.numbertheory.SumOfDivisor;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        VerticalRead testCase = new VerticalRead();
+        SumOfDivisor testCase = new SumOfDivisor();
 
         doTest(testCase);
     }
