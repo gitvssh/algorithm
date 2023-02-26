@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.datastructure.ChangeBasketOrder;
+import algorithm.baek.datastructure.MaxHeap;
 import algorithm.baek.dfs.Cabbage;
 import algorithm.baek.etc.CheckPalindrome;
 import algorithm.baek.etc.Confetti;
@@ -12,7 +13,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Confetti testCase = new Confetti();
+        MaxHeap testCase = new MaxHeap();
 
         doTest(testCase);
     }
