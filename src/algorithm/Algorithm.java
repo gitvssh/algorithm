@@ -1,11 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.ChangeBasketOrder;
-import algorithm.baek.datastructure.MaxHeap;
-import algorithm.baek.dfs.Cabbage;
-import algorithm.baek.etc.CheckPalindrome;
-import algorithm.baek.etc.Confetti;
-import algorithm.baek.etc.Score;
+import algorithm.baek.backtracking.OperatorInserting;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -13,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MaxHeap testCase = new MaxHeap();
+        OperatorInserting testCase = new OperatorInserting();
 
         doTest(testCase);
     }

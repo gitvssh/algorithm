@@ -46,7 +46,6 @@ public class Cabbage implements TestCase {
         }
         bw.close();
     }
-
     public static void bfs(int x, int y) {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{x, y});

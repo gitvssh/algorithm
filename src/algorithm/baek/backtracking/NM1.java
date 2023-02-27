@@ -6,6 +6,10 @@ import java.io.*;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
+/**
+ * https://www.acmicpc.net/problem/15649
+ * N과 M (1)
+ */
 public class NM1 implements TestCase {
 
     public static int n;
