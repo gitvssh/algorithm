@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.backtracking.OperatorInserting;
-import algorithm.baek.backtracking.StartAndLink;
+import algorithm.baek.dynamicprograming.TwoNTiling2;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        StartAndLink testCase = new StartAndLink();
+        TwoNTiling2 testCase = new TwoNTiling2();
 
         doTest(testCase);
     }
