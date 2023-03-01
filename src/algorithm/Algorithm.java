@@ -1,6 +1,8 @@
 package algorithm;
 
+import algorithm.baek.dynamicprograming.StairNumber;
 import algorithm.baek.dynamicprograming.TwoNTiling2;
+import algorithm.baek.recursive.QuadTree;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        TwoNTiling2 testCase = new TwoNTiling2();
+        QuadTree testCase = new QuadTree();
 
         doTest(testCase);
     }
