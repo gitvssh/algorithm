@@ -1,5 +1,7 @@
 package algorithm;
 
+import algorithm.baek.dfs.ConnectedComponent;
+import algorithm.baek.dfs.DfsAndBfs;
 import algorithm.baek.dynamicprograming.*;
 import algorithm.baek.recursive.QuadTree;
 
@@ -9,7 +11,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        LongestBytonicSequence testCase = new LongestBytonicSequence();
+        ConnectedComponent testCase = new ConnectedComponent();
 
         doTest(testCase);
     }
