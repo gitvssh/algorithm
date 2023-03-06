@@ -5,6 +5,7 @@ import algorithm.baek.datastructure.DoublePriorityQueue;
 import algorithm.baek.dfs.ConnectedComponent;
 import algorithm.baek.dfs.DfsAndBfs;
 import algorithm.baek.dynamicprograming.*;
+import algorithm.baek.etc.IOI;
 import algorithm.baek.greedy.MeetingRoom;
 import algorithm.baek.recursive.QuadTree;
 import algorithm.programmers.level2.ConvertingNumber;
@@ -15,7 +16,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MeetingRoom testCase = new MeetingRoom();
+        IOI testCase = new IOI();
 
         doTest(testCase);
     }
