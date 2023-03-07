@@ -2,7 +2,9 @@ package algorithm.baek.etc;
 
 import algorithm.TestCase;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

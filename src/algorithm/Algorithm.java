@@ -1,14 +1,7 @@
 package algorithm;
 
-import algorithm.baek.bfs.HideAndSeek;
-import algorithm.baek.datastructure.DoublePriorityQueue;
-import algorithm.baek.dfs.ConnectedComponent;
-import algorithm.baek.dfs.DfsAndBfs;
-import algorithm.baek.dynamicprograming.*;
-import algorithm.baek.etc.IOI;
-import algorithm.baek.greedy.MeetingRoom;
-import algorithm.baek.recursive.QuadTree;
-import algorithm.programmers.level2.ConvertingNumber;
+import algorithm.baek.bfs.MazeSearch;
+import algorithm.baek.dynamicprograming.ElectronicLine;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -16,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        IOI testCase = new IOI();
+        MazeSearch testCase = new MazeSearch();
 
         doTest(testCase);
     }
