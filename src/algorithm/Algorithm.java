@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.MazeSearch;
-import algorithm.baek.dynamicprograming.ElectronicLine;
+import algorithm.baek.dfs.Numbering;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MazeSearch testCase = new MazeSearch();
+        Numbering testCase = new Numbering();
 
         doTest(testCase);
     }
