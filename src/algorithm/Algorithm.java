@@ -1,14 +1,12 @@
 package algorithm;
 
-import algorithm.baek.dfs.Numbering;
-
 import java.io.IOException;
 import java.text.ParseException;
 
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Numbering testCase = new Numbering();
+        Z testCase = new Z();
 
         doTest(testCase);
     }
