@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.recursive.Z;
+import algorithm.baek.backtracking.RemoteController;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Z testCase = new Z();
+        RemoteController testCase = new RemoteController();
 
         doTest(testCase);
     }
