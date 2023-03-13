@@ -39,8 +39,8 @@ public class Tomato implements TestCase {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < m; j++) {
                 arr[i][j] = Integer.parseInt(st.nextToken());
-                if(arr[i][j] == 1)
-                queue.add(new InTomato(i, j));
+                if (arr[i][j] == 1)
+                    queue.add(new InTomato(i, j));
             }
         }
         bfs();
@@ -89,10 +89,11 @@ public class Tomato implements TestCase {
 
 }
 
-class InTomato{
+class InTomato {
     int x;
     int y;
-    public InTomato(int x, int y){
+
+    public InTomato(int x, int y) {
         this.x = x;
         this.y = y;
     }
