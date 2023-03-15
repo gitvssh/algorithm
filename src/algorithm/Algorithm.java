@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.ElectronicLine;
-import algorithm.baek.greedy.CoinZero;
+import algorithm.baek.numbertheory.NextPrime;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        ElectronicLine testCase = new ElectronicLine();
+        NextPrime testCase = new NextPrime();
 
         doTest(testCase);
     }
