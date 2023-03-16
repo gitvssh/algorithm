@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.NextPrime;
+import algorithm.baek.numbertheory.Goldbach;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NextPrime testCase = new NextPrime();
+        Goldbach testCase = new Goldbach();
 
         doTest(testCase);
     }
