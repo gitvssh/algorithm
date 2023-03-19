@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.Goldbach;
+import algorithm.baek.dynamicprograming.ElectronicLine;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Goldbach testCase = new Goldbach();
+        ElectronicLine testCase = new ElectronicLine();
 
         doTest(testCase);
     }
