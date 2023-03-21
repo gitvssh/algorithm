@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.ElectronicLine;
-import algorithm.baek.dynamicprograming.LCS;
+import algorithm.baek.cumulativesum.ChessBoard;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        LCS testCase = new LCS();
+        ChessBoard testCase = new ChessBoard();
 
         doTest(testCase);
     }
