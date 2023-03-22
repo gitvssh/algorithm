@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.cumulativesum.ChessBoard;
+import algorithm.baek.recursive.CantorSet;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        ChessBoard testCase = new ChessBoard();
+        CantorSet testCase = new CantorSet();
 
         doTest(testCase);
     }
