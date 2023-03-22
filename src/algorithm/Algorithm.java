@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.backtracking.MathClass;
 import algorithm.baek.cumulativesum.ChessBoard;
 import algorithm.baek.recursive.CantorSet;
 
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        CantorSet testCase = new CantorSet();
+        MathClass testCase = new MathClass();
 
         doTest(testCase);
     }
