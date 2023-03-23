@@ -1,8 +1,8 @@
 package algorithm;
 
-import algorithm.baek.backtracking.MathClass;
-import algorithm.baek.cumulativesum.ChessBoard;
-import algorithm.baek.recursive.CantorSet;
+import algorithm.baek.etc.Ground;
+import algorithm.baek.etc.MemorizeTriangle;
+import algorithm.baek.etc.TriangleThreeSides;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MathClass testCase = new MathClass();
+        TriangleThreeSides testCase = new TriangleThreeSides();
 
         doTest(testCase);
     }
