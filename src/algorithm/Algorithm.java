@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.Ground;
-import algorithm.baek.etc.MemorizeTriangle;
-import algorithm.baek.etc.TriangleThreeSides;
+import algorithm.baek.etc.ThreeSticks;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        TriangleThreeSides testCase = new TriangleThreeSides();
+        ThreeSticks testCase = new ThreeSticks();
 
         doTest(testCase);
     }
