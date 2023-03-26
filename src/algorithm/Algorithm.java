@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.ThreeSticks;
+import algorithm.baek.dividenconquer.Multiply;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        ThreeSticks testCase = new ThreeSticks();
+        Multiply testCase = new Multiply();
 
         doTest(testCase);
     }
