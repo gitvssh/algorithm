@@ -1,6 +1,8 @@
 package algorithm;
 
+import algorithm.baek.dividenconquer.BiCoe;
 import algorithm.baek.dividenconquer.Multiply;
+import algorithm.baek.dynamicprograming.FourSquares;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Multiply testCase = new Multiply();
+        FourSquares testCase = new FourSquares();
 
         doTest(testCase);
     }
