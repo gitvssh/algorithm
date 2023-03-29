@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dividenconquer.Multiply;
-import algorithm.baek.graph.KevinBacon;
+import algorithm.baek.dfs.TomatoTower;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        KevinBacon testCase = new KevinBacon();
+        TomatoTower testCase = new TomatoTower();
 
         doTest(testCase);
     }
