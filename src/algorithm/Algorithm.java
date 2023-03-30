@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.bfs.SnakeAndLadder;
 import algorithm.baek.dfs.TomatoTower;
 
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        TomatoTower testCase = new TomatoTower();
+        SnakeAndLadder testCase = new SnakeAndLadder();
 
         doTest(testCase);
     }
