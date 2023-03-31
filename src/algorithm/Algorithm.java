@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.bfs.SnakeAndLadder;
 import algorithm.baek.dfs.TomatoTower;
+import algorithm.baek.numbertheory.BaseConversion;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        SnakeAndLadder testCase = new SnakeAndLadder();
+        BaseConversion testCase = new BaseConversion();
 
         doTest(testCase);
     }
