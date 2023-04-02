@@ -1,5 +1,8 @@
 package algorithm;
 
+import algorithm.baek.backtracking.NM11;
+import algorithm.baek.backtracking.NM5;
+import algorithm.baek.backtracking.NM9;
 import algorithm.baek.bfs.SnakeAndLadder;
 import algorithm.baek.dfs.TomatoTower;
 import algorithm.baek.graph.BabyShark;
@@ -11,7 +14,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        BabyShark testCase = new BabyShark();
+        NM11 testCase = new NM11();
 
         doTest(testCase);
     }
