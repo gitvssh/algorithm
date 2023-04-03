@@ -1,12 +1,6 @@
 package algorithm;
 
-import algorithm.baek.backtracking.NM11;
-import algorithm.baek.backtracking.NM5;
-import algorithm.baek.backtracking.NM9;
-import algorithm.baek.bfs.SnakeAndLadder;
-import algorithm.baek.dfs.TomatoTower;
-import algorithm.baek.graph.BabyShark;
-import algorithm.baek.numbertheory.BaseConversion;
+import algorithm.baek.set.GomGom;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -14,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NM11 testCase = new NM11();
+        GomGom testCase = new GomGom();
 
         doTest(testCase);
     }
