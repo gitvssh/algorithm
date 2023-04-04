@@ -8,9 +8,9 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        GomGom testCase = new GomGom();
+//        GomGom testCase = new GomGom();
 
-        doTest(testCase);
+//        doTest(testCase);
     }
 
     public static void doTest(TestCase testCase) {
