@@ -1,6 +1,8 @@
 package algorithm;
 
 import algorithm.baek.bfs.AtoB;
+import algorithm.baek.dfs.DiameterOfTree;
+import algorithm.baek.recursive.Star11;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        AtoB testCase = new AtoB();
+        Star11 testCase = new Star11();
 
         doTest(testCase);
     }
