@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.AtoB;
-import algorithm.baek.dfs.DiameterOfTree;
-import algorithm.baek.recursive.Star11;
+import algorithm.baek.datastructure.ChongChong;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Star11 testCase = new Star11();
+        ChongChong testCase = new ChongChong();
 
         doTest(testCase);
     }
