@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.ChongChong;
-import algorithm.baek.graph.MinCost;
-import algorithm.baek.graph.Party;
+import algorithm.baek.datastructure.MemorizeWord;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MinCost testCase = new MinCost();
+        MemorizeWord testCase = new MemorizeWord();
 
         doTest(testCase);
     }

@@ -2,12 +2,10 @@ package algorithm.baek.datastructure;
 
 import algorithm.TestCase;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
@@ -18,6 +16,7 @@ public class MemorizeWord implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
@@ -27,14 +26,35 @@ public class MemorizeWord implements TestCase {
             if (word.length() < m) continue;
             map.put(word, map.getOrDefault(word, 0) + 1);
         }
-        ArrayList<String> list = new ArrayList<>(map.keySet());
-        list.sort((o1, o2) -> {
-            if (map.get(o1) == map.get(o2)) {
-                if (o1.length() == o2.length()) return o2.compareTo(o1);
-                return o2.length() - o1.length();
+        PriorityQueue<WordNote> pq = new PriorityQueue<>();
+        for (String key : map.keySet()) {
+            Integer cnt = map.get(key);
+            pq.add(new WordNote(key, cnt));
+        }
+        while (!pq.isEmpty()) {
+            bw.write(pq.poll().word + "\n");
+        }
+        bw.flush();
+        bw.close();
+    }
+
+    static class WordNote implements Comparable<WordNote> {
+        String word;
+        int cnt;
+
+        public WordNote(String word, int cnt) {
+            this.word = word;
+            this.cnt = cnt;
+        }
+
+
+        @Override
+        public int compareTo(WordNote o) {
+            if (this.cnt == o.cnt) {
+                if (this.word.length() == o.word.length()) return this.word.compareTo(o.word);
+                return o.word.length() - this.word.length();
             }
-            return map.get(o2) - map.get(o1);
-        });
-        list.forEach(System.out::println);
+            return o.cnt - this.cnt;
+        }
     }
 }
