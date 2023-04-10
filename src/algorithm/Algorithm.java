@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.MemorizeWord;
+import algorithm.programmers.level1.Kbti;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MemorizeWord testCase = new MemorizeWord();
+        Kbti testCase = new Kbti();
 
         doTest(testCase);
     }
