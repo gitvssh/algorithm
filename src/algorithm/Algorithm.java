@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.level1.Kbti;
+import algorithm.baek.graph.TreeTraversal;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Kbti testCase = new Kbti();
+        TreeTraversal testCase = new TreeTraversal();
 
         doTest(testCase);
     }
