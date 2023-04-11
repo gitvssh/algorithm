@@ -1,2 +1,3 @@
 # algorithm
-study algorithm
+:memo: 알고리즘 공부, 1일 1커밋
+백준, 리트코드, 프로그래머스 등
