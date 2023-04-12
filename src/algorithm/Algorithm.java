@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.TreeTraversal;
+import algorithm.programmers.level1.CountingDivisor;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        TreeTraversal testCase = new TreeTraversal();
+        CountingDivisor testCase = new CountingDivisor();
 
         doTest(testCase);
     }
