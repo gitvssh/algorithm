@@ -1,9 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.HideAndSeek2;
-import algorithm.baek.datastructure.BinarySearchTree;
-import algorithm.baek.dynamicprograming.GreenTop;
-import algorithm.leetcode.daily.RansomNote;
+import algorithm.programmers.level1.NumberPair;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        RansomNote testCase = new RansomNote();
+        NumberPair testCase = new NumberPair();
 
         doTest(testCase);
     }
