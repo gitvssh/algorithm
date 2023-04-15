@@ -35,7 +35,6 @@ class Solution {
     }
 
     class Kbti {
-        //        int r,t,c,f,j,m,a,n;
         int[] arr = new int[27];
         KbtiItem[] items;
 
@@ -50,32 +49,6 @@ class Solution {
             if (score == 0) return;
             char target = (score < 0) ? firstChar : secondChar;
             arr[target - 'A'] += Math.abs(score);
-//            switch(target){
-//                case('R') :
-//                    r += Math.abs(score);
-//                    return;
-//                case('T') :
-//                    t += Math.abs(score);
-//                    return;
-//                case('C') :
-//                    c += Math.abs(score);
-//                    return;
-//                case('F') :
-//                    f += Math.abs(score);
-//                    return;
-//                case('J') :
-//                    j += Math.abs(score);
-//                    return;
-//                case('M') :
-//                    m += Math.abs(score);
-//                    return;
-//                case('A') :
-//                    a += Math.abs(score);
-//                    return;
-//                default :
-//                    n += Math.abs(score);
-//                    return;
-//            }
         }
 
         public String getResult() {
@@ -90,10 +63,6 @@ class Solution {
                     sb.append(item.firstChar);
                 }
             }
-//            sb.append((t > r) ? 'T' : 'R');
-//            sb.append((f > c) ? 'F' : 'C');
-//            sb.append((m > j) ? 'M' : 'J');
-//            sb.append((n > a) ? 'N' : 'A');
             return sb.toString();
         }
     }
