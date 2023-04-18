@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.programmers.level1.NumberPair;
-import algorithm.programmers.level1.WalkPark;
+import algorithm.baek.datastructure.FindTree;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        WalkPark testCase = new WalkPark();
+        FindTree testCase = new FindTree();
 
         doTest(testCase);
     }
