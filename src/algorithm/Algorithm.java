@@ -1,9 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.FindTree;
-import algorithm.baek.numbertheory.MultipleMatrix;
-import algorithm.programmers.level1.AltarOfHonor;
-import algorithm.programmers.level1.BadKeyboard;
+import algorithm.baek.string.FoxSay;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        MultipleMatrix testCase = new MultipleMatrix();
+        FoxSay testCase = new FoxSay();
 
         doTest(testCase);
     }
