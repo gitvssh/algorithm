@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.string.FoxSay;
+import algorithm.programmers.level1.Running;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,7 +9,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        FoxSay testCase = new FoxSay();
+        Running testCase = new Running();
 
         doTest(testCase);
     }
