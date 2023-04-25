@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.string.FoxSay;
-import algorithm.programmers.level1.Running;
+import algorithm.baek.graph.BreakWall;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        Running testCase = new Running();
+        BreakWall testCase = new BreakWall();
 
         doTest(testCase);
     }
