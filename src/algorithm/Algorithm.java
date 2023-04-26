@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.BreakWall;
+import algorithm.programmers.level0.ConvertingArray;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -8,8 +8,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        BreakWall testCase = new BreakWall();
-
+        ConvertingArray testCase = new ConvertingArray();
         doTest(testCase);
     }
 
