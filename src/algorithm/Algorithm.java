@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.etc.NumberOfPeople;
+import algorithm.programmers.level0.Colatz;
 import algorithm.programmers.level0.ConvertingArray;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 //@Slf4j
 public class Algorithm {
     public static void main(String[] args) {
-        NumberOfPeople testCase = new NumberOfPeople();
+        Colatz testCase = new Colatz();
         doTest(testCase);
     }
 
