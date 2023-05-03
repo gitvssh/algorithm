@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.brute.CandyDoctor;
 import algorithm.baek.etc.MineFinder;
 
 import java.io.IOException;
@@ -11,12 +12,9 @@ import java.util.HashSet;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MineFinder testCase = new MineFinder();
+        CandyDoctor testCase = new CandyDoctor();
         doTest(testCase);
-//        int solution = solution(new int[][]{{1, 4}, {9, 2}, {3, 8}, {11, 6}});
-//        System.out.println(solution);
     }
-
     public static void doTest(TestCase testCase) {
         try {
             testCase.test();
