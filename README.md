@@ -9,6 +9,10 @@ algorithm Repository는 알고리즘 공부를 위한 저장소입니다. 주로
 <br>
 1일 1커밋을 목표로 하고 있습니다.
 
+## :stopwatch: Duration 
+
+2021.09 ~ 현재
+
 
 ## 💻 Installation
 
