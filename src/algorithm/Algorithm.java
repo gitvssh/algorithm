@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.DecorateFloor;
+import algorithm.baek.graph.SeniorSearch;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        DecorateFloor testCase = new DecorateFloor();
+        SeniorSearch testCase = new SeniorSearch();
         doTest(testCase);
     }
 
