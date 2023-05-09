@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.graph.FindingHer;
 import algorithm.baek.graph.SeniorSearch;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SeniorSearch testCase = new SeniorSearch();
+        FindingHer testCase = new FindingHer();
         doTest(testCase);
     }
 
