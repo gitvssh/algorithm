@@ -4,7 +4,8 @@ import algorithm.TestCase;
 
 import java.io.*;
 import java.text.ParseException;
-import java.util.PriorityQueue;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
@@ -21,8 +22,9 @@ public class FindingHer implements TestCase {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         int time = Integer.parseInt(br.readLine());
         int edge = Integer.parseInt(br.readLine());
-        possible = new double[edge][edge];
+        possible = new double[4][4];
         location = new double[4];
+
         for (int i = 0; i < edge; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int from = st.nextToken().charAt(0) - 'A';
@@ -32,30 +34,33 @@ public class FindingHer implements TestCase {
         }
         bfs(time);
         for (int i = 0; i < location.length; i++) {
-            bw.write(location[i]/4+"\n");
+            bw.write(String.format("%.2f\n", location[i] * 100));
         }
         bw.close();
         br.close();
     }
 
     private void bfs(int time) {
-        PriorityQueue<Double[]> queue = new PriorityQueue<>();
-        queue.add(new Double[]{Double.valueOf(0),possible[0][0]});
-        queue.add(new Double[]{Double.valueOf(0),possible[0][1]});
-        queue.add(new Double[]{Double.valueOf(0),possible[0][2]});
-        queue.add(new Double[]{Double.valueOf(0),possible[0][3]});
+        Queue<Double[]> queue = new LinkedList<>();
+        queue.add(new Double[]{Double.valueOf(0), Double.valueOf(0.25)});
+        queue.add(new Double[]{Double.valueOf(1), Double.valueOf(0.25)});
+        queue.add(new Double[]{Double.valueOf(2), Double.valueOf(0.25)});
+        queue.add(new Double[]{Double.valueOf(3), Double.valueOf(0.25)});
         while (time-- > 0) {
+            location = new double[4];
             int size = queue.size();
             for (int i = 0; i < size; i++) {
                 Double[] poll = queue.poll();
+                int idx = poll[0].intValue();
                 for (int j = 0; j < possible.length; j++) {
-//                    if (possible[poll[0]][j] != 0) {
-//                        queue.add(new Double[]{(double) j, possible[(int)poll[0]][j] * poll[1]});
-//                        location[j] += possible[(int)poll[0]][j] * poll[1];
-//                    }
+                    double curPossibility = possible[idx][j];
+                    if (curPossibility != 0) {
+                        Double accumPossibility = poll[1];
+                        queue.add(new Double[]{(double) j, curPossibility * accumPossibility});
+                        location[j] += curPossibility * accumPossibility;
+                    }
                 }
             }
         }
     }
-
 }
