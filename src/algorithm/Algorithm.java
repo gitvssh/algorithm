@@ -1,7 +1,7 @@
 package algorithm;
 
-import algorithm.baek.graph.FindingHer;
-import algorithm.baek.graph.SeniorSearch;
+import algorithm.baek.bfs.HideAndSeek2;
+import algorithm.baek.bfs.HideAndSeek3;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        FindingHer testCase = new FindingHer();
+        HideAndSeek3 testCase = new HideAndSeek3();
         doTest(testCase);
     }
 
