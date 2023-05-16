@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dividenconquer.FibonacciNumber6;
-import algorithm.baek.graph.Beach;
-import algorithm.baek.numbertheory.MatrixSquare;
+import algorithm.baek.dividenconquer.fibonacciNumber6;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MatrixSquare testCase = new MatrixSquare();
+        fibonacciNumber6 testCase = new fibonacciNumber6();
         doTest(testCase);
     }
 
