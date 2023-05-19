@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dividenconquer.fibonacciNumber6;
+import algorithm.baek.string.CommandPrompt;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        fibonacciNumber6 testCase = new fibonacciNumber6();
+        CommandPrompt testCase = new CommandPrompt();
         doTest(testCase);
     }
 
