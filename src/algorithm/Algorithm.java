@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.string.CommandPrompt;
+import algorithm.baek.dfs.DiameterOfTree;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        CommandPrompt testCase = new CommandPrompt();
+        DiameterOfTree testCase = new DiameterOfTree();
         doTest(testCase);
     }
 
