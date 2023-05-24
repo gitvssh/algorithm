@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.dfs.DiameterOfTree;
+import algorithm.baek.graph.TreeTraversalChange;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        DiameterOfTree testCase = new DiameterOfTree();
+        TreeTraversalChange testCase = new TreeTraversalChange();
         doTest(testCase);
     }
 
