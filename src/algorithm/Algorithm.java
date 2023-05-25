@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.dfs.DiameterOfTree;
 import algorithm.baek.graph.TreeTraversalChange;
+import algorithm.baek.graph.WormHole;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        TreeTraversalChange testCase = new TreeTraversalChange();
+        WormHole testCase = new WormHole();
         doTest(testCase);
     }
 
