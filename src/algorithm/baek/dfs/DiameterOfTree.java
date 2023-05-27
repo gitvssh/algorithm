@@ -36,6 +36,7 @@ public class DiameterOfTree implements TestCase {
                 list[start].add(new Node(end, weight));
             }
         }
+
         dfs(1, 0);
         visited = new boolean[lines+1];
         dfs(node, 0);
