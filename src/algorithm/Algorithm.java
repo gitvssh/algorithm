@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.bfs.Cheese;
 import algorithm.baek.datastructure.PostfixNotation;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        PostfixNotation testCase = new PostfixNotation();
+        Cheese testCase = new Cheese();
         doTest(testCase);
     }
 
