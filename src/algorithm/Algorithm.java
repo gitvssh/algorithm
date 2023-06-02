@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.bfs.Cheese;
+import algorithm.baek.datastructure.Earring;
 import algorithm.baek.datastructure.PostfixNotation;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Cheese testCase = new Cheese();
+        Earring testCase = new Earring();
         doTest(testCase);
     }
 
