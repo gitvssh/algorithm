@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.dfs.Alphabet;
+import algorithm.baek.graph.SpecificShortestPath;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Alphabet testCase = new Alphabet();
+        SpecificShortestPath testCase = new SpecificShortestPath();
         doTest(testCase);
     }
 
