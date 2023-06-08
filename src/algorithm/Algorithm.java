@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.dfs.Alphabet;
+import algorithm.baek.graph.FindingDistanceOfCity;
 import algorithm.baek.graph.SpecificShortestPath;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SpecificShortestPath testCase = new SpecificShortestPath();
+        FindingDistanceOfCity testCase = new FindingDistanceOfCity();
         doTest(testCase);
     }
 
