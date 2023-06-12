@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.bfs.JumpJump;
+import algorithm.baek.bfs.Laboratory;
 import algorithm.baek.dfs.Alphabet;
 import algorithm.baek.graph.FindingDistanceOfCity;
 import algorithm.baek.graph.ShortCut;
@@ -14,7 +15,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        JumpJump testCase = new JumpJump();
+        Laboratory testCase = new Laboratory();
         doTest(testCase);
     }
 
