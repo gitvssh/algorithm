@@ -1,8 +1,11 @@
 package algorithm;
 
+import algorithm.baek.bfs.JumpJump;
 import algorithm.baek.dfs.Alphabet;
 import algorithm.baek.graph.FindingDistanceOfCity;
+import algorithm.baek.graph.ShortCut;
 import algorithm.baek.graph.SpecificShortestPath;
+import algorithm.baek.numbertheory.KSezun;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +14,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        FindingDistanceOfCity testCase = new FindingDistanceOfCity();
+        JumpJump testCase = new JumpJump();
         doTest(testCase);
     }
 
