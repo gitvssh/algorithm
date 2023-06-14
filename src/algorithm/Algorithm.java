@@ -1,8 +1,12 @@
 package algorithm;
 
-import algorithm.baek.dfs.DiameterOfTree;
-import algorithm.baek.graph.TreeTraversalChange;
-import algorithm.baek.graph.WormHole;
+import algorithm.baek.bfs.JumpJump;
+import algorithm.baek.bfs.Laboratory;
+import algorithm.baek.dfs.Alphabet;
+import algorithm.baek.graph.FindingDistanceOfCity;
+import algorithm.baek.graph.ShortCut;
+import algorithm.baek.graph.SpecificShortestPath;
+import algorithm.baek.numbertheory.KSezun;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +15,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        WormHole testCase = new WormHole();
+        Laboratory testCase = new Laboratory();
         doTest(testCase);
     }
 
