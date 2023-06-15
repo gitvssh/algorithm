@@ -3,6 +3,7 @@ package algorithm;
 import algorithm.baek.bfs.JumpJump;
 import algorithm.baek.bfs.Laboratory;
 import algorithm.baek.dfs.Alphabet;
+import algorithm.baek.etc.DDay;
 import algorithm.baek.graph.FindingDistanceOfCity;
 import algorithm.baek.graph.ShortCut;
 import algorithm.baek.graph.SpecificShortestPath;
@@ -15,7 +16,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Laboratory testCase = new Laboratory();
+        DDay testCase = new DDay();
         doTest(testCase);
     }
 
