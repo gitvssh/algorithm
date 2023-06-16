@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.bfs.ByeByeDirt;
 import algorithm.baek.bfs.JumpJump;
 import algorithm.baek.bfs.Laboratory;
 import algorithm.baek.dfs.Alphabet;
@@ -16,7 +17,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        DDay testCase = new DDay();
+        ByeByeDirt testCase = new ByeByeDirt();
         doTest(testCase);
     }
 
