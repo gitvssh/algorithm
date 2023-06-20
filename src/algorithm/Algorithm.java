@@ -9,6 +9,7 @@ import algorithm.baek.graph.FindingDistanceOfCity;
 import algorithm.baek.graph.ShortCut;
 import algorithm.baek.graph.SpecificShortestPath;
 import algorithm.baek.numbertheory.KSezun;
+import algorithm.baek.string.StringBomb;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -17,7 +18,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        ByeByeDirt testCase = new ByeByeDirt();
+        StringBomb testCase = new StringBomb();
         doTest(testCase);
     }
 
