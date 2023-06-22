@@ -9,6 +9,7 @@ import algorithm.baek.graph.FindingDistanceOfCity;
 import algorithm.baek.graph.ShortCut;
 import algorithm.baek.graph.SpecificShortestPath;
 import algorithm.baek.numbertheory.KSezun;
+import algorithm.baek.numbertheory.SeoGangGround;
 import algorithm.baek.numbertheory.SumOfArray;
 import algorithm.baek.string.StringBomb;
 
@@ -19,7 +20,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SumOfArray testCase = new SumOfArray();
+        SeoGangGround testCase = new SeoGangGround();
         doTest(testCase);
     }
 
