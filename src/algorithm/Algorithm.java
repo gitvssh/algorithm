@@ -1,17 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.ByeByeDirt;
-import algorithm.baek.bfs.JumpJump;
-import algorithm.baek.bfs.Laboratory;
-import algorithm.baek.dfs.Alphabet;
-import algorithm.baek.etc.DDay;
-import algorithm.baek.graph.FindingDistanceOfCity;
-import algorithm.baek.graph.ShortCut;
-import algorithm.baek.graph.SpecificShortestPath;
-import algorithm.baek.numbertheory.KSezun;
-import algorithm.baek.numbertheory.SeoGangGround;
-import algorithm.baek.numbertheory.SumOfArray;
-import algorithm.baek.string.StringBomb;
+import algorithm.baek.brute.ChickenDelivery;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -20,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SeoGangGround testCase = new SeoGangGround();
+        ChickenDelivery testCase = new ChickenDelivery();
         doTest(testCase);
     }
 
