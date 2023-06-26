@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.brute.ChickenDelivery;
+import algorithm.baek.dynamicprograming.Descending;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        ChickenDelivery testCase = new ChickenDelivery();
+        Descending testCase = new Descending();
         doTest(testCase);
     }
 
