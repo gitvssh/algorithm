@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.bfs.PipeMove;
 import algorithm.baek.brute.ChickenDelivery;
 import algorithm.baek.dynamicprograming.Descending;
 
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Descending testCase = new Descending();
+        PipeMove testCase = new PipeMove();
         doTest(testCase);
     }
 
