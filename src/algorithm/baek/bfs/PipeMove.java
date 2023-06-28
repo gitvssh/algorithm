@@ -6,6 +6,8 @@ import java.io.*;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
+import static algorithm.baek.bfs.Status.*;
+
 /**
  * https://www.acmicpc.net/problem/17070
  * 파이프 옮기기 1
@@ -30,7 +32,7 @@ public class PipeMove implements TestCase {
             }
         }
 
-        dfs(new Pipe(0, 1, Status.HORIZONTAL));
+        dfs(new Pipe(0, 1, HORIZONTAL));
 
         bw.write(String.valueOf(res));
         bw.close();
@@ -42,29 +44,29 @@ public class PipeMove implements TestCase {
             return;
         }
 
-        if (pipe.status == Status.HORIZONTAL) {
+        if (pipe.status == HORIZONTAL) {
             if (pipe.canMoveRight(map)) {
-                dfs(new Pipe(pipe.y, pipe.x + 1, Status.HORIZONTAL));
+                dfs(new Pipe(pipe.y, pipe.x + 1, HORIZONTAL));
             }
             if (pipe.canMoveDiagonal(map)) {
-                dfs(new Pipe(pipe.y + 1, pipe.x + 1, Status.DIAGONAL));
+                dfs(new Pipe(pipe.y + 1, pipe.x + 1, DIAGONAL));
             }
-        } else if (pipe.status == Status.VERTICAL) {
+        } else if (pipe.status == VERTICAL) {
             if (pipe.canMoveDown(map)) {
-                dfs(new Pipe(pipe.y + 1, pipe.x, Status.VERTICAL));
+                dfs(new Pipe(pipe.y + 1, pipe.x, VERTICAL));
             }
             if (pipe.canMoveDiagonal(map)) {
-                dfs(new Pipe(pipe.y + 1, pipe.x + 1, Status.DIAGONAL));
+                dfs(new Pipe(pipe.y + 1, pipe.x + 1, DIAGONAL));
             }
-        } else if (pipe.status == Status.DIAGONAL) {
+        } else if (pipe.status == DIAGONAL) {
             if (pipe.canMoveRight(map)) {
-                dfs(new Pipe(pipe.y, pipe.x + 1, Status.HORIZONTAL));
+                dfs(new Pipe(pipe.y, pipe.x + 1, HORIZONTAL));
             }
             if (pipe.canMoveDown(map)) {
-                dfs(new Pipe(pipe.y + 1, pipe.x, Status.VERTICAL));
+                dfs(new Pipe(pipe.y + 1, pipe.x, VERTICAL));
             }
             if (pipe.canMoveDiagonal(map)) {
-                dfs(new Pipe(pipe.y + 1, pipe.x + 1, Status.DIAGONAL));
+                dfs(new Pipe(pipe.y + 1, pipe.x + 1, DIAGONAL));
             }
         }
     }
@@ -82,20 +84,20 @@ class Pipe {
     }
 
     void moveRight() {
-        if (this.status == Status.DIAGONAL)
-            this.status = Status.HORIZONTAL;
+        if (this.status == DIAGONAL)
+            this.status = HORIZONTAL;
         this.x++;
     }
 
     void moveDown() {
-        if (this.status == Status.DIAGONAL)
-            this.status = Status.VERTICAL;
+        if (this.status == DIAGONAL)
+            this.status = VERTICAL;
         this.y++;
     }
 
     void moveDiagonal() {
-        if (this.status != Status.DIAGONAL)
-            this.status = Status.DIAGONAL;
+        if (this.status != DIAGONAL)
+            this.status = DIAGONAL;
         this.x++;
         this.y++;
     }
