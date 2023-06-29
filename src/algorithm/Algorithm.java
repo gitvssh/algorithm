@@ -3,6 +3,7 @@ package algorithm;
 import algorithm.baek.bfs.PipeMove;
 import algorithm.baek.brute.ChickenDelivery;
 import algorithm.baek.dynamicprograming.Descending;
+import algorithm.baek.graph.Lie;
 import algorithm.baek.numbertheory.Sigma;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Sigma testCase = new Sigma();
+        Lie testCase = new Lie();
         doTest(testCase);
     }
 
