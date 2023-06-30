@@ -4,6 +4,7 @@ import algorithm.baek.bfs.PipeMove;
 import algorithm.baek.brute.ChickenDelivery;
 import algorithm.baek.dynamicprograming.Descending;
 import algorithm.baek.graph.Lie;
+import algorithm.baek.graph.MinCost2;
 import algorithm.baek.numbertheory.Sigma;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Lie testCase = new Lie();
+        MinCost2 testCase = new MinCost2();
         doTest(testCase);
     }
 
