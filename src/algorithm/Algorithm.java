@@ -6,6 +6,7 @@ import algorithm.baek.dynamicprograming.Descending;
 import algorithm.baek.graph.Lie;
 import algorithm.baek.graph.MinCost2;
 import algorithm.baek.numbertheory.Sigma;
+import algorithm.baek.sort.SolvedAc;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -14,7 +15,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MinCost2 testCase = new MinCost2();
+        SolvedAc testCase = new SolvedAc();
         doTest(testCase);
     }
 
