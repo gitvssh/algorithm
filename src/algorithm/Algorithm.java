@@ -1,7 +1,9 @@
 package algorithm;
 
+import algorithm.baek.bfs.EasyShortcut;
 import algorithm.baek.bfs.PipeMove;
 import algorithm.baek.brute.ChickenDelivery;
+import algorithm.baek.brute.ThreeClosestPeople;
 import algorithm.baek.dynamicprograming.Descending;
 import algorithm.baek.graph.Lie;
 import algorithm.baek.graph.MinCost2;
@@ -15,7 +17,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SolvedAc testCase = new SolvedAc();
+        ThreeClosestPeople testCase = new ThreeClosestPeople();
         doTest(testCase);
     }
 
