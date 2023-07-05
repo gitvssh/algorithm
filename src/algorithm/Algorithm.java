@@ -1,16 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.EasyShortcut;
-import algorithm.baek.bfs.PipeMove;
-import algorithm.baek.brute.ChickenDelivery;
-import algorithm.baek.brute.ThreeClosestPeople;
-import algorithm.baek.dfs.NeedFriend;
-import algorithm.baek.dynamicprograming.Descending;
-import algorithm.baek.graph.Lie;
-import algorithm.baek.graph.MinCost2;
-import algorithm.baek.numbertheory.NumDivGame;
-import algorithm.baek.numbertheory.Sigma;
-import algorithm.baek.sort.SolvedAc;
+import algorithm.baek.twopointer.Liquid;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -19,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        NumDivGame testCase = new NumDivGame();
+        Liquid testCase = new Liquid();
         doTest(testCase);
     }
 
