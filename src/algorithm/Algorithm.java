@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.graph.Mst;
 import algorithm.baek.twopointer.Liquid;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Liquid testCase = new Liquid();
+        Mst testCase = new Mst();
         doTest(testCase);
     }
 
