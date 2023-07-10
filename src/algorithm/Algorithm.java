@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.Mst;
-import algorithm.baek.twopointer.Liquid;
+import algorithm.baek.backtracking.Sudoku2;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Mst testCase = new Mst();
+        Sudoku2 testCase = new Sudoku2();
         doTest(testCase);
     }
 

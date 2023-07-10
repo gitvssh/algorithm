@@ -20,9 +20,11 @@ public class Sudoku implements TestCase {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         for (int i = 0; i < 9; i++) {
-            st = new StringTokenizer(br.readLine());
+//            st = new StringTokenizer(br.readLine());
+            String line = br.readLine();
             for (int j = 0; j < 9; j++) {
-                sudoku[i][j] = Integer.parseInt(st.nextToken());
+//                sudoku[i][j] = Integer.parseInt(st.nextToken());
+                sudoku[i][j] = line.charAt(j) - '0';
             }
         }
         dfs(0, 0);
