@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.backtracking.Sudoku2;
+import algorithm.baek.dynamicprograming.LCS;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Sudoku2 testCase = new Sudoku2();
+        LCS testCase = new LCS();
         doTest(testCase);
     }
 
