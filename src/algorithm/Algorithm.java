@@ -1,7 +1,8 @@
 package algorithm;
 
-import algorithm.baek.backtracking.Sudoku2;
-import algorithm.baek.dynamicprograming.LCS;
+import algorithm.baek.dynamicprograming.Palindrome;
+import algorithm.baek.graph.Mst;
+import algorithm.baek.twopointer.Liquid;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        LCS testCase = new LCS();
+        Palindrome testCase = new Palindrome();
         doTest(testCase);
     }
 
