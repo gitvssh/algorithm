@@ -1,8 +1,7 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.Palindrome;
-import algorithm.baek.graph.Mst;
-import algorithm.baek.twopointer.Liquid;
+import algorithm.baek.dynamicprograming.RGBDistance;
+import algorithm.baek.graph.CycleGame;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Palindrome testCase = new Palindrome();
+        CycleGame testCase = new CycleGame();
         doTest(testCase);
     }
 
