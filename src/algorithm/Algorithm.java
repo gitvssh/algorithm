@@ -1,7 +1,7 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.RGBDistance;
-import algorithm.baek.graph.CycleGame;
+import algorithm.baek.graph.ShortCut;
+import algorithm.baek.numbertheory.PrimeSeqSum;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        CycleGame testCase = new CycleGame();
+        PrimeSeqSum testCase = new PrimeSeqSum();
         doTest(testCase);
     }
 
