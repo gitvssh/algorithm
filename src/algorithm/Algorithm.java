@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.ShortCut;
-import algorithm.baek.numbertheory.PrimeSeqSum;
+import algorithm.programmers.level2.PairDelete;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        PrimeSeqSum testCase = new PrimeSeqSum();
+        PairDelete testCase = new PairDelete();
         doTest(testCase);
     }
 
