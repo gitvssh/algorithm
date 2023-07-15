@@ -1,5 +1,7 @@
 package algorithm;
 
+import algorithm.baek.twopointer.TwoArraySum;
+import algorithm.programmers.level2.EndWord;
 import algorithm.programmers.level2.PairDelete;
 
 import java.io.IOException;
@@ -9,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        PairDelete testCase = new PairDelete();
+        TwoArraySum testCase = new TwoArraySum();
         doTest(testCase);
     }
 
