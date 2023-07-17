@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.twopointer.TwoArraySum;
-import algorithm.programmers.level2.EndWord;
-import algorithm.programmers.level2.PairDelete;
+import algorithm.baek.dynamicprograming.DanceDanceRevolution;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        TwoArraySum testCase = new TwoArraySum();
+        DanceDanceRevolution testCase = new DanceDanceRevolution();
         doTest(testCase);
     }
 
