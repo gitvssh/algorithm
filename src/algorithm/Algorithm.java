@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.dynamicprograming.DanceDanceRevolution;
+import algorithm.baek.graph.ACMCraft;
 import algorithm.baek.sort.ThreeLiquid;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        ThreeLiquid testCase = new ThreeLiquid();
+        ACMCraft testCase = new ACMCraft();
         doTest(testCase);
     }
 
