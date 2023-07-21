@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.sort.MusicProgram;
+import algorithm.baek.dfs.TeamProject;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MusicProgram testCase = new MusicProgram();
+        TeamProject testCase = new TeamProject();
         doTest(testCase);
     }
 
