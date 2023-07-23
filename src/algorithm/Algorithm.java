@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dfs.TeamProject;
+import algorithm.baek.sort.Workbook;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        TeamProject testCase = new TeamProject();
+        Workbook testCase = new Workbook();
         doTest(testCase);
     }
 
