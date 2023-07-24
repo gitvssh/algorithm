@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.sort.Workbook;
+import algorithm.baek.bfs.MoveCrashWall;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Workbook testCase = new Workbook();
+        MoveCrashWall testCase = new MoveCrashWall();
         doTest(testCase);
     }
 
