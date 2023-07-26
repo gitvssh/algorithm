@@ -8,6 +8,10 @@ import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.StringTokenizer;
 
+/**
+ * https://www.acmicpc.net/problem/1149
+ * RGB거리
+ */
 public class RGBDistance implements TestCase {
     @Override
     public void test() throws ParseException, IOException {
@@ -26,6 +30,7 @@ public class RGBDistance implements TestCase {
         dp[0][1] = arr[0][1];
         dp[0][2] = arr[0][2];
 
+        // 이전 집의 색과 다른 색을 칠하는 경우만 고려한다.
         for (int i = 1; i < arr.length; i++) {
             dp[i][0] = Math.min(dp[i - 1][1], dp[i - 1][2]) + arr[i][0];
             dp[i][1] = Math.min(dp[i - 1][0], dp[i - 1][2]) + arr[i][1];

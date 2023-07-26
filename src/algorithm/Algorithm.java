@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.bfs.MoveCrashWall;
+import algorithm.baek.dynamicprograming.RGBDistance2;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MoveCrashWall testCase = new MoveCrashWall();
+        RGBDistance2 testCase = new RGBDistance2();
         doTest(testCase);
     }
 
