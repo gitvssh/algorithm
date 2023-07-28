@@ -38,17 +38,17 @@ public class Backpack implements TestCase {
 
     }
 
-    public static int backpack(int i, int k) {
-        if (i == 0 || k == 0) {
+    public static int backpack(int n, int k) {
+        if (n == 0 || k == 0) {
             return 0;
         }
-        if (dp[i][k] != null) {
-            return dp[i][k];
+        if (dp[n][k] != null) {
+            return dp[n][k];
         }
-        if (w[i] > k) {
-            return dp[i][k] = backpack(i - 1, k);
+        if (w[n] > k) {
+            return dp[n][k] = backpack(n - 1, k);
         } else {
-            return dp[i][k] = Math.max(backpack(i - 1, k), backpack(i - 1, k - w[i]) + v[i]);
+            return dp[n][k] = Math.max(backpack(n - 1, k), backpack(n - 1, k - w[n]) + v[n]);
         }
     }
 }

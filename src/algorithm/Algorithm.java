@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.set.Constellation;
+import algorithm.baek.dynamicprograming.Coin;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Constellation testCase = new Constellation();
+        Coin testCase = new Coin();
         doTest(testCase);
     }
 
