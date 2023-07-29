@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.Coin;
+import algorithm.baek.graph.PiedPiper;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Coin testCase = new Coin();
+        PiedPiper testCase = new PiedPiper();
         doTest(testCase);
     }
 
