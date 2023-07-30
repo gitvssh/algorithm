@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.PiedPiper;
+import algorithm.baek.graph.Halloween;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        PiedPiper testCase = new PiedPiper();
+        Halloween testCase = new Halloween();
         doTest(testCase);
     }
 
