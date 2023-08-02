@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.greedy.GemTheif;
+import algorithm.baek.greedy.PackingShom;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        GemTheif testCase = new GemTheif();
+        PackingShom testCase = new PackingShom();
         doTest(testCase);
     }
 
