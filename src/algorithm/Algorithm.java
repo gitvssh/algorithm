@@ -4,6 +4,7 @@ import algorithm.baek.bfs.Sibling;
 import algorithm.baek.brute.NumSquare;
 import algorithm.baek.greedy.MakeTriangle;
 import algorithm.baek.greedy.WriteSequenceNum;
+import algorithm.baek.sort.Prefix;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -12,7 +13,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        WriteSequenceNum testCase = new WriteSequenceNum();
+        Prefix testCase = new Prefix();
         doTest(testCase);
     }
 
