@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.bfs.Sibling;
 import algorithm.baek.brute.NumSquare;
+import algorithm.baek.geometry.LineIntersecting;
 import algorithm.baek.greedy.MakeTriangle;
 import algorithm.baek.greedy.WriteSequenceNum;
 import algorithm.baek.sort.Prefix;
@@ -13,7 +14,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Prefix testCase = new Prefix();
+        LineIntersecting testCase = new LineIntersecting();
         doTest(testCase);
     }
 
