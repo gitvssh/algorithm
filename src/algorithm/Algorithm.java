@@ -3,6 +3,7 @@ package algorithm;
 import algorithm.baek.bfs.Sibling;
 import algorithm.baek.brute.NumSquare;
 import algorithm.baek.etc.King;
+import algorithm.baek.etc.OneLine;
 import algorithm.baek.geometry.LineIntersecting;
 import algorithm.baek.graph.Friend;
 import algorithm.baek.greedy.MakeTriangle;
@@ -16,7 +17,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        King testCase = new King();
+        OneLine testCase = new OneLine();
         doTest(testCase);
     }
 
