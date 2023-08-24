@@ -22,21 +22,11 @@ public class AddSeven implements TestCase {
             String a = arr[0];
             //주어진 문자열은 LED코드값
             //LED코드값을 숫자로 변환
-            int sum = 0;
-            for (int i = 0; i < a.length(); i += 3) {
-                String s = a.substring(i, i + 3);
-                for (LED led : LED.values()) {
-                    if (led.code.equals(s)) {
-                        sum = sum * 10 + Integer.parseInt(led.name());
-                        break;
-                    }
-                }
-            }
 
             String b = arr[1].substring(0, arr[1].length() - 1);
 
-//            String s = Integer.toBinaryString(sum);
-//            bw.write(line + s + "\n");
+            String s = resolve(resolve(a) + resolve(b));
+            bw.write(line + s + "\n");
             line = br.readLine();
         }
         bw.flush();
@@ -44,21 +34,59 @@ public class AddSeven implements TestCase {
     }
 
     enum LED {
-        ZERO("063"),
-        ONE("010"),
-        TWO("093"),
-        THREE("079"),
-        FOUR("106"),
-        FIVE("103"),
-        SIX("119"),
-        SEVEN("011"),
-        EIGHT("127"),
-        NINE("107");
+        ZERO("063", 0),
+        ONE("010", 1),
+        TWO("093", 2),
+        THREE("079", 3),
+        FOUR("106", 4),
+        FIVE("103", 5),
+        SIX("119", 6),
+        SEVEN("011", 7),
+        EIGHT("127", 8),
+        NINE("107", 9);
 
         String code;
+        int value;
 
-        LED(String code) {
+        LED(String code, int value) {
             this.code = code;
+            this.value = value;
         }
+
+        public String getCode() {
+            return code;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+    public int resolve(String code) {
+        int sum = 0;
+        for (int i = 0; i < code.length(); i += 3) {
+            String s = code.substring(i, i + 3);
+            for (LED led : LED.values()) {
+                if (led.code.equals(s)) {
+                    sum = sum * 10 + led.getValue();
+                    break;
+                }
+            }
+        }
+        return sum;
+    }
+
+    public String resolve(int num) {
+        StringBuilder sb = new StringBuilder();
+        String s = String.valueOf(num);
+        for (int i = 0; i < s.length(); i++) {
+            int n = Integer.parseInt(s.substring(i, i + 1));
+            for (LED led : LED.values()) {
+                if (led.value == n) {
+                    sb.append(led.code);
+                    break;
+                }
+            }
+        }
+        return sb.toString();
     }
 }
