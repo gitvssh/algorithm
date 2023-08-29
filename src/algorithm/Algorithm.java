@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.brute.FindSquare;
+import algorithm.baek.numbertheory.UnderPrime;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        FindSquare testCase = new FindSquare();
+        UnderPrime testCase = new UnderPrime();
         doTest(testCase);
     }
 
