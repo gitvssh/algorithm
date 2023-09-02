@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.backtracking.Teach;
 import algorithm.baek.greedy.Dice;
 import algorithm.baek.greedy.Ship;
 
@@ -10,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Ship testCase = new Ship();
+        Teach testCase = new Teach();
         doTest(testCase);
     }
 
