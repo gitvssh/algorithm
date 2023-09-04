@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.backtracking.Teach;
+import algorithm.baek.datastructure.Josephus;
 import algorithm.baek.greedy.Dice;
 import algorithm.baek.greedy.Ship;
 
@@ -11,7 +12,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Teach testCase = new Teach();
+        Josephus testCase = new Josephus();
         doTest(testCase);
     }
 
