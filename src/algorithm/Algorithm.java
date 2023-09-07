@@ -2,6 +2,7 @@ package algorithm;
 
 import algorithm.baek.backtracking.Teach;
 import algorithm.baek.datastructure.Josephus;
+import algorithm.baek.datastructure.SerialNumber;
 import algorithm.baek.greedy.Dice;
 import algorithm.baek.greedy.Ship;
 
@@ -12,7 +13,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Josephus testCase = new Josephus();
+        SerialNumber testCase = new SerialNumber();
         doTest(testCase);
     }
 
