@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.twopointer.RightArray;
+import algorithm.baek.geometry.Square;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        RightArray testCase = new RightArray();
+        Square testCase = new Square();
         doTest(testCase);
     }
 
