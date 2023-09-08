@@ -1,10 +1,6 @@
 package algorithm;
 
-import algorithm.baek.backtracking.Teach;
-import algorithm.baek.datastructure.Josephus;
-import algorithm.baek.datastructure.SerialNumber;
-import algorithm.baek.greedy.Dice;
-import algorithm.baek.greedy.Ship;
+import algorithm.baek.twopointer.RightArray;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -13,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SerialNumber testCase = new SerialNumber();
+        RightArray testCase = new RightArray();
         doTest(testCase);
     }
 
