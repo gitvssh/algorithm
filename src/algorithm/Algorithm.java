@@ -1,5 +1,7 @@
 package algorithm;
 
+import algorithm.baek.cumulativesum.Air;
+import algorithm.baek.cumulativesum.SuperMario;
 import algorithm.baek.geometry.Square;
 
 import java.io.IOException;
@@ -9,7 +11,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Square testCase = new Square();
+        SuperMario testCase = new SuperMario();
         doTest(testCase);
     }
 
