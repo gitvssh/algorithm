@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
 public class NumSquare implements TestCase {
     static int n, m;
     static int[][] arr;
-    static int max = 0;
+    static int max = 1;
 
     @Override
     public void test() throws ParseException, IOException {
