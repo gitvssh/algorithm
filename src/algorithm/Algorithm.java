@@ -1,8 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Air;
-import algorithm.baek.cumulativesum.SuperMario;
-import algorithm.baek.geometry.Square;
+import algorithm.baek.cumulativesum.ArraySum;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -11,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        SuperMario testCase = new SuperMario();
+        ArraySum testCase = new ArraySum();
         doTest(testCase);
     }
 
