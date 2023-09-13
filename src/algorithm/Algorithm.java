@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.ArraySum;
+import algorithm.baek.cumulativesum.CreeString;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        ArraySum testCase = new ArraySum();
+        CreeString testCase = new CreeString();
         doTest(testCase);
     }
 
