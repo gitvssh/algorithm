@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.CreeString;
+import algorithm.baek.cumulativesum.SumOfNumber;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        CreeString testCase = new CreeString();
+        SumOfNumber testCase = new SumOfNumber();
         doTest(testCase);
     }
 
