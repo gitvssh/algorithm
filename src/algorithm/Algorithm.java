@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.MultipleSum;
-import algorithm.baek.cumulativesum.SumOfNumber;
+import algorithm.baek.cumulativesum.CalculatedSum;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        MultipleSum testCase = new MultipleSum();
+        CalculatedSum testCase = new CalculatedSum();
         doTest(testCase);
     }
 
