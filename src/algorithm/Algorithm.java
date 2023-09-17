@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.CalculatedSum;
+import algorithm.baek.cumulativesum.Blog;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        CalculatedSum testCase = new CalculatedSum();
+        Blog testCase = new Blog();
         doTest(testCase);
     }
 
