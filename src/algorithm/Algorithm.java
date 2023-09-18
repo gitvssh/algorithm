@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Blog;
+import algorithm.baek.cumulativesum.HoneyAlba;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Blog testCase = new Blog();
+        HoneyAlba testCase = new HoneyAlba();
         doTest(testCase);
     }
 
