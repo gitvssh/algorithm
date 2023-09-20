@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Firebug;
+import algorithm.baek.cumulativesum.TwoTower;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Firebug testCase = new Firebug();
+        TwoTower testCase = new TwoTower();
         doTest(testCase);
     }
 
