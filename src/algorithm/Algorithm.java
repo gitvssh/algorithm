@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.cumulativesum.Library;
 import algorithm.baek.cumulativesum.TwoTower;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        TwoTower testCase = new TwoTower();
+        Library testCase = new Library();
         doTest(testCase);
     }
 
