@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Library;
-import algorithm.baek.cumulativesum.TwoTower;
+import algorithm.baek.cumulativesum.Honey;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -10,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Library testCase = new Library();
+        Honey testCase = new Honey();
         doTest(testCase);
     }
 
