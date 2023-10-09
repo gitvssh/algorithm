@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.cumulativesum.Honey;
+import algorithm.baek.string.Password;
 
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +9,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Honey testCase = new Honey();
+        Password testCase = new Password();
         doTest(testCase);
     }
 
