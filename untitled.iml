@@ -9,4 +9,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="log4j-api-2.18.0" level="project" />
   </component>
+  <component name="SonarLintModuleSettings">
+    <option name="uniqueId" value="83409d77-63c7-40b3-ba67-29d752334367" />
+  </component>
 </module>

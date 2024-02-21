@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.numbertheory.Sweet;
 import algorithm.baek.string.Password;
 
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
     public static void main(String[] args) {
 
-        Password testCase = new Password();
+        Sweet testCase = new Sweet();
         doTest(testCase);
     }
 
