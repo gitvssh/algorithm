@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.LuckyLetter;
-import algorithm.baek.numbertheory.TeamReport;
+import algorithm.baek.etc.ChildLikesCandy;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -10,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        TeamReport testCase = new TeamReport();
+        ChildLikesCandy testCase = new ChildLikesCandy();
         doTest(testCase);
     }
 
