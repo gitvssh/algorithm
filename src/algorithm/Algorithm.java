@@ -1,6 +1,7 @@
 package algorithm;
 
 import algorithm.baek.etc.KoreanAge;
+import algorithm.baek.etc.ModelStudent;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +10,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        KoreanAge testCase = new KoreanAge();
+        ModelStudent testCase = new ModelStudent();
         doTest(testCase);
     }
 
