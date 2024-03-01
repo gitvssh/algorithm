@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.KoreanAge;
-import algorithm.baek.etc.ModelStudent;
+import algorithm.baek.dynamicprograming.ShortCut;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -10,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        ModelStudent testCase = new ModelStudent();
+        ShortCut testCase = new ShortCut();
         doTest(testCase);
     }
 
