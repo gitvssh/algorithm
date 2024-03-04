@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.cumulativesum.WhiteBear;
 import algorithm.baek.dynamicprograming.ShortCut;
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        ShortCut testCase = new ShortCut();
+        WhiteBear testCase = new WhiteBear();
         doTest(testCase);
     }
 
