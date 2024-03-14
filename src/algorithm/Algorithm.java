@@ -1,5 +1,6 @@
 package algorithm;
 
+import algorithm.baek.dynamicprograming.JumpJump;
 import algorithm.baek.etc.Warning;
 import java.io.IOException;
 import java.text.ParseException;
@@ -9,7 +10,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Warning testCase = new Warning();
+        JumpJump testCase = new JumpJump();
         doTest(testCase);
     }
 
