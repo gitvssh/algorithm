@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.JumpJump;
-import algorithm.baek.etc.Warning;
+import algorithm.baek.binarysearch.IntegerSquare;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -10,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        JumpJump testCase = new JumpJump();
+        IntegerSquare testCase = new IntegerSquare();
         doTest(testCase);
     }
 

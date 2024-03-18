@@ -8,12 +8,15 @@ import java.io.InputStreamReader;
 import java.text.ParseException;
 import java.util.ArrayDeque;
 import java.util.StringTokenizer;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * https://www.acmicpc.net/problem/5430
- * AC
+ * https://www.acmicpc.net/problem/5430 AC
  */
+@Slf4j
 public class AC implements TestCase {
+
+
     public static int[] arr;
     public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     public static StringBuilder sb = new StringBuilder();
@@ -35,7 +38,7 @@ public class AC implements TestCase {
             }
             ac(command, deque);
         }
-        System.out.println(sb.toString());
+        log.info("result : {}", sb.toString());
     }
 
     private void ac(String command, ArrayDeque<Integer> deque) {
@@ -45,15 +48,15 @@ public class AC implements TestCase {
             sb.append("error").append("\n");
             return;
         }
-        command = command.replaceAll("RR", "");
+        command = command.replace("RR", "");
         for (int i = 0; i < command.length(); i++) {
             if (command.charAt(i) == 'R') {
                 isReverse = !isReverse;
                 continue;
             }
-            if(isReverse){
+            if (isReverse) {
                 deque.pollLast();
-            }else{
+            } else {
                 deque.pollFirst();
             }
         }
@@ -62,13 +65,13 @@ public class AC implements TestCase {
 
     private void makeString(ArrayDeque<Integer> deque, boolean isReverse) {
         sb.append("[");
-        if(deque.size() >0){
-            if(isReverse){
+        if (deque.size() > 0) {
+            if (isReverse) {
                 sb.append(deque.pollLast());
                 while (!deque.isEmpty()) {
                     sb.append(",").append(deque.pollLast());
                 }
-            }else{
+            } else {
                 sb.append(deque.pollFirst());
                 while (!deque.isEmpty()) {
                     sb.append(",").append(deque.pollFirst());
