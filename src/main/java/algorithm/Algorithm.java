@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.FibonacciSimilar;
+import algorithm.baek.numbertheory.Plug;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        FibonacciSimilar testCase = new FibonacciSimilar();
+        Plug testCase = new Plug();
         doTest(testCase);
     }
 
