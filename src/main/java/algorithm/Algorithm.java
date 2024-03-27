@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.numbertheory.Plug;
+import algorithm.baek.geometry.CircurmstancesOfCircle;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Plug testCase = new Plug();
+        CircurmstancesOfCircle testCase = new CircurmstancesOfCircle();
         doTest(testCase);
     }
 
