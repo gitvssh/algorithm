@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.geometry.CircurmstancesOfCircle;
+import algorithm.baek.etc.AddBinary;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        CircurmstancesOfCircle testCase = new CircurmstancesOfCircle();
+        AddBinary testCase = new AddBinary();
         doTest(testCase);
     }
 
