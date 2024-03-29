@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.etc.AddBinary;
+import algorithm.baek.numbertheory.FindingMultiple;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        AddBinary testCase = new AddBinary();
+        FindingMultiple testCase = new FindingMultiple();
         doTest(testCase);
     }
 
