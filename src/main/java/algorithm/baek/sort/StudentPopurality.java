@@ -7,13 +7,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
 /**
- * https://www.acmicpc.net/problem/25325
- * 학생 인기도
+ * https://www.acmicpc.net/problem/25325 학생 인기도
  */
 public class StudentPopurality implements TestCase {
 
@@ -38,11 +41,11 @@ public class StudentPopurality implements TestCase {
         }
 
         // Create a list of Map.Entry objects for sorting
-        List<Map.Entry<String, Integer>> entries = new ArrayList<>(popularity.entrySet());
+        List<Entry<String, Integer>> entries = new ArrayList<>(popularity.entrySet());
 
         // Sort the entries in descending order of value (popularity)
         Collections.sort(entries, (entry1, entry2) -> {
-            if(entry2.getValue() == entry1.getValue()){
+            if (entry2.getValue() == entry1.getValue()) {
                 return entry1.getKey().compareTo(entry2.getKey());
             }
             return entry2.getValue() - entry1.getValue();
