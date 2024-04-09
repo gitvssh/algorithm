@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.binarysearch.PointerOnLine;
+import algorithm.baek.brute.Palindrome;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        PointerOnLine testCase = new PointerOnLine();
+        Palindrome testCase = new Palindrome();
         doTest(testCase);
     }
 
