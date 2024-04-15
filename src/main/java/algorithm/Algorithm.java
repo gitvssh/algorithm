@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.brute.Palindrome;
+import algorithm.baek.simulation.Turtle;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Palindrome testCase = new Palindrome();
+        Turtle testCase = new Turtle();
         doTest(testCase);
     }
 
