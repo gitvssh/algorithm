@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.Turtle;
+import algorithm.baek.simulation.Wheel;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Turtle testCase = new Turtle();
+        Wheel testCase = new Wheel();
         doTest(testCase);
     }
 
