@@ -13,12 +13,9 @@ class WheelTest {
     public void print() {
         //given
         WheelBoard wheel = new WheelBoard("RGB",3);
-        //when
-        wheel.printColor();
+
         //then
-        assertThat(wheel.red).isEqualTo(1);
-        assertThat(wheel.green).isEqualTo(1);
-        assertThat(wheel.blue).isEqualTo(1);
+        assertThat(wheel.toString()).isEqualTo("1 1 1");
     }
 
     @DisplayName("돌림판의 색을 1번 규칙에 맞게 변경할 수 있다.")
@@ -27,19 +24,16 @@ class WheelTest {
         //given
         WheelBoard wheel = new WheelBoard("RRR",3);
         WheelBoard wheel2 = new WheelBoard("GGG",3);
+
         //when
         wheel.changeColor();
         wheel2.changeColor();
+
         //then
         //BRR -> BGR -> BGB
-        assertThat(wheel.red).isEqualTo(0);
-        assertThat(wheel.green).isEqualTo(0);
-        assertThat(wheel.blue).isEqualTo(3);
-
+        assertThat(wheel.toString()).isEqualTo("0 0 3");
         //BGG -> BRG -> BRB
-        assertThat(wheel2.red).isEqualTo(0);
-        assertThat(wheel2.green).isEqualTo(0);
-        assertThat(wheel2.blue).isEqualTo(3);
+        assertThat(wheel2.toString()).isEqualTo("0 0 3");
     }
 
     @DisplayName("돌림판의 색을 여러번 변경할 수 있다.")
@@ -48,18 +42,13 @@ class WheelTest {
         //given
         WheelBoard wheel = new WheelBoard("RGB",3);
         WheelBoard wheel2 = new WheelBoard("RRGGBB",6);
-        // BGB -> BGB -> BGG
-        //
+
         //when
         wheel.changeColor(5);
         wheel2.changeColor(3);
-        //then
-        assertThat(wheel.red).isEqualTo(0);
-        assertThat(wheel.green).isEqualTo(0);
-        assertThat(wheel.blue).isEqualTo(3);
 
-        assertThat(wheel2.red).isEqualTo(3);
-        assertThat(wheel2.green).isEqualTo(3);
-        assertThat(wheel2.blue).isEqualTo(0);
+        //then
+        assertThat(wheel.toString()).isEqualTo("0 0 3");
+        assertThat(wheel2.toString()).isEqualTo("3 3 0");
     }
 }

@@ -8,6 +8,10 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.StringTokenizer;
 
+/**
+ * https://www.acmicpc.net/problem/12739
+ * 돌림판
+ */
 public class Wheel implements TestCase {
 
     @Override
@@ -18,7 +22,7 @@ public class Wheel implements TestCase {
         int k = Integer.parseInt(st.nextToken());
         WheelBoard wheelBoard = new WheelBoard(br.readLine(), n);
         wheelBoard.changeColor(k);
-        wheelBoard.printColor();
+        System.out.println(wheelBoard);
     }
 
     static class WheelBoard {
@@ -50,26 +54,27 @@ public class Wheel implements TestCase {
             }
         }
 
-        public void printColor() {
-            System.out.println(red + " " + green + " " + blue);
+        @Override
+        public String toString() {
+            return red + " " + green + " " + blue;
         }
 
         public void changeColor() {
             StringBuilder sb = new StringBuilder(this.wheel);
             for (int i = 0; i < this.length; i++) {
-                int pre = (i - 1) >= 0 ? i - 1 : this.length - 1;
-                int cur = i;
-                int next = (i + 1) < this.length ? i + 1 : 0;
+                char pre = this.wheel.charAt((i - 1) >= 0 ? i - 1 : this.length - 1);
+                char cur = this.wheel.charAt(i);
+                char next = this.wheel.charAt((i + 1) < this.length ? i + 1 : 0);
 
-                if (isAllSameOrAllDiff(this.wheel, pre, cur, next)) {
-                    sb.setCharAt(cur, 'B');
+                if (isAllSameOrAllDiff(pre, cur, next)) {
+                    sb.setCharAt(i, 'B');
                 } else {
                     ColorData colorData = new ColorData();
-                    colorData.countColor(List.of(this.wheel.charAt(pre), this.wheel.charAt(cur), this.wheel.charAt(next)));
+                    colorData.countColor(List.of(pre, cur, next));
                     if (isCase2(colorData)) {
-                        sb.setCharAt(cur, 'R');
+                        sb.setCharAt(i, 'R');
                     } else {
-                        sb.setCharAt(cur, 'G');
+                        sb.setCharAt(i, 'G');
                     }
                 }
             }
@@ -83,10 +88,9 @@ public class Wheel implements TestCase {
             }
         }
 
-        private static boolean isAllSameOrAllDiff(String wheel, int pre, int cur, int next) {
-            return (wheel.charAt(pre) == wheel.charAt(cur) && wheel.charAt(cur) == wheel.charAt(next) && wheel.charAt(pre) == wheel.charAt(
-                    next)) || (wheel.charAt(pre) != wheel.charAt(cur)
-                    && wheel.charAt(cur) != wheel.charAt(next) && wheel.charAt(pre) != wheel.charAt(next));
+        private static boolean isAllSameOrAllDiff(char pre, char cur, char next) {
+            return (pre == cur && cur == next) ||
+                    (pre != cur && cur != next && pre != next);
         }
         private static boolean isCase2(ColorData colorData) {
             return (colorData.red == 2 && colorData.green == 1) || (colorData.green == 2 && colorData.blue == 1) || (colorData.blue == 2 &&
@@ -94,7 +98,6 @@ public class Wheel implements TestCase {
         }
 
         static class ColorData {
-
             int red;
             int green;
             int blue;
