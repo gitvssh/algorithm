@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.Wheel;
+import algorithm.baek.simulation.MostFavoriteTeamMate;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Wheel testCase = new Wheel();
+        MostFavoriteTeamMate testCase = new MostFavoriteTeamMate();
         doTest(testCase);
     }
 
