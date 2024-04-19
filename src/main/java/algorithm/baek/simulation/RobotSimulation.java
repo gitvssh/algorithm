@@ -93,45 +93,38 @@ public class RobotSimulation implements TestCase {
         }
 
         public void putRobot(Robot robot) {
-            if (!validatePosition(robot.position)) {
+            Position correctedPostion = correctPostion(robot.position);
+            if (checkInvalidatePosition(correctedPostion)) {
                 throw new IllegalArgumentException("존재하지 않는 위치입니다.");
             }
-            int corX = robot.position.x - 1;
-            int corY = robot.position.y - 1;
-
-            if (robots.get(corX).get(corY) != null) {
+            if (robots.get(correctedPostion.x).get(correctedPostion.y) != null) {
                 throw new IllegalArgumentException("로봇이 이미 존재합니다.");
             }
-            robots.get(corX).set(corY, robot);
+            robots.get(correctedPostion.x).set(correctedPostion.y, robot);
             robotList.put(robot.number, robot);
         }
 
         public Robot getRobot(Position position) {
-            if (!validatePosition(position)) {
+            Position correctedPostion = correctPostion(position);
+            if (checkInvalidatePosition(correctedPostion)) {
                 throw new IllegalArgumentException("존재하지 않는 위치입니다.");
             }
-            int corX = position.x - 1;
-            int corY = position.y - 1;
-            return robots.get(corX).get(corY);
+            return robots.get(correctedPostion.x).get(correctedPostion.y);
         }
 
         public void removeRobot(Robot robot) {
-            if (!validatePosition(robot.position)) {
+            Position correctedPostion = correctPostion(robot.position);
+            if (checkInvalidatePosition(correctedPostion)) {
                 throw new IllegalArgumentException("존재하지 않는 위치입니다.");
             }
-            int corX = robot.position.x - 1;
-            int corY = robot.position.y - 1;
-            if (robots.get(corX).get(corY) == null) {
+            if (robots.get(correctedPostion.x).get(correctedPostion.y) == null) {
                 throw new IllegalArgumentException("로봇이 존재하지 않습니다.");
             }
-            robots.get(corX).set(corY, null);
+            robots.get(correctedPostion.x).set(correctedPostion.y, null);
         }
 
-        private boolean validatePosition(Position position) {
-            if (position.x < 1 || position.y < 1 || position.x > robots.size() || position.y > robots.get(0).size()) {
-                return false;
-            }
-            return true;
+        private boolean checkInvalidatePosition(Position position) {
+            return position.x < 0 || position.y < 0 || position.x >= robots.size() || position.y >= robots.get(0).size();
         }
 
         public Robot getRobotFromList(int robotNumber) {
@@ -208,6 +201,11 @@ public class RobotSimulation implements TestCase {
             this.x = x;
             this.y = y;
         }
+    }
+
+
+    public static Position correctPostion(Position position){
+        return new Position(position.x-1, position.y-1);
     }
 
     enum Direction {

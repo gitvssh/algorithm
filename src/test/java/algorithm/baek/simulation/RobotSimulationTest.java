@@ -1,14 +1,16 @@
 package algorithm.baek.simulation;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
+import algorithm.baek.simulation.RobotSimulation.Direction;
+import algorithm.baek.simulation.RobotSimulation.Ground;
 import algorithm.baek.simulation.RobotSimulation.Position;
+import algorithm.baek.simulation.RobotSimulation.Robot;
 import algorithm.baek.simulation.RobotSimulation.Robot.DuplicatePostionException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import algorithm.baek.simulation.RobotSimulation.Ground;
-import algorithm.baek.simulation.RobotSimulation.Robot;
-import algorithm.baek.simulation.RobotSimulation.Direction;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class RobotSimulationTest {
 
@@ -24,7 +26,7 @@ class RobotSimulationTest {
     public void positioning() {
         //given
         Ground ground = new Ground(5, 5);
-        Robot robot = new Robot(1,new Position(1, 1), Direction.N, ground);
+        Robot robot = new Robot(1, new Position(1, 1), Direction.N, ground);
         //when
         ground.putRobot(robot);
         //then
@@ -32,14 +34,15 @@ class RobotSimulationTest {
     }
 
     @DisplayName("로봇은 회전할 수 있다.")
+    @CsvSource({"L, W", "R, E"})
     @Test
     public void canRotate() throws DuplicatePostionException {
         //given
         Ground ground = new Ground(5, 5);
-        Robot robot = new Robot(1,new Position(1, 1), Direction.N, ground);
-        Robot robot2 = new Robot(2,new Position(1, 1), Direction.N, ground);
-        Robot robot3 = new Robot(3,new Position(1, 1), Direction.N, ground);
-        Robot robot4 = new Robot(4,new Position(1, 1), Direction.N, ground);
+        Robot robot = new Robot(1, new Position(1, 1), Direction.N, ground);
+        Robot robot2 = new Robot(2, new Position(1, 1), Direction.N, ground);
+        Robot robot3 = new Robot(3, new Position(1, 1), Direction.N, ground);
+        Robot robot4 = new Robot(4, new Position(1, 1), Direction.N, ground);
         //when
         robot.command('L');
         robot2.command('R');
@@ -79,23 +82,18 @@ class RobotSimulationTest {
         ground.putRobot(robot);
         ground.putRobot(robot2);
         ground.putRobot(robot3);
-        try{
-            robot.command('F');
-        } catch (DuplicatePostionException e) {
-            //then
-            assertThat(e.getMessage()).isEqualTo("2");
-        } catch (IllegalArgumentException e) {
-            assertThat(e.getMessage()).isEqualTo("벽에 부딪혔습니다.");
-        }
-        try{
+
+        assertThatThrownBy(() -> robot.command('F'))
+                .isInstanceOf(DuplicatePostionException.class)
+                .hasMessage("2");
+
+        assertThatThrownBy(() -> {
             robot3.command('L');
             robot3.command('F');
             robot3.command('F');
-        } catch (DuplicatePostionException e) {
-            //then
-            assertThat(e.getMessage()).isEqualTo("다른 로봇에 부딪혔습니다.");
-        } catch (IllegalArgumentException e) {
-            assertThat(e.getMessage()).isEqualTo("벽에 부딪혔습니다.");
-        }
+        })
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage("벽에 부딪혔습니다.");
+
     }
 }
