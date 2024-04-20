@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.RobotSimulation;
+import algorithm.baek.simulation.RecommendCandidate;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        RobotSimulation testCase = new RobotSimulation();
+        RecommendCandidate testCase = new RecommendCandidate();
         doTest(testCase);
     }
 
