@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.RecommendCandidate;
+import algorithm.baek.simulation.Voyager;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        RecommendCandidate testCase = new RecommendCandidate();
+        Voyager testCase = new Voyager();
         doTest(testCase);
     }
 
