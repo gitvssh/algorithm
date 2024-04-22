@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.Voyager;
+import algorithm.baek.simulation.MakeComputer;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Voyager testCase = new Voyager();
+        MakeComputer testCase = new MakeComputer();
         doTest(testCase);
     }
 
