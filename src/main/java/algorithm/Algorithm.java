@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.MakeComputer;
+import algorithm.baek.simulation.RollingDice;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        MakeComputer testCase = new MakeComputer();
+        RollingDice testCase = new RollingDice();
         doTest(testCase);
     }
 
