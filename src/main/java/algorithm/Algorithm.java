@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.RollingDice;
+import algorithm.baek.simulation.DragonCurve;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        RollingDice testCase = new RollingDice();
+        DragonCurve testCase = new DragonCurve();
         doTest(testCase);
     }
 
