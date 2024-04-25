@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.DragonCurve;
+import algorithm.baek.simulation.CastleDefence;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        DragonCurve testCase = new DragonCurve();
+        CastleDefence testCase = new CastleDefence();
         doTest(testCase);
     }
 
