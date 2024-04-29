@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.CastleDefence;
+import algorithm.baek.simulation.PuttingSticker;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        CastleDefence testCase = new CastleDefence();
+        PuttingSticker testCase = new PuttingSticker();
         doTest(testCase);
     }
 
