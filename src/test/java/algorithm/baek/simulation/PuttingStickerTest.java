@@ -141,4 +141,39 @@ class PuttingStickerTest {
         //then
         assertThat(notebook.getStickerCount()).isEqualTo(expected);
     }
+
+    @DisplayName("알고리즘을 최종 테스트 할 수 있다.")
+    @CsvFileSource(files = "src/test/java/resources/simulation/putting_sticker_test.csv")
+    @ParameterizedTest
+    public void finalTest2(String input) throws IOException {
+        BufferedReader br = new BufferedReader(new java.io.StringReader(input));
+        //given
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        ArrayList<Sticker> stickers = new ArrayList<>();
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int K = Integer.parseInt(st.nextToken());
+
+        Notebook notebook = new Notebook(N, M);
+
+        for (int i = 0; i < K; i++) {
+            st = new StringTokenizer(br.readLine());
+            int R = Integer.parseInt(st.nextToken());
+            int C = Integer.parseInt(st.nextToken());
+            int[][] graph = new int[R][C];
+            for (int j = 0; j < R; j++) {
+                st = new StringTokenizer(br.readLine());
+                for (int k = 0; k < C; k++) {
+                    graph[j][k] = Integer.parseInt(st.nextToken());
+                }
+            }
+            stickers.add(new Sticker(graph));
+        }
+
+        notebook.puttingStickers(stickers);
+        //when
+
+        //then
+        assertThat(notebook.getStickerCount()).isEqualTo(18);
+    }
 }
