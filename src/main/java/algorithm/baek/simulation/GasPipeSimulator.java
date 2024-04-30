@@ -75,7 +75,7 @@ public class GasPipeSimulator implements TestCase {
         System.out.println(europeanMap.printResult());
     }
 
-    public static class EuropeanMap {
+    protected static class EuropeanMap {
 
         Character[][] map;
         Position start;
@@ -84,11 +84,11 @@ public class GasPipeSimulator implements TestCase {
 
         GasPipe fixGasPipe;
 
-        public EuropeanMap(int y, int x) {
+        protected EuropeanMap(int y, int x) {
             map = new Character[y][x];
         }
 
-        public void update(ArrayList<String> mapData) {
+        protected void update(ArrayList<String> mapData) {
             for (int y = 0; y < map.length; y++) {
                 String row = mapData.get(y);
                 map[y] = Arrays.stream(row.split(""))
@@ -109,15 +109,15 @@ public class GasPipeSimulator implements TestCase {
                     });
         }
 
-        public Position getStart() {
+        protected Position getStart() {
             return start;
         }
 
-        public Position getEnd() {
+        protected Position getEnd() {
             return end;
         }
 
-        public Position check() {
+        protected Position check() {
             //시작 포인트에서 방향 찾기
             Direction dir = findStartDirection();
             Position tmpStart = this.start;
@@ -163,7 +163,7 @@ public class GasPipeSimulator implements TestCase {
             return null;
         }
 
-        public Boolean fixError(Position errorPoint, GasPipe gasPipe) {
+        protected Boolean fixError(Position errorPoint, GasPipe gasPipe) {
             char backup = map[errorPoint.getY()][errorPoint.getX()];
             map[errorPoint.getY()][errorPoint.getX()] = gasPipe.value;
 
@@ -176,12 +176,12 @@ public class GasPipeSimulator implements TestCase {
             return false;
         }
 
-        public String printResult() {
+        protected String printResult() {
             return (error.getY() + 1) + " " + (error.getX() + 1) + " " + fixGasPipe.value;
         }
     }
 
-    public enum Direction {
+    private enum Direction {
         NORTH(new int[]{-1, 0}), EAST(new int[]{0, 1}), SOUTH(new int[]{1, 0}), WEST(new int[]{0, -1});
 
         private final int[] correlation;
@@ -190,12 +190,12 @@ public class GasPipeSimulator implements TestCase {
             this.correlation = direction;
         }
 
-        public int[] getCorrelation() {
+        private int[] getCorrelation() {
             return correlation;
         }
     }
 
-    public enum GasPipe {
+    protected enum GasPipe {
         VERTICAL('|'),
         HORIZONTAL('-'),
         CROSS('+'),
@@ -210,7 +210,7 @@ public class GasPipeSimulator implements TestCase {
             this.value = value;
         }
 
-        public static GasPipe getByValue(char value) {
+        private static GasPipe getByValue(char value) {
             for (GasPipe gasPipe : GasPipe.values()) {
                 if (gasPipe.value == value) {
                     return gasPipe;
@@ -219,58 +219,62 @@ public class GasPipeSimulator implements TestCase {
             return null;
         }
 
-        public Direction getNextDirection(Direction dir) {
-            switch (this) {
-                case VERTICAL:
-                    if(dir == Direction.NORTH || dir == Direction.SOUTH) {
-                        return dir;
+        private Direction getNextDirection(Direction dir) {
+            return switch (this) {
+                case VERTICAL -> {
+                    if (dir == Direction.NORTH || dir == Direction.SOUTH) {
+                        yield dir;
                     }
-                    return null;
-                case CROSS:
-                    return dir;
-                case HORIZONTAL:
-                    if(dir == Direction.EAST || dir == Direction.WEST) {
-                        return dir;
+                    yield null;
+                }
+                case CROSS -> dir;
+                case HORIZONTAL -> {
+                    if (dir == Direction.EAST || dir == Direction.WEST) {
+                        yield dir;
                     }
-                    return null;
-                case CORNER_TOP_LEFT:
+                    yield null;
+                }
+                case CORNER_TOP_LEFT -> {
                     if (dir == Direction.NORTH) {
-                        return Direction.EAST;
+                        yield Direction.EAST;
 
                     } else if (dir == Direction.WEST) {
-                        return Direction.SOUTH;
+                        yield Direction.SOUTH;
                     }
-                    return null;
-                case CORNER_BOTTOM_LEFT:
+                    yield null;
+                }
+                case CORNER_BOTTOM_LEFT -> {
                     if (dir == Direction.SOUTH) {
-                        return Direction.EAST;
+                        yield Direction.EAST;
 
                     } else if (dir == Direction.WEST) {
-                        return Direction.NORTH;
+                        yield Direction.NORTH;
                     }
-                    return null;
-                case CORNER_BOTTOM_RIGHT:
+                    yield null;
+                }
+                case CORNER_BOTTOM_RIGHT -> {
                     if (dir == Direction.SOUTH) {
-                        return Direction.WEST;
+                        yield Direction.WEST;
 
                     } else if (dir == Direction.EAST) {
-                        return Direction.NORTH;
+                        yield Direction.NORTH;
                     }
-                    return null;
-                case CORNER_TOP_RIGHT:
+                    yield null;
+                }
+                case CORNER_TOP_RIGHT -> {
                     if (dir == Direction.NORTH) {
-                        return Direction.WEST;
+                        yield Direction.WEST;
 
                     } else if (dir == Direction.EAST) {
-                        return Direction.SOUTH;
+                        yield Direction.SOUTH;
                     }
-                    return null;
-            }
-            return null;
+                    yield null;
+                }
+            };
         }
     }
 
-    public static class Position {
+    protected static class Position {
 
         private final int x;
         private final int y;
@@ -280,11 +284,11 @@ public class GasPipeSimulator implements TestCase {
             this.y = y;
         }
 
-        public int getX() {
+        protected int getX() {
             return x;
         }
 
-        public int getY() {
+        protected int getY() {
             return y;
         }
 
