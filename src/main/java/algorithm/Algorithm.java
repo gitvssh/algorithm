@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.PuttingSticker;
+import algorithm.baek.simulation.GasPipeSimulator;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        PuttingSticker testCase = new PuttingSticker();
+        GasPipeSimulator testCase = new GasPipeSimulator();
         doTest(testCase);
     }
 
