@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.GasPipeSimulator;
+import algorithm.baek.simulation.RotateRoundPlate;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        GasPipeSimulator testCase = new GasPipeSimulator();
+        RotateRoundPlate testCase = new RotateRoundPlate();
         doTest(testCase);
     }
 
