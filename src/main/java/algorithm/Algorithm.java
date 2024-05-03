@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.RotateRoundPlate;
+import algorithm.baek.simulation.DiceYutnori;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        RotateRoundPlate testCase = new RotateRoundPlate();
+        DiceYutnori testCase = new DiceYutnori();
         doTest(testCase);
     }
 
