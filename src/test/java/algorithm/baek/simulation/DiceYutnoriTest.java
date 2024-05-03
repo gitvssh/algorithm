@@ -2,7 +2,7 @@ package algorithm.baek.simulation;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import algorithm.baek.simulation.YutnoriBoard.Yut;
+import algorithm.baek.simulation.DiceYutnori.YutnoriBoard.Yut;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class DiceYutnoriTest {
     @Test
     void moveItem() {
         //given
-        YutnoriBoard board = new YutnoriBoard();
+        DiceYutnori.YutnoriBoard board = new DiceYutnori.YutnoriBoard();
         Yut[] yuts = board.initYuts();
         //when
         board.moveItem(yuts,1, 1);
@@ -24,7 +24,7 @@ class DiceYutnoriTest {
     @Test
     void moveByBlueStart() {
         //given
-        YutnoriBoard board = new YutnoriBoard();
+        DiceYutnori.YutnoriBoard board = new DiceYutnori.YutnoriBoard();
         Yut[] yuts = board.initYuts();
         //when
         board.moveItem(yuts,1, 5);
@@ -37,7 +37,7 @@ class DiceYutnoriTest {
     @Test
     void moveByNormalStart() {
         //given
-        YutnoriBoard board = new YutnoriBoard();
+        DiceYutnori.YutnoriBoard board = new DiceYutnori.YutnoriBoard();
         Yut[] yuts = board.initYuts();
         //when
         board.moveItem(yuts,1, 4);
@@ -50,7 +50,7 @@ class DiceYutnoriTest {
     @Test
     void canNotDuplicateItemOnTile() {
         //given
-        YutnoriBoard board = new YutnoriBoard();
+        DiceYutnori.YutnoriBoard board = new DiceYutnori.YutnoriBoard();
         Yut[] yuts = board.initYuts();
         //when
         board.moveItem(yuts,1, 4);
@@ -63,7 +63,7 @@ class DiceYutnoriTest {
     @Test
     void simulate() {
         //given
-        YutnoriBoard board = new YutnoriBoard();
+        DiceYutnori.YutnoriBoard board = new DiceYutnori.YutnoriBoard();
         //when
         int maxPoint = board.simulate("1 2 3 4 1 2 3 4 1 2");
         //then

@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.DiceYutnori;
+import algorithm.baek.graph.CountingConnectedVertex;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        DiceYutnori testCase = new DiceYutnori();
+        CountingConnectedVertex testCase = new CountingConnectedVertex();
         doTest(testCase);
     }
 
