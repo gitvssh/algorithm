@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.CountingConnectedVertex;
+import algorithm.baek.simulation.EscapeMarble;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        CountingConnectedVertex testCase = new CountingConnectedVertex();
+        EscapeMarble testCase = new EscapeMarble();
         doTest(testCase);
     }
 
