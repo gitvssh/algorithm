@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.EscapeMarble;
+import algorithm.baek.datastructure.ACMContestScoring;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        EscapeMarble testCase = new EscapeMarble();
+        ACMContestScoring testCase = new ACMContestScoring();
         doTest(testCase);
     }
 
