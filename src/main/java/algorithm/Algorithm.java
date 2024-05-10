@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.binarysearch.NumberCard;
-import algorithm.baek.datastructure.PeopleInTheWork;
+import algorithm.baek.graph.GoToTrip;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -10,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        NumberCard testCase = new NumberCard();
+        GoToTrip testCase = new GoToTrip();
         doTest(testCase);
     }
 
