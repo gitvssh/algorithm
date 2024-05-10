@@ -1,6 +1,7 @@
 package algorithm;
 
-import algorithm.baek.datastructure.ACMContestScoring;
+import algorithm.baek.binarysearch.NumberCard;
+import algorithm.baek.datastructure.PeopleInTheWork;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +10,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        ACMContestScoring testCase = new ACMContestScoring();
+        NumberCard testCase = new NumberCard();
         doTest(testCase);
     }
 
