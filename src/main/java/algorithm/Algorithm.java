@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.WareHousePolygon;
+import algorithm.baek.datastructure.Ecology;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        WareHousePolygon testCase = new WareHousePolygon();
+        Ecology testCase = new Ecology();
         doTest(testCase);
     }
 
