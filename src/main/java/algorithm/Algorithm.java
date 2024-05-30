@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.datastructure.Deque2;
+import algorithm.baek.simulation.StudyRoomDistancing;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Deque2 testCase = new Deque2();
+        StudyRoomDistancing testCase = new StudyRoomDistancing();
         doTest(testCase);
     }
 
