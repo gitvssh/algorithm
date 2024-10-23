@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.simulation.StudyRoomDistancing;
+import algorithm.baek.string.GuardDuty;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,12 +9,15 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        StudyRoomDistancing testCase = new StudyRoomDistancing();
+        Object testCase = new GuardDuty();
         doTest(testCase);
     }
 
 
-    public static void doTest(TestCase testCase) {
+    public static void doTest(Object param) {
+        if (!(param instanceof TestCase testCase)) {
+            throw new ShCodingTestException("Test case must implement TestCase interface");
+        }
         try {
             testCase.test();
         } catch (ParseException | IOException e) {
