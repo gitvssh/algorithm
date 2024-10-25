@@ -3,3 +3,4 @@ out/
 build/
 .gradle/
 src/main/java/algorithm/programmers/codingtest/
+/src/algorithm/
