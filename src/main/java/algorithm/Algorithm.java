@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dynamicprograming.CompanyCulture;
+import algorithm.baek.tree.EscapeTree;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Object testCase = new CompanyCulture();
+        Object testCase = new EscapeTree();
         doTest(testCase);
     }
 
