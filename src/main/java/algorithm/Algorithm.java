@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.tree.EscapeTree;
+import algorithm.baek.graph.DeathGame;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Object testCase = new EscapeTree();
+        Object testCase = new DeathGame();
         doTest(testCase);
     }
 
