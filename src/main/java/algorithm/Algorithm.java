@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.President;
+import algorithm.baek.dfs.DFSPractice;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Object testCase = new President();
+        Object testCase = new DFSPractice();
         doTest(testCase);
     }
 
