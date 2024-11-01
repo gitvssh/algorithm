@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.dfs.DFSPractice;
+import algorithm.baek.numbertheory.PrimeDrivingCondition;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Object testCase = new DFSPractice();
+        Object testCase = new PrimeDrivingCondition();
         doTest(testCase);
     }
 
