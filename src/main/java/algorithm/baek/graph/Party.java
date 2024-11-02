@@ -74,6 +74,8 @@ public class Party implements TestCase {
         }
     }
 
+    //단방향 그래프 연결관계 확인
+
     static class Node implements Comparable<Node> {
         int cost;
         int node;
