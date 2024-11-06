@@ -1,6 +1,6 @@
 package algorithm;
 
-import algorithm.baek.graph.HeightOrder;
+import algorithm.baek.twopointer.Good;
 import java.io.IOException;
 import java.text.ParseException;
 
@@ -9,7 +9,7 @@ public class Algorithm {
 
     public static void main(String[] args) {
 
-        Object testCase = new HeightOrder();
+        Object testCase = new Good();
         doTest(testCase);
     }
 
