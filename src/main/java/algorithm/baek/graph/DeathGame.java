@@ -66,16 +66,24 @@ public class DeathGame implements TestCase {
     }
 
     private void updateDeathZone(int x1, int y1, int x2, int y2) {
-        for (int x = x1; x <= x2; x++) {
-            for (int y = y1; y <= y2; y++) {
+        int minX = Math.min(x1, x2);
+        int maxX = Math.max(x1, x2);
+        int minY = Math.min(y1, y2);
+        int maxY = Math.max(y1, y2);
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
                 map[y][x] = -1;
             }
         }
     }
 
     private void updateDangerZone(int x1, int y1, int x2, int y2) {
-        for (int x = x1; x <= x2; x++) {
-            for (int y = y1; y <= y2; y++) {
+        int minX = Math.min(x1, x2);
+        int maxX = Math.max(x1, x2);
+        int minY = Math.min(y1, y2);
+        int maxY = Math.max(y1, y2);
+        for (int x = minX; x <= maxX; x++) {
+            for (int y = minY; y <= maxY; y++) {
                 if (map[y][x] != -1) {
                     map[y][x] = 1; // 위험 지역
                 }

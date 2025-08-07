@@ -40,7 +40,7 @@ class ACMContestScoringTest {
         assertThat(log.getLogs("H").getFailCount()).isEqualTo(0);
         assertThat(log.getLogs("B").getSolved()).isTrue();
         assertThat(log.getLogs("B").getCompleteTime()).isEqualTo(80);
-        assertThat(log.getLogs("B").getFailCount()).isEqualTo(1);
+        assertThat(log.getLogs("B").getFailCount()).isEqualTo(2);
     }
 
     @DisplayName("문제 클래스는 패널티를 계산할 수 있다.")

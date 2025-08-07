@@ -77,7 +77,7 @@ public class MoveCrashWall implements TestCase {
                 if (map[y][i] == 0 && !visited[y][i]) {
                     visited[y][i] = true;
                     group[y][i] = groupIdx;
-                    groupCnt.put(groupIdx, new Integer(bfs(y, i, groupIdx)));
+                    groupCnt.put(groupIdx, bfs(y, i, groupIdx));
                     groupIdx++;
                 }
             }

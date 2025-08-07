@@ -114,6 +114,9 @@ public class ACMContestScoring implements TestCase {
         }
 
         public void update(int time, boolean solved) {
+            if (this.solved) {
+                return;
+            }
             if (solved) {
                 this.solvedTime = time;
                 this.solved = true;

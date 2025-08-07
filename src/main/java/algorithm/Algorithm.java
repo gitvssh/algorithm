@@ -1,18 +1,19 @@
 package algorithm;
 
 import algorithm.baek.twopointer.Good;
+import algorithm.euler.Problem001;
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.IOException;
 import java.text.ParseException;
 
-//@Slf4j
+@Slf4j
 public class Algorithm {
 
     public static void main(String[] args) {
-
-        Object testCase = new Good();
+        Object testCase = new Problem001();
         doTest(testCase);
     }
-
 
     public static void doTest(Object param) {
         if (!(param instanceof TestCase testCase)) {

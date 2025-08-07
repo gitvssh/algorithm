@@ -19,7 +19,7 @@ dependencies {
 
 
     //lombok
-    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
     //logger
     implementation 'org.slf4j:slf4j-api:1.7.30'
@@ -28,4 +28,10 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+compileJava {
+    options.compilerArgs += [
+        '--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED'
+    ]
 }
