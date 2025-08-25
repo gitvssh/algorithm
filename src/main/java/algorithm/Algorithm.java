@@ -1,7 +1,6 @@
 package algorithm;
 
-import algorithm.baek.twopointer.Good;
-import algorithm.euler.Problem001;
+import algorithm.euler.Problem002;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -11,7 +10,7 @@ import java.text.ParseException;
 public class Algorithm {
 
     public static void main(String[] args) {
-        Object testCase = new Problem001();
+        Object testCase = new Problem002();
         doTest(testCase);
     }
 
